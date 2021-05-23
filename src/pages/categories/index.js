@@ -8,7 +8,7 @@ const categories = [
     {category:"Recycling", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", path:"/challenges/recycling"},
 ]
 
-function Dashboard() {
+function AllCategories() {
     return (
         <div>
             <h1>All categories:</h1>
@@ -26,4 +26,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default AllCategories
