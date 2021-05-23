@@ -2,8 +2,8 @@
 
 # How to use:
 
-Clone the repo;
-Install Yarn globally on your machine
-Cd to the project folder
-Install node modules: yarn install
-Start development: yarn start
+- clone the repo
+- install yarn globally on your machine
+- cd to the project folder
+- install node modules: yarn install
+- start development: yarn start
