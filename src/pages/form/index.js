@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Footer() {
+function Form() {
     return (
         <div>
-            <h2>Footer here</h2>
+            <h1>Form</h1>
         </div>
     )
 }
 
-export default Footer
+export default Form
