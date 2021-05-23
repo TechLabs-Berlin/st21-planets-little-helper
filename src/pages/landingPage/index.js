@@ -9,7 +9,10 @@ function LandingPage() {
         Challenge yourself to change your habits and become more environmentally
         conscious.
       </p>
-      <button><Link to="/form">Get started!</Link></button>
+      <div>
+      <button><Link to="/form">Get started</Link></button>
+      <button><Link to="/challenges">Go to challenges</Link></button>
+      </div>
     </div>
   );
 }
