@@ -7,3 +7,5 @@
 - cd to the project folder
 - install node modules: yarn install
 - start development: yarn start
+
+See deployed version at: https://planetslittlehelper.netlify.app/
