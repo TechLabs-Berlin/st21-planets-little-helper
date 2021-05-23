@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 const links = [
     {page: "Home", path: "/"},
@@ -13,7 +13,7 @@ function Header() {
         <header>
             <nav>
                 <ul>
-                    {links.map(link => <li><Link to={link.path}>{link.page}</Link></li>)}
+                    {links.map(link => <li><NavLink to={link.path}>{link.page}</NavLink></li>)}
                 </ul>
             </nav>
             
