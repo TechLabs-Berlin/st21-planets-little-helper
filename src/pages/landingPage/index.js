@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -10,8 +10,12 @@ function LandingPage() {
         conscious.
       </p>
       <div>
-      <button><Link to="/form">Get started</Link></button>
-      <button><Link to="/challenges">Go to challenges</Link></button>
+        <button>
+          <Link to="/form">Get started</Link>
+        </button>
+        <button>
+          <Link to="/challenges">Go to challenges</Link>
+        </button>
       </div>
     </div>
   );
