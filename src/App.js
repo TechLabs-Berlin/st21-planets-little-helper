@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Form from "./pages/form/index"
 import UserProfile from "./pages/userProfile"
-import Challenges from "./pages/challenges"
+import Challenges from "./pages/challenge"
 import Dashboard from "./pages/dashboard"
 import LandingPage from "./pages/landingPage"
 import Header from "./components/header"
