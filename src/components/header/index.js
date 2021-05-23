@@ -13,7 +13,7 @@ function Header() {
         <header>
             <nav>
                 <ul>
-                    {links.map(link => <li><NavLink to={link.path}>{link.page}</NavLink></li>)}
+                    {links.map(link => <li key={link.page}><NavLink to={link.path}>{link.page}</NavLink></li>)}
                 </ul>
             </nav>
             

@@ -14,7 +14,7 @@ function Dashboard() {
             <h1>All categories:</h1>
             <ul>
                 {categories.map(cat => (
-                    <li>
+                    <li key={cat.category}>
                     <Link to={cat.path}>
                         <h4>{cat.category}</h4>
                         <p>{cat.description}</p>
