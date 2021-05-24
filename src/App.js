@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Form from "./pages/form/index"
 import UserProfile from "./pages/userProfile"
 import Category from "./pages/categories/category"
-import AllCategories from "./pages/categories"
+import AllCategories from "./pages/categories/categories"
 import LandingPage from "./pages/landingPage"
 import Header from "./components/header"
 import Footer from "./components/footer"
