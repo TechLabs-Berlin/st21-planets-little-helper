@@ -24,13 +24,13 @@ export const challenges = [
       id: 4,
       title: "Conscious nutrition",
       description: "It is important to be mindful of the water that we drink as well as the food that we eat. Organic food is more environmentally friendly and does not add any chemicals to the drinking water.",
-      challenge: "Respecting your budget, try to maximize the percentage of bio-groceries that you will buy this week ", 
+      challenge: "Respecting your budget, try to maximize the percentage of organic groceries that you will buy this week ", 
     },
     {
       id: 5,
-      title: "",
-      description: "",
-      challenge: "",
+      title: "Raw",
+      description: "Not all foods should be eaten raw, but many vegetables can be eaten in that way which saves energy. It is yet another environmentally friendly way to keep you and environment healthy.",
+      challenge: "This week you should eat 3 meals with a 75% or more of raw vegetables.",
       category: "Diet",
     },
     {
@@ -84,9 +84,9 @@ export const challenges = [
     },
     {
       id: 13,
-      title: "",
-      description: "",
-      challenge: "",
+      title: "Bulk/unpackaged",
+      description: "Purchasing foods in bulk is a good way to cut back energy and gas as you will not have to travel to the store as often. It also creates less garbage in the landfills.",
+      challenge: "Try and find a shop/supermarket that focuses on zero-waste to get your groceries for this week",
       category: "Energy consumption",
     },
     {
@@ -112,9 +112,9 @@ export const challenges = [
     },
     {
       id: 17,
-      title: "",
-      description: "",
-      challenge: "",
+      title: "Single use",
+      description: "It's difficult to quantify the climate impact of our over reliance on single use products. Plastic pollution is a huge environmental crisis, but it should be considered a separate, albeit connected, issue to the climate crisis. Plastic, particularly recycled plastic, can play an important part of our future when used in the right way and often has lower life-cycle emissions than non-plastic alternatives.  It is the over consumption of single use manufactured items - be they plastic, cardboard, wood, metal or paper - that needs to be addressed in the fight against climate change.",
+      challenge: "On this week you should focus on avoiding single use products in your day to day life as much as possible. Reduce, re-use, recycle - in that order. Consider the lifespan of the things you're buying and try to avoid single use products and packaging.",
       category: "Recycling",
     },
     {
