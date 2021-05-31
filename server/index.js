@@ -1,33 +1,27 @@
+require('dotenv').config()
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
-const ChallengeModel = require("./models/Challenge");
-const challenges = require("../client/src/data/challenges");
-require('dotenv').config()
+const PORT = 8000;
+const errorHandler = require("./handlers/error")
 
-const url = `mongodb+srv://${process.env.MDB_USERNAME}:${process.env.MDB_PASSWORD}@challenges.1a54e.mongodb.net/plh?retryWrites=true&w=majority`;
+const authRoutes = require("./routes/auth")
+const challengesRoutes = require("./routes/challenges")
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 const app = express();
-
 app.use(cors());
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("HELLOOOO WHERE AM I?");
-});
+app.use("/api/auth", authRoutes)
+app.use("/api/challenges", challengesRoutes)
 
-// ChallengeModel.insertMany(challenges, function(error, docs) {})
-
-app.get("/challenges", async (req, res) => {
-    await ChallengeModel.find({}, (err, result) => {
-        if(err){
-            res.send(err)
-        } else {
-            res.send(result)
-        }
-    })
+app.use((req, res, next)=> {
+    let err = new Error("Not found")
+    err.status = 404;
+    next(err)
 })
 
-app.listen(8000, () => {
-  console.log("Server started at port 8000.");
+app.use(errorHandler)
+
+app.listen(PORT, () => {
+  console.log(`Server started at port ${PORT}.`);
 });
