@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 
 const challengeSchema = new mongoose.Schema({
-    category: String,
     title: String,
-    action: String,
-    duration: String,
-    impact: String
+    description: String,
+    challenge: String,
+    category: String,
 })
 
 const ChallengeModel = mongoose.model('challenges', challengeSchema)

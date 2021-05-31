@@ -1,9 +1,15 @@
-const express = require("express")
-const router = express.Router()
-const db = require("../models/index")
+const express = require("express");
+const router = express.Router();
+const db = require("../models")
 
-router.post("/", async () => {
-    await db.find({}, (err, res) => {
+
+// to insert challenges in the DB
+// const chal = require("../../client/src/data/challenges")
+// db.ChallengeModel.insertMany(chal, function(error, docs) {});
+
+
+router.get("/", async (req, res) => {
+     await db.ChallengeModel.find({}, (err, result) => {
         if(err){
             res.send(err)
         } else {
@@ -11,5 +17,7 @@ router.post("/", async () => {
         }
     })
 })
+
+
 
 module.exports = router;
