@@ -2,9 +2,10 @@ import React from 'react'
 import {NavLink} from "react-router-dom"
 
 const links = [
-    {page: "Home", path: "/"},
+    {page: "About", path: "/"},
     {page: "Challenges", path: "/challenges"},
-    {page: "Form", path: "/form"},
+    {page: "Knowedge", path: "/"},
+    {page: "Sign in/Sign up", path: "/form"},
     {page: "User Profile", path: "/user/1"}
 ]
 
