@@ -10,6 +10,7 @@ function LandingPage() {
         the world. Choose your own pace and own categories where
         you want to improve your lifestyle.
       </p>
+      <img src={process.env.PUBLIC_URL + "/earth.png"} width='400' alt='planet earth' />
       <div>
         <button>
           <Link to="/form">Get started</Link>
