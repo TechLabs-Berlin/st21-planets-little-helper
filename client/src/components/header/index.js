@@ -3,10 +3,9 @@ import { NavLink } from "react-router-dom"
 import './header.css'
 
 const links = [
-    { page: "About", path: "/" },
     { page: "Challenges", path: "/challenges" },
-    { page: "Knowedge", path: "/" },
-    { page: "Sign in/Sign up", path: "/form" },
+    { page: "Sign in", path: "/form" },
+    { page: "Sign up", path: "/form" },
     { page: "User Profile", path: "/user/1" }
 ]
 
@@ -21,13 +20,15 @@ class Header extends React.Component {
         return (
             <header>
                 <nav className='navbar'>
-                    <img src={process.env.PUBLIC_URL + "/logo.png"} width='60' alt='logo' id='logo' />
+                <a href='/'>
+                <img src={process.env.PUBLIC_URL + "/logo.png"} width='60' alt='logo' id='logo' />
+                </a>
 
                     <div className='navbar-logo-name'>
                         <span>Planet's Little Helper</span>
                     </div>
 
-                    <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+                    <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'} onClick={this.handleClick}>
                         {links.map(link => <li key={link.page}><NavLink to={link.path} className='nav-links'>{link.page}</NavLink></li>)}
                     </ul>
 
