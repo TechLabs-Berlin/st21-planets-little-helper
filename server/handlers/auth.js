@@ -2,11 +2,11 @@ const db = require("../models");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-exports.signIn = async function(req, res, next) {
+exports.signIn = async function (req, res, next) {
   // finding a user
   try {
     let user = await db.User.findOne({
-      email: req.body.email
+      email: req.body.email,
     });
     let { id, username, profileImageUrl } = user;
     let isMatch = await user.comparePassword(req.body.password);
@@ -15,7 +15,7 @@ exports.signIn = async function(req, res, next) {
         {
           id,
           username,
-          profileImageUrl
+          profileImageUrl,
         },
         process.env.SECRET_KEY
       );
@@ -23,16 +23,16 @@ exports.signIn = async function(req, res, next) {
         id,
         username,
         profileImageUrl,
-        token
+        token,
       });
     } else {
       return next({
         status: 400,
-        message: "Invalid Email/Password."
+        message: "Invalid Email/Password.",
       });
     }
   } catch (e) {
-    console.log(e)
+    console.log(e);
     return next({ status: 400, message: "Invalid email or password." });
   }
 };
@@ -62,4 +62,14 @@ exports.signUp = async (req, res, next) => {
       message: err.message,
     });
   }
+};
+
+exports.getAllUsers = async (req, res, next) => {
+  await db.User.find({}, (err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  });
 };
