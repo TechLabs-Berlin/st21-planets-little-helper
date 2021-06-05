@@ -14,9 +14,9 @@ function LandingPage() {
             you want to improve your lifestyle.
           </p>
           <div>
-          <Link to="/form">
-          <button className='button-register'>Register</button>
-          </Link>
+            <Link to="/form">
+              <button className='button-register'>Register</button>
+            </Link>
           </div>
         </div>
         <div className='box-img'>
@@ -44,24 +44,20 @@ function LandingPage() {
         <h3>Categories</h3>
         <div className='container3'>
           <div>
-            <button className='btns'><Link to="">Food</Link></button>
+            <div>
+              <button className='btns'><Link to="">Diet</Link></button>
+            </div>
+            <div>
+              <button className='btns'><Link to="">Recycling</Link></button>
+            </div>
           </div>
           <div>
-            <button className='btns'><Link to="">Shopping</Link></button>
-          </div>
-          <div>
-            <button className='btns'><Link to="">Home & Work</Link></button>
-          </div>
-        </div>
-        <div className='container3'>
-          <div>
-            <button className='btns'><Link to="">Energy</Link></button>
-          </div>
-          <div>
-            <button className='btns'><Link to="">Advocacy</Link></button>
-          </div>
-          <div>
-            <button className='btns'><Link to="">Transport & Travel</Link></button>
+            <div>
+              <button className='btns'><Link to="">Energy</Link></button>
+            </div>
+            <div>
+              <button className='btns'><Link to="">Transport & Travel</Link></button>
+            </div>
           </div>
         </div>
       </div>
