@@ -35,12 +35,13 @@ html {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 10px;
+  box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
 }
 
 .button-register:hover {
   cursor: pointer;
   transform: translateY(-0.1em);
-  box-shadow: 0 0.5em 0.5em -0.4em #178f63;
+  box-shadow: 0 0.5em 0.5em -0.2em #0c704b;
   border: 2px solid #1eac78;
 }
 
