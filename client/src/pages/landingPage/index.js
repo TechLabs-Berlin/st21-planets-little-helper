@@ -15,10 +15,8 @@ function LandingPage() {
           </p>
           <div>
           <Link to="/form">
-            <button className='button-register'>
-              Register
-            </button>
-            </Link>
+          <button className='button-register'>Register</button>
+          </Link>
           </div>
         </div>
         <div className='box-img'>
