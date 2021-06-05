@@ -14,9 +14,11 @@ function LandingPage() {
             you want to improve your lifestyle.
           </p>
           <div>
+          <Link to="/form">
             <button className='button-register'>
-              <Link to="/form">Register</Link>
+              Register
             </button>
+            </Link>
           </div>
         </div>
         <div className='box-img'>
