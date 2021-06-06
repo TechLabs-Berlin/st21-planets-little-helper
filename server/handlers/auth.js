@@ -64,20 +64,19 @@ exports.signUp = async (req, res, next) => {
   }
 };
 
-exports.getAllUsers = async (req, res) => {
-  await db.User.find({}, (err, result) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send(result);
-    }
-  });
+exports.getAllUsers = async (req, res, next) => {
+  try {
+    const users = await db.User.find({});
+    res.status(200).json(users);
+  } catch (e) {
+    return next(e);
+  }
 };
 
 exports.saveUserChallenge = async (req, res) => {
   const { challengeId } = req.body;
   const userId = req.params.id;
-  try {    
+  try {
     await db.User.findByIdAndUpdate(
       userId,
       {
@@ -91,24 +90,4 @@ exports.saveUserChallenge = async (req, res) => {
   } catch (e) {
     res.send(e);
   }
-};    
-
-
-exports.saveUserChallenge = async (req, res) => {
-  const { challengeId } = req.body;
-  const userId = req.params.id;
-  try {    
-    await db.User.findByIdAndUpdate(
-      userId,
-      {
-        $pull: { challenges: challengeId },
-      },
-      { new: true }
-    );
-    const user = await db.User.findById(userId);
-    console.log(user);
-    res.status(200).json({ message: challengeId });
-  } catch (e) {
-    res.send(e);
-  }
-};  
+};
