@@ -16,6 +16,9 @@
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
+.navbar-logo-name span {
+  text-shadow: 1px 1px 1.5px #63b496;
+}
 
 .nav-menu {
   display: grid;

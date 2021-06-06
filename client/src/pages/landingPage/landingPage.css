@@ -1,6 +1,10 @@
 html {
   background: whitesmoke;
 }
+
+h1,h2,h3 {
+  text-shadow: 1.5px 1.5px 1px #63b496;
+}
 .container {
   position: relative;
   width: 100%;

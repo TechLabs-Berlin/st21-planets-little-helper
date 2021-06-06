@@ -13,7 +13,7 @@ const categories = [
 function AllCategories() {
     return (
         <div>
-            <h1>All categories:</h1>
+            <h1 className='h1-categories'>All categories:</h1>
             <div className='container-div'>
 
                 {categories.map(cat => (

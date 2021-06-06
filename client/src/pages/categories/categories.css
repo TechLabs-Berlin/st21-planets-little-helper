@@ -1,9 +1,8 @@
 
 
-h1 {
+.h1-categories {
     text-align: center;
     text-decoration: underline;
-    text-shadow: 1.5px 1.5px 1px #63b496;
     letter-spacing: 2px;
     background: white;
     margin-top: 0;
