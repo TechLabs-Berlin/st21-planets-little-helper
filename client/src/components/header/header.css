@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  border-bottom: 2px solid rgb(210, 226, 221);
+  border-radius: 5px;
 }
 
 .navbar-logo-name {
@@ -43,6 +45,7 @@ li {
   background-color: rgb(153, 194, 188);
   border-radius: 4px;
   transition: all 0.2s ease-out;
+  text-decoration: underline;
 }
 
 .navbar-menu-icon {
