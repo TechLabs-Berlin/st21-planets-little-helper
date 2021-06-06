@@ -64,7 +64,7 @@ exports.signUp = async (req, res, next) => {
   }
 };
 
-exports.getAllUsers = async (req, res, next) => {
+exports.getAllUsers = async (req, res) => {
   await db.User.find({}, (err, result) => {
     if (err) {
       res.send(err);
@@ -73,3 +73,42 @@ exports.getAllUsers = async (req, res, next) => {
     }
   });
 };
+
+exports.saveUserChallenge = async (req, res) => {
+  const { challengeId } = req.body;
+  const userId = req.params.id;
+  try {    
+    await db.User.findByIdAndUpdate(
+      userId,
+      {
+        $push: { challenges: challengeId },
+      },
+      { new: true }
+    );
+    const user = await db.User.findById(userId);
+    console.log(user);
+    res.status(200).json({ message: challengeId });
+  } catch (e) {
+    res.send(e);
+  }
+};    
+
+
+exports.saveUserChallenge = async (req, res) => {
+  const { challengeId } = req.body;
+  const userId = req.params.id;
+  try {    
+    await db.User.findByIdAndUpdate(
+      userId,
+      {
+        $pull: { challenges: challengeId },
+      },
+      { new: true }
+    );
+    const user = await db.User.findById(userId);
+    console.log(user);
+    res.status(200).json({ message: challengeId });
+  } catch (e) {
+    res.send(e);
+  }
+};  
