@@ -1,11 +1,30 @@
-const express = require("express")
-const router = express.Router({mergeParams: true})
+const express = require("express");
+const router = express.Router({ mergeParams: true });
 
-const {signUp, signIn, getAllUsers, saveUserChallenge} = require("../handlers/auth")
+const { logInRequired, ensureCorrectUser } = require("../middleware/auth");
 
-router.post("/signup", signUp)
-router.post("/signin", signIn)
-router.get("/users", getAllUsers)
-router.post("/:id/challenges", saveUserChallenge);
+const {
+  signUp,
+  signIn,
+  getAllUsers,
+  saveUserChallenge,
+  removeUserChallenge,
+} = require("../handlers/auth");
+
+router.post("/signup", signUp);
+router.post("/signin", signIn);
+router.get("/users", getAllUsers);
+router.post(
+  "/:id/challenges",
+  logInRequired,
+  ensureCorrectUser,
+  saveUserChallenge
+);
+router.delete(
+  "/:id/challenges",
+  logInRequired,
+  ensureCorrectUser,
+  removeUserChallenge
+);
 
 module.exports = router;
