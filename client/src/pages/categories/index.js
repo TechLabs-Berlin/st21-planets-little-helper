@@ -4,7 +4,7 @@ import './categories.css'
 
 
 const categories = [
-    { category: "Diet", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/food", img: "/images/food.png" },
+    { category: "Food", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/food", img: "/images/food.png" },
     { category: "Travel", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/transportation-and-travel", img: "/images/travel.png" },
     { category: "Energy", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/energy-consumption", img: "/images/energy.png" },
     { category: "Recycling", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/recycling", img: "/images/recycle.png" },
