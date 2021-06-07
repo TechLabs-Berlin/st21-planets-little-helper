@@ -5,8 +5,8 @@ import "./header.css";
 
 const links = [
   { page: "Challenges", path: "/challenges" },
-  { page: "Sign in", path: "/form" },
-  { page: "Sign up", path: "/form" },
+  { page: "Sign in", path: "/signin" },
+  { page: "Sign up", path: "/signup" },
   { page: "User Profile", path: "/user/1" },
 ];
 
@@ -64,4 +64,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps)(Header);
