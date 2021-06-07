@@ -7,7 +7,7 @@ import AllCategories from "./pages/categories";
 import LandingPage from "./pages/landingPage";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import { Provider } from "react-redux";
+import { Provider, connect } from "react-redux";
 import { configureStore } from "./store";
 
 import "./App.css";
@@ -32,4 +32,10 @@ function App() {
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    currentUser: state.currentUser,
+  };
+}
+
+export default connect(mapStateToProps, null)(App);
