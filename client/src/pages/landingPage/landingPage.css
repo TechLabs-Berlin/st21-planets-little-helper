@@ -2,42 +2,61 @@ html {
   background: whitesmoke;
 }
 
-h1,h2,h3 {
+/* h1,h2,h3 {
   text-shadow: 1.5px 1.5px 1px #63b496;
-}
+} */
 .container {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: center;
   align-items: center;
   background: white;
-  margin-bottom: 10px;
 }
 
+/* .container h1,p{
+  text-align: left;
+  
+} */
 .box-text {
   position: relative;
   max-width: 600px;
+  min-width: 400px;
   margin-left: 50px;
   margin-right: 50px;
   font-size: 28px;
-  text-align: center;
+  text-align: left;
+  flex: 4;
 }
 
 .box-img {
-  margin-right: 50px;
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  max-width: 512px;
+  min-width: 300px;
+  padding: 30px 15px;
+  margin-bottom: 50px;
+}
+.box-img img{
+  grid: box-img;
+  flex: 2;
 }
 
 .button-register {
   height: 108px;
-  width: 490px;
-  left: 247px;
-  top: 512px;
+  color: white;
+  width: 100%;
+  max-width: 490px;
+  min-width: 340px;
   border-radius: 5px;
   border: 2px solid #1dad78;
   background: #1dad78;
   font-size: 36px;
   font-weight: 700;
+  margin-top: 20px;
   margin-bottom: 50px;
   box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
 }
@@ -49,17 +68,17 @@ h1,h2,h3 {
   border: 2px solid #1eac78;
 }
 
-.button-register a {
+/* .button-register a {
   text-decoration: none;
-  color: white;
-}
+} */
 
 .container2 {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: flex-start;
   background: whitesmoke;
   margin-bottom: 10px;
 }
@@ -79,6 +98,9 @@ h3 {
   text-align: center;
   font-weight: 400;
   font-size: 20px;
+  flex: 4;
+  max-width: 300px;
+  min-width: 200px;
 }
 
 h3 {
@@ -90,19 +112,20 @@ h3 {
 
 .btns {
   height: 72px;
-  width: 524px;
+  width: 100%;
+  min-width: 340px;
   left: 996px;
   top: 1007px;
   border-radius: 3px;
   background: white;
   border: 1px solid black;
-  margin: 5px 10px;
+  margin: 10px;
 }
 
 .btns:hover {
   cursor: pointer;
-  transform: translateY(-0.1em);
-  box-shadow: 0 0.5em 0.5em -0.4em #1a201e;
+  transform: translateY(-0.2em);
+  box-shadow: 0 0.6em 0.6em -0.4em #1a201e;
   border: 2px solid #1a201e;
 }
 
@@ -118,8 +141,17 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
   align-items: center;
   background: white;
   margin-bottom: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.btns-div {
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+  margin: 5px 10px;
 }

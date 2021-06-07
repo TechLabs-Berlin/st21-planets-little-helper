@@ -13,14 +13,14 @@ function LandingPage() {
             the world. Choose your own pace and own categories where
             you want to improve your lifestyle.
           </p>
-          <div>
+          
             <Link to="/form">
               <button className='button-register'>Register</button>
             </Link>
-          </div>
+          
         </div>
         <div className='box-img'>
-          <img src={process.env.PUBLIC_URL + "/earth.png"} width='400' alt='planet earth' id='planet-img' />
+          <img src={process.env.PUBLIC_URL + "/earth.png"}  alt='planet earth' id='planet-img' />
         </div>
       </div>
       <div>
@@ -43,15 +43,15 @@ function LandingPage() {
       <div>
         <h3>Categories</h3>
         <div className='container3'>
-          <div>
+          <div className='btns-div'>
             <div>
-              <button className='btns'><Link to="">Diet</Link></button>
+              <button className='btns'><Link to="">Food</Link></button>
             </div>
             <div>
               <button className='btns'><Link to="">Recycling</Link></button>
             </div>
           </div>
-          <div>
+          <div className='btns-div'>
             <div>
               <button className='btns'><Link to="">Energy</Link></button>
             </div>
