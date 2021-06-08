@@ -2,11 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import "./header.css";
+import {logout} from "../../store/actions/auth"
 
 const links = [{ page: "All Challenges", path: "/challenges" }];
 
 class Header extends React.Component {
   state = { clicked: false };
+
+  logout = e => {
+    e.preventDefault()
+    this.props.logout()
+  }
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
@@ -51,9 +57,9 @@ class Header extends React.Component {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/logout" className="nav-links">
+                  <button className="nav-links" onClick={this.logout}>
                     Log out
-                  </NavLink>
+                  </button>
                 </li>
               </>
             )}
@@ -90,4 +96,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, {logout})(Header);
