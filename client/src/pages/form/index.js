@@ -2,7 +2,7 @@ import React from 'react'
 
 function Form() {
     return (
-        <div class="loginbox">
+        <div className="loginbox">
            <h1>Login:</h1>
            <form name="login" action="" method="">
               <div>

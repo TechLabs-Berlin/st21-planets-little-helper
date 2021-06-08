@@ -4,10 +4,10 @@ import './categories.css'
 
 
 const categories = [
-    { category: "Food", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/food", img: "/images/food.png" },
-    { category: "Travel", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/transportation-and-travel", img: "/images/travel.png" },
-    { category: "Energy", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/energy-consumption", img: "/images/energy.png" },
-    { category: "Recycling", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", path: "/challenges/recycling", img: "/images/recycle.png" },
+    { category: "Food", description: "This respond to basic needs and bring a better quality of life, while minimising the use of natural resources, toxic materials and emissions of waste and pollutants.", path: "/challenges/food", img: "/images/food.png" },
+    { category: "Travel", description: "Green transportation revolves around efficient and effective use of resources, modification of the transport structure and making healthier travel choices.", path: "/challenges/transportation-and-travel", img: "/images/travel.png" },
+    { category: "Energy", description: "Recycling prevents the waste of useful materials and reduces the consumption of fresh raw materials, thereby reducing: energy usage, air and water pollution.", path: "/challenges/energy-consumption", img: "/images/energy.png" },
+    { category: "Recycling", description: "Green energy reduces the negative effects of fossil fuels. Derived from natural resources, it is also often renewable and clean, thus emitting no or few greenhouse gases.", path: "/challenges/recycling", img: "/images/recycle.png" },
 ]
 
 function AllCategories() {
