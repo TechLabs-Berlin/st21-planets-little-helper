@@ -9,11 +9,11 @@ export function setCurrentUser(user) {
   };
 }
 
-export function logout(){
-  return dispatch => {
-    localStorage.clear()
-    dispatch(setCurrentUser({}))
-  }
+export function logout() {
+  return (dispatch) => {
+    localStorage.clear();
+    dispatch(setCurrentUser({}));
+  };
 }
 
 export function authUser(type, userData) {
@@ -22,6 +22,7 @@ export function authUser(type, userData) {
       return apiCall("post", `http://localhost:8000/api/user/${type}`, userData)
         .then(({ token, ...user }) => {
           localStorage.setItem("jwtToken", token);
+          localStorage.setItem("user", JSON.stringify(user));
           dispatch(setCurrentUser(user));
           dispatch(removeError);
           resolve();
