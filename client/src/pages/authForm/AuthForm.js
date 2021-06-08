@@ -80,7 +80,7 @@ function AuthForm({
               className={styles.authInput}
             />
           </div>
-          <div className={styles.inputContainer}>
+          {/* <div className={styles.inputContainer}>
             <label htmlFor="imageUrl" className={styles.authLabel}>
               Profile picture:
             </label>
@@ -92,7 +92,7 @@ function AuthForm({
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
             />
-          </div>
+          </div> */}
         </>
       )}
       <button type="submit" className={styles.submitButton}>
