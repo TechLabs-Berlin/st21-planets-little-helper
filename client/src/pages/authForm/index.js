@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 
-function AuthForm({ heading, buttonText, signup, onAuth }) {
+function AuthForm({
+  heading,
+  buttonText,
+  signup,
+  onAuth,
+  error,
+  removeError,
+  history,
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -9,15 +17,24 @@ function AuthForm({ heading, buttonText, signup, onAuth }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const authType = signup ? "signup" : "signin";
-    onAuth(authType, { email, password, username, imageUrl }).then(() => {
-       console.log("Logged in")
-    })
+    onAuth(authType, { email, password, username, imageUrl })
+      .then(() => {
+        history.push("/")
+      })
+      .catch(() => {
+        return;
+      });
   };
+
+  history.listen(() => {
+    removeError();
+  });
 
   return (
     <div className="loginbox">
-      <form name="login" action="" method="" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h2>{heading}</h2>
+        {error.message && <div>{error.message}</div>}
         <label htmlFor="email">Email:</label>
         <input
           type="email"

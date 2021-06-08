@@ -3,12 +3,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import "./header.css";
 
-const links = [
-  { page: "Challenges", path: "/challenges" },
-  { page: "Sign in", path: "/signin" },
-  { page: "Sign up", path: "/signup" },
-  { page: "User Profile", path: "/user/1" },
-];
+const links = [{ page: "All Challenges", path: "/challenges" }];
 
 class Header extends React.Component {
   state = { clicked: false };
@@ -45,6 +40,37 @@ class Header extends React.Component {
                 </NavLink>
               </li>
             ))}
+            {this.props.currentUser.isAuthenticated && (
+              <>
+                <li>
+                  <NavLink
+                    to={`/user/${this.props.currentUser.user.id}`}
+                    className="nav-links"
+                  >
+                    Your profile
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/logout" className="nav-links">
+                    Log out
+                  </NavLink>
+                </li>
+              </>
+            )}
+            {!this.props.currentUser.isAuthenticated && (
+              <>
+                <li>
+                  <NavLink to="/signin" className="nav-links">
+                    Sign in
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/signup" className="nav-links">
+                    Sign up
+                  </NavLink>
+                </li>
+              </>
+            )}
           </ul>
 
           <div className="navbar-menu-icon" onClick={this.handleClick}>
