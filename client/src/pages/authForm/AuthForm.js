@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Auth.module.css";
 
 function AuthForm({
   heading,
@@ -19,7 +20,7 @@ function AuthForm({
     const authType = signup ? "signup" : "signin";
     onAuth(authType, { email, password, username, imageUrl })
       .then(() => {
-        history.push("/")
+        history.push("/");
       })
       .catch(() => {
         return;
@@ -31,11 +32,14 @@ function AuthForm({
   });
 
   return (
-    <div className="loginbox">
-      <form onSubmit={handleSubmit}>
-        <h2>{heading}</h2>
-        {error.message && <div>{error.message}</div>}
-        <label htmlFor="email">Email:</label>
+    <form onSubmit={handleSubmit} className={styles.container}>
+      <h2>{heading}</h2>
+      {error.message && <div>{error.message}</div>}
+      <div className={styles.inputContainer}>
+        <label htmlFor="email" className={styles.authLabel}>
+          Email:
+        </label>
+
         <input
           type="email"
           placeholder="email"
@@ -44,7 +48,12 @@ function AuthForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="password">Password:</label>
+      </div>
+      <div className={styles.inputContainer}>
+        <label htmlFor="password" className={styles.authLabel}>
+          Password:
+        </label>
+
         <input
           type="password"
           placeholder="password"
@@ -53,9 +62,14 @@ function AuthForm({
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        {signup && (
-          <div>
-            <label htmlFor="username">Username:</label>
+      </div>
+      {signup && (
+        <>
+          <div className={styles.inputContainer}>
+            <label htmlFor="username" className={styles.authLabel}>
+              Username:{" "}
+            </label>
+
             <input
               type="username"
               placeholder="username"
@@ -63,8 +77,13 @@ function AuthForm({
               name="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              className={styles.authInput}
             />
-            <label htmlFor="imageUrl">Profile picture:</label>
+          </div>
+          <div className={styles.inputContainer}>
+            <label htmlFor="imageUrl" className={styles.authLabel}>
+              Profile picture:
+            </label>
             <input
               type="imageUrl"
               placeholder="imageUrl"
@@ -74,10 +93,12 @@ function AuthForm({
               onChange={(e) => setImageUrl(e.target.value)}
             />
           </div>
-        )}
-        <button type="submit">{buttonText}</button>
-      </form>
-    </div>
+        </>
+      )}
+      <button type="submit" className={styles.submitButton}>
+        {buttonText}
+      </button>
+    </form>
   );
 }
 
