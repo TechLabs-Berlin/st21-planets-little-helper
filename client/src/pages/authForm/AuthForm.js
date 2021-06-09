@@ -13,12 +13,12 @@ function AuthForm({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  // const [imageUrl, setImageUrl] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const authType = signup ? "signup" : "signin";
-    onAuth(authType, { email, password, username, imageUrl })
+    onAuth(authType, { email, password, username})
       .then(() => {
         history.push("/");
       })
