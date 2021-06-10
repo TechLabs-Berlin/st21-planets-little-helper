@@ -46,7 +46,7 @@ class Header extends React.Component {
                   </NavLink>
                 </li>
                 <li>
-                  <button className="nav-links" onClick={this.logout}>
+                  <button className="log-out-btn" onClick={this.logout}>
                     Log out
                   </button>
                 </li>
