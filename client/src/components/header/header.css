@@ -28,6 +28,18 @@
   color: black;
 }
 
+.log-out-btn {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100%;
+  cursor: pointer;
+  background-color: rgb(153, 194, 188);
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
 /* .navbar-logo-name span {
   text-shadow: 1px 1px 1.5px #63b496;
 } */

@@ -59,6 +59,8 @@ html {
   margin-top: 20px;
   margin-bottom: 50px;
   box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
+
+  transition: all .3s ease;
 }
 
 .button-register:hover {
@@ -120,6 +122,8 @@ h3 {
   background: white;
   border: 1px solid black;
   margin: 10px;
+
+  transition: all .3s ease;
 }
 
 .btns:hover {
