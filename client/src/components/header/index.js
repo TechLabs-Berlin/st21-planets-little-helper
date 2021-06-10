@@ -2,17 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import "./header.css";
-import {logout} from "../../store/actions/auth"
-
-const links = [{ page: "All Challenges", path: "/challenges" }];
+import { logout } from "../../store/actions/auth";
 
 class Header extends React.Component {
   state = { clicked: false };
 
-  logout = e => {
-    e.preventDefault()
-    this.props.logout()
-  }
+  logout = (e) => {
+    e.preventDefault();
+    this.props.logout();
+  };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
@@ -22,14 +20,6 @@ class Header extends React.Component {
     return (
       <header>
         <nav className="navbar">
-          <NavLink to="/">
-            <img
-              src={process.env.PUBLIC_URL + "/logo.png"}
-              width="60"
-              alt="logo"
-              id="logo"
-            />
-          </NavLink>
           <NavLink to="/" className="nav-logo-link">
             <div className="navbar-logo-name">
               <span>Planet's Little Helper</span>
@@ -39,13 +29,12 @@ class Header extends React.Component {
             className={this.state.clicked ? "nav-menu active" : "nav-menu"}
             onClick={this.handleClick}
           >
-            {links.map((link) => (
-              <li key={link.page}>
-                <NavLink to={link.path} className="nav-links">
-                  {link.page}
-                </NavLink>
-              </li>
-            ))}
+            <li>
+              <NavLink to="/challenges" className="nav-links">
+                All Challenges
+              </NavLink>
+            </li>
+
             {this.props.currentUser.isAuthenticated && (
               <>
                 <li>
@@ -57,7 +46,7 @@ class Header extends React.Component {
                   </NavLink>
                 </li>
                 <li>
-                  <button className="nav-links" onClick={this.logout}>
+                  <button className="log-out-btn" onClick={this.logout}>
                     Log out
                   </button>
                 </li>
@@ -96,4 +85,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, {logout})(Header);
+export default connect(mapStateToProps, { logout })(Header);
