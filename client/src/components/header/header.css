@@ -8,7 +8,7 @@
   /* background: white; */
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.2rem;
   border-bottom: 2px solid rgb(210, 226, 221);
@@ -16,8 +16,10 @@
 }
 
 .navbar-logo-name {
-  width: 400px;
-  margin-left: 0.5rem;
+  width: 100%;
+  width: 296px;
+  margin-left: auto;
+  padding: 2rem;
   font-size: 30px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 700;

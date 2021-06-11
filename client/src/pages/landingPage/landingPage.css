@@ -32,17 +32,20 @@ html {
 }
 
 .box-img {
-  flex: 4;
+  flex: 3;
   display: flex;
   justify-content: center;
+  width: 100%;
   max-width: 512px;
-  min-width: 300px;
+  min-width: 279px;
+  /* min-width: 100px; */
   padding: 30px 15px;
   margin-bottom: 50px;
 }
 .box-img img{
   grid: box-img;
   flex: 2;
+  width: 100%;
 }
 
 .button-register {
@@ -115,13 +118,13 @@ h3 {
 .btns {
   height: 72px;
   width: 100%;
-  min-width: 340px;
-  left: 996px;
-  top: 1007px;
+  min-width: 200px;
+  /* left: 996px;
+  top: 1007px; */
   border-radius: 3px;
   background: white;
   border: 1px solid black;
-  margin: 10px;
+  margin: 10px auto;
 
   transition: all .3s ease;
 }
@@ -129,7 +132,7 @@ h3 {
 .btns:hover {
   cursor: pointer;
   transform: translateY(-0.2em);
-  box-shadow: 0 0.6em 0.6em -0.4em #1a201e;
+  box-shadow: 0 0.8em 0.8em -0.4em #1a201e;
   border: 2px solid #1a201e;
 }
 
@@ -157,5 +160,5 @@ h3 {
   width: 100%;
   max-width: 550px;
   text-align: center;
-  margin: 5px 10px;
+  margin: 0px 10px;
 }
