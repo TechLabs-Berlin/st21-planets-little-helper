@@ -9,14 +9,14 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import { connect } from "react-redux";
 import { authUser } from "./store/actions/auth";
-import {removeError} from "./store/actions/error"
+import { removeError } from "./store/actions/error";
 
 import "./App.css";
 
-function App({authUser, error, removeError, currentUser}) {
+function App({ authUser, error, removeError, currentUser }) {
   return (
     <Router className="App">
-      <Header currentUser={currentUser}/>
+      <Header currentUser={currentUser} />
       <Switch>
         <Route
           exact
@@ -47,10 +47,22 @@ function App({authUser, error, removeError, currentUser}) {
             />
           )}
         />
-        <Route path="/user/:userId" component={UserProfile} />
+        {currentUser.isAuthenticated ? (
+          <Route path="/user/:userId" component={UserProfile} />
+        ) : (
+          <Route
+            exact
+            path="/"
+            render={(props) => <LandingPage currentUser={currentUser} />}
+          />
+        )}
         <Route path="/challenges/:category" component={Category} />
         <Route path="/challenges" component={AllCategories} />
-        <Route exact path="/" render={(props) => (<LandingPage currentUser={currentUser}/>)} />
+        <Route
+          exact
+          path="/"
+          render={(props) => <LandingPage currentUser={currentUser} />}
+        />
       </Switch>
       <Footer />
     </Router>
@@ -60,8 +72,8 @@ function App({authUser, error, removeError, currentUser}) {
 function mapStateToProps(state) {
   return {
     currentUser: state.currentUser,
-    error: state.error
+    error: state.error,
   };
 }
 
-export default connect(mapStateToProps, {authUser, removeError})(App);
+export default connect(mapStateToProps, { authUser, removeError })(App);
