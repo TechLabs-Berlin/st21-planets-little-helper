@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import "./header.css";
 import { logout } from "../../store/actions/auth";
@@ -10,6 +10,7 @@ class Header extends React.Component {
   logout = (e) => {
     e.preventDefault();
     this.props.logout();
+    this.props.history.push("/")
   };
 
   handleClick = () => {
@@ -17,6 +18,7 @@ class Header extends React.Component {
   };
 
   render() {
+
     return (
       <header>
         <nav className="navbar">
@@ -85,4 +87,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { logout })(Header);
+export default withRouter(connect(mapStateToProps, { logout })(Header));
