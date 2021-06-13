@@ -9,11 +9,13 @@ const {
   getAllUsers,
   saveUserChallenge,
   removeUserChallenge,
+  getUser,
 } = require("../handlers/auth");
 
 router.post("/signup", signUp);
 router.post("/signin", signIn);
 router.get("/users", getAllUsers);
+router.get("/:id", getUser)
 router.post(
   "/:id/challenges",
   logInRequired,

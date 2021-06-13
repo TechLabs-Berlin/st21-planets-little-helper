@@ -76,4 +76,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { authUser, removeError })(App);
+export default connect(mapStateToProps, {
+  authUser,
+  removeError,
+})(App);

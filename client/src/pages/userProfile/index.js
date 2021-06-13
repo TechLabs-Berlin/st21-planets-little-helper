@@ -1,15 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchChallenges } from "../../store/actions/challenges";
+import {
+  fetchChallenges,
+  deleteChallenge,
+  populateUserChallenges,
+} from "../../store/actions/challenges";
 import { Link } from "react-router-dom";
 
 class UserProfile extends Component {
   componentDidMount() {
     this.props.fetchChallenges();
+
+    if(this.props.user.isAuthenticated){
+      this.props.populateUserChallenges(this.props.user.user.id)
+    }
   }
 
   render() {
     const challenges = this.props.challenges;
+    const userId = this.props.user.user.id;
     const userChallenges = this.props.user.user.challenges;
     let profile;
 
@@ -23,6 +32,11 @@ class UserProfile extends Component {
               <div key={c._id}>
                 <h4>{c.title}</h4>
                 <p>{c.description}</p>
+                <button
+                  onClick={() => this.props.deleteChallenge(userId, c._id)}
+                >
+                  Delete
+                </button>
               </div>
             ))}
         </div>
@@ -44,7 +58,12 @@ function mapStateToProps(state) {
   return {
     challenges: state.challenges,
     user: state.currentUser,
+    userChallenges : state.userChallenges
   };
 }
 
-export default connect(mapStateToProps, { fetchChallenges })(UserProfile);
+export default connect(mapStateToProps, {
+  fetchChallenges,
+  deleteChallenge,
+  populateUserChallenges,
+})(UserProfile);
