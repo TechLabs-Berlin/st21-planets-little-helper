@@ -61,26 +61,34 @@ function LandingPage({ currentUser }) {
         <div className="container3">
           <div className="btns-div">
             <div>
-              <button className="btns">
-                <Link to="/challenges/food">Food</Link>
-              </button>
+              <Link to="/challenges/food">
+                <button className="btns">
+                  Food
+            </button>
+              </Link>
             </div>
             <div>
-              <button className="btns">
-                <Link to="/challenges/recycling">Recycling</Link>
-              </button>
+              <Link to="/challenges/recycling">
+                <button className="btns">
+                  Recycling
+            </button>
+              </Link>
             </div>
           </div>
           <div className="btns-div">
             <div>
-              <button className="btns">
-                <Link to="/challenges/energy-consumption">Energy</Link>
-              </button>
+              <Link to="/challenges/energy-consumption">
+                <button className="btns">
+                  Energy
+            </button>
+              </Link>
             </div>
             <div>
-              <button className="btns">
-                <Link to="/challenges/transportation-and-travel">Transport & Travel</Link>
-              </button>
+              <Link to="/challenges/transportation-and-travel">
+                <button className="btns">
+                  Transport & Travel
+            </button>
+              </Link>
             </div>
           </div>
         </div>
