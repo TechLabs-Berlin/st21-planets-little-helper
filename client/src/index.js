@@ -6,8 +6,19 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { Provider} from "react-redux";
 import { configureStore } from "./store";
+import { setAuthToken, setCurrentUser } from "./store/actions/auth";
 
 const store = configureStore();
+
+if(localStorage.jwtToken){
+  setAuthToken(localStorage.jwtToken)
+
+  try{
+    store.dispatch(setCurrentUser(JSON.parse(localStorage.user)))
+  }catch(e){
+    store.dispatch(setCurrentUser({}))
+  }
+}
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,22 +1,42 @@
 .container {
-  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 15px 146px;
 }
 
-.inputContainer{
-    display: flex;
-    margin: 20px auto;
+.inputContainer {
+  display: flex;
+  margin: 20px auto;
 }
 
 .authLabel {
   margin-right: 10px;
 }
 
+.authInput {
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid #204768;
+  background-color: #b2daac;
+  padding: 15px, 146px, 15px, 146px;
+  width: 300px;
+  height: 20px;
+}
+
+.linkSignUp a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+::placeholder {
+  text-align: center;
+  color: #204768;
+}
+
 .submitButton {
   width: 200px;
   margin: 0 auto;
 }
-
-

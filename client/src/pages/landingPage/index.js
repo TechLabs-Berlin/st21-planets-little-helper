@@ -22,7 +22,7 @@ function LandingPage({ currentUser }) {
         )}
         {currentUser.isAuthenticated && (
           <div className="box-text">
-            <h1>Welcome back, {currentUser.user.username}!</h1>
+            <h1>Welcome, {currentUser.user.username}!</h1>
           </div>
         )}
         <div className="box-img">

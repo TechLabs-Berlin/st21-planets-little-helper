@@ -1,6 +1,8 @@
 export const ADD_ERROR = "ADD_ERROR";
 export const REMOVE_ERROR = "REMOVE_ERROR";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
-
+export const LOAD_CHALLENGES = "LOAD_CHALLENGES";
+export const DELETE_USER_CHALLENGE = "DELETE_CHALLENGE";
+export const SET_USER_CHALLENGE = "ADD_CHALLENGE";
 
 
