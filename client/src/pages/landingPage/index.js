@@ -15,7 +15,7 @@ function LandingPage({ currentUser }) {
               your lifestyle.
             </p>
 
-            <Link to="/form">
+            <Link to="/signup">
               <button className="button-register">Register</button>
             </Link>
           </div>
@@ -61,26 +61,34 @@ function LandingPage({ currentUser }) {
         <div className="container3">
           <div className="btns-div">
             <div>
-              <button className="btns">
-                <Link to="">Food</Link>
-              </button>
+              <Link to="/challenges/food">
+                <button className="btns">
+                  Food
+            </button>
+              </Link>
             </div>
             <div>
-              <button className="btns">
-                <Link to="">Recycling</Link>
-              </button>
+              <Link to="/challenges/recycling">
+                <button className="btns">
+                  Recycling
+            </button>
+              </Link>
             </div>
           </div>
           <div className="btns-div">
             <div>
-              <button className="btns">
-                <Link to="">Energy</Link>
-              </button>
+              <Link to="/challenges/energy-consumption">
+                <button className="btns">
+                  Energy
+            </button>
+              </Link>
             </div>
             <div>
-              <button className="btns">
-                <Link to="">Transport & Travel</Link>
-              </button>
+              <Link to="/challenges/transportation-and-travel">
+                <button className="btns">
+                  Transport & Travel
+            </button>
+              </Link>
             </div>
           </div>
         </div>

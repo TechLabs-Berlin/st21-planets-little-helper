@@ -119,11 +119,15 @@ h3 {
   height: 72px;
   width: 100%;
   min-width: 200px;
+  font-size: 32px;
   /* left: 996px;
   top: 1007px; */
   border-radius: 3px;
   background: white;
-  border: 1px solid black;
+  color: #3E93A7;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  border: 1px solid #3E93A7;
+
   margin: 10px auto;
 
   transition: all .3s ease;
@@ -132,8 +136,8 @@ h3 {
 .btns:hover {
   cursor: pointer;
   transform: translateY(-0.2em);
-  box-shadow: 0 0.8em 0.8em -0.4em #1a201e;
-  border: 2px solid #1a201e;
+  box-shadow: 0 0.8em 0.8em -0.4em gray;
+  border: 1.5px solid gray;
 }
 
 .btns a {

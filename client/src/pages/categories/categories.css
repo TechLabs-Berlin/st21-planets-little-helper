@@ -4,12 +4,30 @@
   background: white;
   margin: 0;
   padding-top: 30px;
-  text-shadow: 1.5px 1.5px 2px #63b496;
+  text-shadow: 0.5px 0.5px 1px #3e93a7;
 }
 
-h4 {
+.categories_h2 {
+  margin-top: 15px;
+}
+
+.btn_div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#register_cattegories_page {
+  margin: auto;
+  width: 450px;
+}
+
+.category-box h4 {
   letter-spacing: 1.5px;
-  text-shadow: 1.5px 1.5px 2px #63b496;
+  margin: 10px;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  color: #3e93a7;
   font-size: larger;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -18,20 +36,27 @@ h4 {
   display: flex;
   flex: auto;
   flex-flow: row wrap;
+  /* justify-content: space-evenly; */
   justify-content: center;
   background: white;
-  /* border-left: 2px solid #1eac78;
-    border-right: 2px solid #1eac78;
-    border-radius: 15px; */
+  padding-bottom: 15px;
+  margin-bottom: 0px;
+  /* width: 100%; */
 
   /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background: white; */
 }
 
+.container-div a {
+  text-decoration: none;
+  color: black;
+}
+
 .category-box {
   flex: 2;
   /* position: relative; */
+  width: 100%;
   max-width: 250px;
   min-width: 200px;
   margin: 30px 25px;
@@ -39,39 +64,24 @@ h4 {
   font-size: 20px;
   text-align: center;
   background: whitesmoke;
-  border-radius: 5%;
-  border-left: 1px solid #1eac78;
-  border-bottom: 2px solid #1eac78;
+  border: 1px solid #1dad78;
+  box-shadow: 0 0.5em 0.5em -0.3em grey;
+  justify-content: center;
 }
 
-/* .category-box p,h4{
-    margin: 5px;
-} */
-
-.imgDiv {
-  margin: auto;
-  width: 184px;
-  height: 184px;
-  border-radius: 50%;
-  background-position: center;
-  transition: all 0.5s ease-in-out;
-}
-
-.imgDiv:hover {
-  transform: translateY(-0.4em) translateX(-0.1em);
-  box-shadow: 0 0.9em 0.9em -0.3em #0c704b;
+.category-box:hover {
+  transform: translateY(-0.4em);
+  box-shadow: 0 0.9em 0.9em -0.3em #1dad78;
   border: 2px solid #1eac78;
+  transition: all 0.5s ease-in-out;
+  margin: 29px 24px;
 }
 
 .category-box img {
-  grid-area: imgDiv;
   margin: 0px;
   padding: 3px;
-  width: 98%;
-  border-radius: 50%;
-  height: fit-content;
-  background-position: center;
-  background-size: cover;
+  height: 150px;
+  width: 150px;
 }
 
 /* .category-box a{
