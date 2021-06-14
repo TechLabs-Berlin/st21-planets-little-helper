@@ -3,9 +3,6 @@ import { Link } from "react-router-dom"
 import './categories.css'
 import categories from "./categoriesArray"
 
-
-
-
 function AllCategories() {
 
 
@@ -15,7 +12,7 @@ function AllCategories() {
             <div className='container-div'>
 
                 {categories.map(cat => (
-                    <a href={cat.path}>
+                    <Link to={cat.path}>
                         <div className='category-box' key={cat.category}>
 
                             <img src={process.env.PUBLIC_URL + cat.img} alt={cat.category} />
@@ -23,9 +20,8 @@ function AllCategories() {
 
                             <p>{cat.description}</p>
 
-
                         </div>
-                    </a>
+                    </Link>
                 ))}
 
 
