@@ -77,16 +77,16 @@ function LandingPage({ currentUser }) {
           </div>
           <div className="btns-div">
             <div>
-              <Link to="/challenges/energy-consumption">
+              <Link to="/challenges/energy">
                 <button className="btns">
                   Energy
             </button>
               </Link>
             </div>
             <div>
-              <Link to="/challenges/transportation-and-travel">
+              <Link to="/challenges/travel">
                 <button className="btns">
-                  Transport & Travel
+                  Travel
             </button>
               </Link>
             </div>

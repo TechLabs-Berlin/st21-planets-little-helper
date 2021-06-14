@@ -36,7 +36,7 @@ function AuthForm({
       <h2>{heading}</h2>
       {error.message && <div>{error.message}</div>}
       <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.authLabel}></label>
+        <label htmlFor="email"></label>
 
         <input
           type="email"
@@ -49,7 +49,7 @@ function AuthForm({
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.authLabel}></label>
+        <label htmlFor="password"></label>
 
         <input
           type="password"
@@ -64,7 +64,7 @@ function AuthForm({
       {signup && (
         <>
           <div className={styles.inputContainer}>
-            <label htmlFor="username" className={styles.authLabel}></label>
+            <label htmlFor="username"></label>
 
             <input
               type="username"

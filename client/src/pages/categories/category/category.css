@@ -97,6 +97,14 @@
   padding: 0 20px 50px 20px;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex ;
+}
+
 /* .back-to-categories-div a {
   text-decoration: none;
   color: #3e93a7;
