@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AuthForm from "./pages/authForm/AuthForm";
-import UserProfile from "./pages/userProfile";
+import UserProfile from "./pages/userProfile/userProfile";
 import Category from "./pages/categories/category";
 import AllCategories from "./pages/categories";
 import LandingPage from "./pages/landingPage";
@@ -76,4 +76,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { authUser, removeError })(App);
+export default connect(mapStateToProps, {
+  authUser,
+  removeError,
+})(App);

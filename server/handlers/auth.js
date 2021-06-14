@@ -24,7 +24,7 @@ exports.signIn = async function (req, res, next) {
         username,
         profileImageUrl,
         token,
-        challenges
+        challenges,
       });
     } else {
       return next({
@@ -69,6 +69,16 @@ exports.getAllUsers = async (req, res, next) => {
   try {
     const users = await db.User.find({});
     res.status(200).json(users);
+  } catch (e) {
+    return next(e);
+  }
+};
+
+exports.getUser = async (req, res, next) => {
+  const userId = req.params.id
+  try {
+    const user = await db.User.findById(userId);
+    res.status(200).json(user);
   } catch (e) {
     return next(e);
   }
