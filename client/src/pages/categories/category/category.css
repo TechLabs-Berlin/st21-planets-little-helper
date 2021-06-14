@@ -83,9 +83,11 @@
 
 .add-challenge-btn:hover {
   cursor: pointer;
-  transform: translateY(-0.1em);
+  transform: translateY(-0.2em);
   box-shadow: 0 0.6em 0.6em -0.4em #1b4049;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
+
 }
 
 .bottom-div {
@@ -95,14 +97,14 @@
   padding: 0 20px 50px 20px;
 }
 
-.back-to-categories-div a {
+/* .back-to-categories-div a {
   text-decoration: none;
   color: #3e93a7;
   font-size: 24px;
   font-weight: 700;
   text-shadow: 0.5px 0.5px 0.5px #021114;
   letter-spacing: 0.1rem;
-}
+} */
 /* .back-to-categories-div a:hover{
     text-decoration: underline;
     text-underline-offset: 7px;
