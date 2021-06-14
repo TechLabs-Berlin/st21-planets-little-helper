@@ -21,27 +21,16 @@ function Category() {
   return (
     <div className="container-category-page">
       <div className="toggle-btns-div">
-        {challenges &&
-          categories.map((btn) => (
-            <Link to={btn.path}>
-              <button
-                className="toggle-btns"
-                id={
-                  btn.category === category
-                    ? "clicked"
-                    : btn.category === "Travel" &&
-                      category === "Transportation and travel"
-                    ? "clicked"
-                    : btn.category === "Energy" &&
-                      category === "Energy consumption"
-                    ? "clicked"
-                    : null
-                }
-              >
-                {btn.category}
-              </button>
-            </Link>
-          ))}
+
+        {challenges && categories.map((btn) => (
+          <Link to={btn.path}>
+            <button
+              className="toggle-btns"
+              id={btn.category === category ? "clicked" : null} >
+              {btn.category}
+            </button>
+          </Link>
+        ))}
       </div>
 
       {challenges &&
@@ -64,7 +53,7 @@ function Category() {
             </div>
           ))}
 
-    
+
       <div className="bottom-div">
         <h2 className="categories_h2">
           Start with small positive changes for our planet
