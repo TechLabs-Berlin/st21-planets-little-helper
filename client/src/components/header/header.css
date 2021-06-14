@@ -16,10 +16,10 @@
 }
 
 .navbar-logo-name {
-  width: 100%;
-  width: 296px;
-  margin-left: auto;
-  padding: 2rem;
+  /* width: 100%; */
+  /* width: 296px; */
+  margin-left: 2rem;
+  /* padding: 2rem; */
   font-size: 30px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -52,7 +52,8 @@
   gap: 10px;
   list-style: none;
   text-align: center;
-  width: 60vw;
+  width: 50%;
+  /* max-width: 50vw; */
   justify-content: end;
   margin-right: 1rem;
 }
@@ -96,7 +97,7 @@ li {
     height: 270px;
     position: absolute;
     top: 60px;
-    left: -100%;
+    left: -250%;
     opacity: 1;
     transition: all 0.5s ease;
   }

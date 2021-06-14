@@ -15,7 +15,7 @@ function LandingPage({ currentUser }) {
               your lifestyle.
             </p>
 
-            <Link to="/form">
+            <Link to="/signup">
               <button className="button-register">Register</button>
             </Link>
           </div>

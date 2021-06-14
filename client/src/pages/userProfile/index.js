@@ -15,15 +15,7 @@ function UserProfile() {
   return (
     <div>
       <h1>User Profile</h1>
-      {challenges &&
-        challenges.map((c) => (
-          <div key={c._id}>
-            <h1>
-              {c.title} - {c.category}
-            </h1>
-            <p>{c.description}</p>
-          </div>
-        ))}
+      
     </div>
   );
 }
