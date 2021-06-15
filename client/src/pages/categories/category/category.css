@@ -1,6 +1,9 @@
 #clicked {
-  color: white;
-  background-color: #3e93a7;
+  /* color: white;
+  background-color: #3e93a7; */
+  font-weight: 700;
+  /* border: 1px solid black; */
+
 }
 
 .container-category-page {
@@ -13,36 +16,44 @@
   background: whitesmoke;
   margin-bottom: 10px;
 }
+
 .toggle-btns-div {
+  background-color: white;
   justify-content: center;
   width: 90%;
   max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-top: 30px;
+  margin-top: 30px;
+  border-bottom: 2px solid black;
+  border-radius: 6px;
 }
 
 .toggle-btns {
-  color: white;
-  background-color: rgba(62, 147, 167, 0.22);
+  /* color: white; */
+  /* background-color: rgba(62, 147, 167, 0.22); */
+  border-radius:5px;
+  background-color: white;
   border: none;
-  border-radius: 5px;
+  font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 400;
   width: 100%;
   padding: auto;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
-  margin-top: 0px;
-  box-shadow: 0 0.3em 0.3em -0.4em #1b4049;
+  margin: 0px 1px;
+  /* box-shadow: 0 0.3em 0.3em -0.4em #1b4049; */
 }
 
 .toggle-btns:hover {
+  margin: 0;
   padding-bottom: 8px;
-  border: 0.5px solid #3e93a7;
+  border: 1px solid black;
   cursor: pointer;
-  transform: translateY(-0.1em);
-  box-shadow: 0 0.4em 0.4em -0.4em #1b4049;
+  /* transform: translateY(-0.1em); */
+  box-shadow: 0 0.7em 0.7em -0.7em #1b4049;
+  /* transition: all 0.2s ease-in-out; */
 }
 
 .callengeBox {
@@ -52,16 +63,19 @@
   width: 90%;
   max-width: 940px;
   background-color: white;
-  border: 2px solid #1dad78;
+  /* border: 2px solid #1dad78; */
   border-radius: 1.5%;
   padding: 0 30px 15px 30px;
   margin: 1rem 1rem 0 1rem;
+  /* border-bottom: 1px solid black; */
+  box-shadow: 20px 26px 10px -24px #1b4049;
 }
+
 .callengeBox h2 {
-  color: #3e93a7;
+  color: #FB6B4A;
   width: 100%;
   margin-top: 10px;
-  font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .p-div {
   align-content: flex-start;
@@ -69,16 +83,17 @@
 }
 .p-div p {
     line-height: 1.7rem;
-  font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .add-challenge-btn {
   color: white;
-  background-color: #3e93a7;
+  background-color: #FB6B4A;
   font-size: 20px;
   border: none;
   padding: 15px 25px;
   border-radius: 50px;
-  box-shadow: 0 0.5em 0.5em -0.4em #1b4049;
+  box-shadow: 0 0.2em 0.2em -0.2em black;
+  font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .add-challenge-btn:hover {
