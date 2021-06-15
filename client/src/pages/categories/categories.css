@@ -65,13 +65,14 @@
   text-align: center;
   background: whitesmoke;
   border: 1px solid #1dad78;
+  border-radius: 5px;
   box-shadow: 0 0.5em 0.5em -0.3em grey;
   justify-content: center;
 }
 
 .category-box:hover {
   transform: translateY(-0.4em);
-  box-shadow: 0 0.9em 0.9em -0.3em #1dad78;
+  box-shadow: 0 0.7em 0.7em -0.3em #0f6143;
   border: 2px solid #1eac78;
   transition: all 0.5s ease-in-out;
   margin: 29px 24px;

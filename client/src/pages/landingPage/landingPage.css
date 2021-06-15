@@ -62,7 +62,6 @@ html {
   margin-top: 20px;
   margin-bottom: 50px;
   box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
-
   transition: all .3s ease;
 }
 
@@ -126,7 +125,7 @@ h3 {
   background: white;
   color: #3E93A7;
   text-shadow: 0.5px 0.5px 0.5px black;
-  border: 1px solid #3E93A7;
+  border: 1px solid #1DAD78;
 
   margin: 10px auto;
 
