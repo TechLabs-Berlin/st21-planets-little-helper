@@ -7,6 +7,20 @@ import { logout } from "../../store/actions/auth";
 class Header extends React.Component {
   state = { clicked: false };
 
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({clicked: false});
+    this.forceUpdate();
+  };
+
+
   logout = (e) => {
     e.preventDefault();
     this.props.logout();
