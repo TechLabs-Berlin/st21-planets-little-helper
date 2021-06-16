@@ -33,7 +33,7 @@ html {
   min-width: 279px;
   /* min-width: 100px; */
   padding: 30px 15px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .box-img img {
@@ -165,7 +165,7 @@ h3 {
   .box-text {
     font-size: 1.6em;
     width: 100%;
-    min-width: 350px;
+    min-width: 430px;
     justify-content: center;
     text-align: left;
   }
@@ -191,12 +191,14 @@ h3 {
   .box-img {
     display: flex;
     justify-content: center;
-    max-width: 212px;
-    min-width: 50%;
     padding: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
+  .box-img img {
+    max-width: 80%;
+  }
+  
   .btns {
     height: 64px;
     font-size: 1.7em;
@@ -245,5 +247,8 @@ h3 {
   .btns {
     height: 50px;
     font-size: 1.5em;
+  }
+  .container3 {
+    padding-bottom: 25px;
   }
 }
