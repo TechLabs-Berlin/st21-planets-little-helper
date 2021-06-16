@@ -118,7 +118,7 @@ exports.removeUserChallenge = async (req, res) => {
     await db.User.findByIdAndUpdate(
       userId,
       {
-        $pull: { challenges: challengeId },
+        $pull: { challenges: {id: challengeId} },
       },
       { new: true }
     );
