@@ -75,7 +75,7 @@ exports.getAllUsers = async (req, res, next) => {
 };
 
 exports.getUser = async (req, res, next) => {
-  const userId = req.params.id
+  const userId = req.params.id;
   try {
     const user = await db.User.findById(userId);
     res.status(200).json(user);
@@ -88,10 +88,20 @@ exports.saveUserChallenge = async (req, res, next) => {
   const { challengeId } = req.body;
   const userId = req.params.id;
   try {
+    const challenge = await db.ChallengeModel.findById(challengeId);
+    const { title, description } = challenge;
+
     await db.User.findByIdAndUpdate(
       userId,
       {
-        $push: { challenges: challengeId },
+        $push: {
+          challenges: {
+            id: challengeId,
+            title: title,
+            description: description,
+            completed: false,
+          },
+        },
       },
       { new: true }
     );
@@ -113,6 +123,27 @@ exports.removeUserChallenge = async (req, res) => {
       { new: true }
     );
     res.status(200).json({ message: challengeId });
+  } catch (e) {
+    return next(e);
+  }
+};
+
+exports.toggleComplete = async (req, res) => {
+  let { challengeId, update } = req.body;
+  const userId = req.params.id;
+
+  update = JSON.parse(update);
+
+  try {
+    await db.User.updateOne(
+      { _id: userId, "challenges.id": challengeId },
+      {
+        $set: {
+          "challenges.$.completed": update,
+        },
+      }
+    );
+    res.status(200).json({ message: "updated completed property" });
   } catch (e) {
     return next(e);
   }

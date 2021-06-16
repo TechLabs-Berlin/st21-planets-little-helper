@@ -1,25 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
-  fetchChallenges,
   deleteChallenge,
   populateUserChallenges,
+  completeChallenge
 } from "../../store/actions/challenges";
 import { Link } from "react-router-dom";
 import styles from "./userProfile.module.css";
 
 class UserProfile extends Component {
   componentDidMount() {
-    this.props.fetchChallenges();
-
     if (this.props.user.isAuthenticated) {
       this.props.populateUserChallenges(this.props.user.user.id);
     }
   }
 
   render() {
-    const challenges = this.props.challenges;
     const userId = this.props.user.user.id;
+
     const userChallenges = this.props.userChallenges;
     let profile;
 
@@ -27,21 +25,21 @@ class UserProfile extends Component {
       profile = (
         <div className={styles.container}>
           <h2>Your challenges:</h2>
-          {challenges
-            .filter((c) => userChallenges.includes(c._id))
-            .map((c) => (
-              <div key={c._id} className={styles.challenge}>
-                <div>
-                  <h4>{c.title}</h4>
-                  <p>{c.description}</p>
-                </div>
-                <button
-                  onClick={() => this.props.deleteChallenge(userId, c._id)}
-                >
-                  Remove challenge
-                </button>
+          {userChallenges.map((c) => (
+            <div key={c.id} className={styles.challenge}>
+              <div>
+                <h4>{c.title}</h4>
+                <p>{c.description}</p>
               </div>
-            ))}
+              <button className={c.completed ? styles.completed : styles.default} onClick={() => this.props.completeChallenge(userId, c.id, !c.completed)}>{c.completed ? 'Completed' : 'Mark as completed'}</button>
+              <button
+                onClick={() => this.props.deleteChallenge(userId, c.id)}
+                className={styles.delete}
+              >
+                Remove challenge
+              </button>
+            </div>
+          ))}
         </div>
       );
     } else {
@@ -66,7 +64,8 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {
-  fetchChallenges,
   deleteChallenge,
   populateUserChallenges,
+  completeChallenge
+  
 })(UserProfile);
