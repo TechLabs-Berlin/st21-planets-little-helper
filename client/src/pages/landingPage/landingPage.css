@@ -1,7 +1,6 @@
 html {
   background: whitesmoke;
 }
-
 .container {
   position: relative;
   width: 100%;
@@ -15,11 +14,10 @@ html {
 
 .box-text {
   position: relative;
-  max-width: 600px;
-  min-width: 400px;
+  max-width: 1000px;
   margin-left: 50px;
   margin-right: 50px;
-  font-size: 28px;
+  font-size:xx-large;
   text-align: left;
   flex: 4;
 }
@@ -28,10 +26,7 @@ html {
   flex: 3;
   display: flex;
   justify-content: center;
-  width: 100%;
   max-width: 40%;
-  min-width: 279px;
-  /* min-width: 100px; */
   padding: 30px 15px;
   margin-bottom: 10px;
 }
@@ -46,12 +41,11 @@ html {
   height: 108px;
   color: white;
   width: 100%;
-  max-width: 490px;
-  min-width: 340px;
+  max-width: 80%;
   border-radius: 5px;
   border: 2px solid #1dad78;
   background: #1dad78;
-  font-size: 36px;
+  font-size: xx-large;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -83,7 +77,7 @@ h3 {
   margin-top: 40px;
   margin-bottom: 20px;
   padding-top: 10px;
-  font-size: 35px;
+  font-size: xx-large;
 }
 
 .how-text {
@@ -91,10 +85,9 @@ h3 {
   margin-right: 25px;
   text-align: center;
   font-weight: 400;
-  font-size: 20px;
+  font-size: xx-large;
   flex: 4;
-  max-width: 300px;
-  min-width: 200px;
+  max-width:25%
 }
 
 h3 {
@@ -108,7 +101,7 @@ h3 {
   height: 72px;
   width: 100%;
   min-width: 200px;
-  font-size: 32px;
+  font-size: xx-large;
   border-radius: 3px;
   background: white;
   color: #3e93a7;
@@ -145,6 +138,44 @@ h3 {
   margin: 0px 10px;
 }
 
+@media screen and (max-width: 1300px){
+
+
+.box-text {
+  max-width: 600px;
+  min-width: 400px;
+  font-size: 28px;
+}
+
+.box-img {
+  min-width: 279px;
+}
+
+.button-register {
+  width: 100%;
+  max-width: 490px;
+  min-width: 340px;
+  font-size: 36px;
+}
+
+h2,
+h3 {
+  font-size: 35px;
+}
+
+.how-text {
+  font-size: 20px;
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.btns {
+  width: 100%;
+  min-width: 200px;
+  font-size: 32px;
+}
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 1.8em;
@@ -152,7 +183,6 @@ h3 {
 
   h2,
   h3 {
-    text-align: center;
     margin-top: 10px;
     padding: 20px 0;
     font-size: 30px;
@@ -164,16 +194,7 @@ h3 {
 
   .box-text {
     font-size: 1.6em;
-    width: 100%;
     min-width: 430px;
-    justify-content: center;
-    text-align: left;
-  }
-
-  .box-text p,
-  h1 {
-    text-align: left;
-    width: auto;
   }
 
   .box-text p {
@@ -182,15 +203,11 @@ h3 {
 
   .button-register {
     height: 88px;
-    color: white;
-    width: 100%;
     min-width: unset;
     font-size: 1.3em;
   }
 
   .box-img {
-    display: flex;
-    justify-content: center;
     padding: 0;
     margin-bottom: 40px;
   }
@@ -219,21 +236,15 @@ h3 {
 
   .box-text {
     font-size: 1.4em;
-    width: 100%;
-    min-width: 250px;
   }
 
   .button-register {
     height: 70px;
-    color: white;
-    width: 100%;
-    min-width: unset;
+    width: 80%;
     font-size: 1.1em;
   }
 
   .box-img {
-    display: flex;
-    justify-content: center;
     max-width: 212px;
     min-width: 50%;
     padding: 0;
