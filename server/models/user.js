@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
   profileImageUrl: {
     type: String,
   },
-  challenges: [String],
+  challenges: [Object],
 });
 
 userSchema.pre("save", async function (next) {

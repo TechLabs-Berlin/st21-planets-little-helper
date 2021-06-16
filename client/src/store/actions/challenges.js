@@ -1,5 +1,5 @@
 import { addError } from "./error";
-import { LOAD_CHALLENGES, DELETE_USER_CHALLENGE, SET_USER_CHALLENGE } from "../actionTypes";
+import { LOAD_CHALLENGES, DELETE_USER_CHALLENGE, SET_USER_CHALLENGE, SET_CHALLENGE_AS_COMPLETED } from "../actionTypes";
 import { apiCall } from "../../services/api";
 import axios from "axios";
 
@@ -17,6 +17,25 @@ export const setChallenges = (challenges) => ({
   type: SET_USER_CHALLENGE,
   challenges,
 });
+
+export const setComplete = (id, update) => ({
+  type: SET_CHALLENGE_AS_COMPLETED,
+  id,
+  update,
+})
+
+export const completeChallenge = (userId, challengeId, update) => {
+  return dispatch => {
+    return axios({method: "post", url: `http://localhost:8000/api/user/${userId}/completed`, data: {
+      challengeId,
+      update
+    }})
+    .then((res) => {
+      dispatch(setComplete(challengeId, update))
+    })
+    
+  }
+}
 
 export const populateUserChallenges = (userId) => {
   return dispatch => {

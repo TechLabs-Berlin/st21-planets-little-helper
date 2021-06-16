@@ -2,6 +2,7 @@ import {
   LOAD_CHALLENGES,
   DELETE_USER_CHALLENGE,
   SET_USER_CHALLENGE,
+  SET_CHALLENGE_AS_COMPLETED,
 } from "../actionTypes";
 
 const challenges = (state = [], action) => {
@@ -19,7 +20,9 @@ const userChallenges = (state = [], action) => {
     case SET_USER_CHALLENGE:
       return [...action.challenges];
     case DELETE_USER_CHALLENGE:
-      return state.filter((challenge) => challenge !== action.id);
+      return state.filter((challenge) => challenge.id !== action.id);
+    case SET_CHALLENGE_AS_COMPLETED:
+      return state.map((c) => c.id === action.id ? {...c, completed: action.update} : c)
     default:
       return state;
   }

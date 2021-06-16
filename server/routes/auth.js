@@ -10,12 +10,13 @@ const {
   saveUserChallenge,
   removeUserChallenge,
   getUser,
+  toggleComplete,
 } = require("../handlers/auth");
 
 router.post("/signup", signUp);
 router.post("/signin", signIn);
 router.get("/users", getAllUsers);
-router.get("/:id", getUser)
+router.get("/:id", getUser);
 router.post(
   "/:id/challenges",
   logInRequired,
@@ -27,6 +28,13 @@ router.delete(
   logInRequired,
   ensureCorrectUser,
   removeUserChallenge
+);
+
+router.post(
+  "/:id/completed",
+  logInRequired,
+  ensureCorrectUser,
+  toggleComplete
 );
 
 module.exports = router;
