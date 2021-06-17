@@ -5,7 +5,6 @@
     0%,
     rgb(248, 251, 251) 100%
   );
-  /* background: white; */
   height: 80px;
   display: flex;
   justify-content: space-around;
@@ -16,10 +15,7 @@
 }
 
 .navbar-logo-name {
-  /* width: 100%; */
-  /* width: 296px; */
   margin-left: 2rem;
-  /* padding: 2rem; */
   font-size: 30px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: 700;
@@ -43,10 +39,6 @@
   margin-top: -5px;
 }
 
-/* .navbar-logo-name span {
-  text-shadow: 1px 1px 1.5px #63b496;
-} */
-
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -54,7 +46,6 @@
   list-style: none;
   text-align: center;
   width: 50%;
-  /* max-width: 50vw; */
   justify-content: end;
   margin-right: 1rem;
 }
