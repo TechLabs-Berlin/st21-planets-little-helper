@@ -1,6 +1,5 @@
 import { addError } from "./error";
-import { LOAD_CHALLENGES, DELETE_USER_CHALLENGE, SET_USER_CHALLENGE, SET_CHALLENGE_AS_COMPLETED } from "../actionTypes";
-import { apiCall } from "../../services/api";
+import { LOAD_CHALLENGES, DELETE_USER_CHALLENGE, GET_USER_CHALLENGES, SET_CHALLENGE_AS_COMPLETED, ADD_USER_CHALLENGE } from "../actionTypes";
 import axios from "axios";
 
 export const loadChallenges = (challenges) => ({
@@ -13,8 +12,13 @@ export const remove = (id) => ({
   id,
 });
 
-export const setChallenges = (challenges) => ({
-  type: SET_USER_CHALLENGE,
+export const add = (challenge) => ({
+  type: ADD_USER_CHALLENGE,
+  challenge,
+});
+
+export const getChallenges = (challenges) => ({
+  type: GET_USER_CHALLENGES,
   challenges,
 });
 
@@ -37,12 +41,12 @@ export const completeChallenge = (userId, challengeId, update) => {
   }
 }
 
-export const populateUserChallenges = (userId) => {
+export const getUserChallenges = (userId) => {
   return dispatch => {
     return axios({method: "get", url: `http://localhost:8000/api/user/${userId}`})
     .then(res => {
       const userChallenges = res.data.challenges;
-      dispatch(setChallenges(userChallenges))
+      dispatch(getChallenges(userChallenges))
     })
     .catch(err => addError(err.message))
   }
@@ -57,8 +61,24 @@ export const deleteChallenge = (userId, challengeId) => {
         challengeId,
       },
     })
-      .then((res) => {
+      .then(() => {
         dispatch(remove(challengeId));
+      })
+      .catch((err) => addError(err.message));
+  };
+};
+
+export const addChallenge = (userId, challengeId) => {
+  return (dispatch) => {
+    return axios({
+      method: "post",
+      url: `http://localhost:8000/api/user/${userId}/challenges`,
+      data: {
+        challengeId,
+      },
+    })
+      .then((res) => {
+        dispatch(add(res.data));
       })
       .catch((err) => addError(err.message));
   };
@@ -66,9 +86,9 @@ export const deleteChallenge = (userId, challengeId) => {
 
 export const fetchChallenges = () => {
   return (dispatch) => {
-    return apiCall("get", "http://localhost:8000/api/challenges")
+    return axios("http://localhost:8000/api/challenges")
       .then((res) => {
-        dispatch(loadChallenges(res));
+        dispatch(loadChallenges(res.data));
       })
       .catch((err) => addError(err.message));
   };
