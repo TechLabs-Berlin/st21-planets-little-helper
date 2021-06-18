@@ -42,7 +42,7 @@ exports.signUp = async (req, res, next) => {
   try {
     //create user
     let user = await db.User.create(req.body);
-    let { id, username, profileImageUrl } = user;
+    let { id, username, profileImageUrl, challenges } = user;
     // create token
     let token = jwt.sign(
       { id, username, profileImageUrl },
@@ -52,6 +52,7 @@ exports.signUp = async (req, res, next) => {
       id,
       username,
       profileImageUrl,
+      challenges,
       token,
     });
   } catch (err) {
@@ -105,7 +106,14 @@ exports.saveUserChallenge = async (req, res, next) => {
       },
       { new: true }
     );
-    res.status(200).json({ message: challengeId });
+    res
+      .status(200)
+      .json({
+        id: challengeId,
+        title: title,
+        description: description,
+        completed: false,
+      });
   } catch (e) {
     return next(e);
   }
@@ -118,7 +126,7 @@ exports.removeUserChallenge = async (req, res) => {
     await db.User.findByIdAndUpdate(
       userId,
       {
-        $pull: { challenges: {id: challengeId} },
+        $pull: { challenges: { id: challengeId } },
       },
       { new: true }
     );

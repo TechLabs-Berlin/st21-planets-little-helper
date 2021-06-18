@@ -1,36 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { formatUrlParams } from "../../../utils/utils";
-import axios from "axios";
+import { connect } from "react-redux";
 import categories from "../categoriesArray";
 import "./category.css";
+import {
+  addChallenge,
+  fetchChallenges,
+} from "../../../store/actions/challenges";
 
-function Category() {
+function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
+  const userId = currentUser.user.id;
   let { category } = useParams();
   category = formatUrlParams(category);
-  const [challenges, setChallenges] = useState();
 
   useEffect(() => {
-    axios("http://localhost:8000/api/challenges")
-      .then((response) => setChallenges(response.data))
-      .catch((e) => {
-        console.log(e);
-      });
-  }, [challenges]);
+    fetchChallenges();
+  }, []);
 
   return (
     <div className="container-category-page">
       <div className="toggle-btns-div">
-
-        {challenges && categories.map((btn) => (
-          <Link to={btn.path}>
-            <button
-              className="toggle-btns"
-              id={btn.category === category ? "clicked" : null} >
-              {btn.category}
-            </button>
-          </Link>
-        ))}
+        {challenges &&
+          categories.map((btn) => (
+            <Link to={btn.path} key={btn.path}>
+              <button
+                className="toggle-btns"
+                id={btn.category === category ? "clicked" : null}
+              >
+                {btn.category}
+              </button>
+            </Link>
+          ))}
       </div>
 
       {challenges &&
@@ -49,28 +50,48 @@ function Category() {
                   {cat.description}
                 </p>
               </div>
-              <button className="add-challenge-btn">Add challenge</button>
+              {currentUser.isAuthenticated && (
+                <button
+                  className="add-challenge-btn"
+                  onClick={() => addChallenge(userId, cat._id)}
+                  disabled={currentUser.user.challenges
+                    .map((c) => c.id)
+                    .includes(cat._id)}
+                >
+                  Add challenge
+                </button>
+              )}
             </div>
           ))}
 
-
-      <div className="bottom-div">
-        <h2 className="categories_h2">
-          Start with small positive changes for our planet
-        </h2>
-        <div className="btn_div">
-          <Link to="/signup">
-            <button className="button-register" id="register_cattegories_page">
-              Register
-            </button>
-          </Link>
+      {!currentUser.isAuthenticated && (
+        <div className="bottom-div">
+          <h2 className="categories_h2">
+            Start with small positive changes for our planet
+          </h2>
+          <div className="btn_div">
+            <Link to="/signup">
+              <button
+                className="button-register"
+                id="register_cattegories_page"
+              >
+                Register
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
 
-export default Category;
+function mapStateToProps(state) {
+  return {
+    currentUser: state.currentUser,
+    challenges: state.challenges,
+  };
+}
 
-
-
+export default connect(mapStateToProps, { addChallenge, fetchChallenges })(
+  Category
+);

@@ -12,7 +12,7 @@ function AllCategories() {
             <div className='container-div'>
 
                 {categories.map(cat => (
-                    <Link to={cat.path}>
+                    <Link to={cat.path} key={cat.path}>
                         <div className='category-box' key={cat.category}>
 
                             <img src={process.env.PUBLIC_URL + cat.img} alt={cat.category} />
