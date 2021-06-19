@@ -16,7 +16,7 @@ function UserProfile({
 }) {
   useEffect(() => {
     getUserChallenges(currentUser.user.id);
-  });
+  }, []);
 
   const userId = currentUser.user.id;
   let profile;
