@@ -20,6 +20,7 @@
 
 .btn_div a {
   width: 65%;
+  max-width: 512px;
   text-align: center;
 }
 
@@ -41,10 +42,9 @@
   display: flex;
   flex: auto;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  /* justify-content: space-around; */
+  justify-content: center;
   background: white;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   margin-bottom: 0px;
   /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -59,9 +59,9 @@
 .category-box {
   flex: 2;
   width: 100%;
-  max-width: 250px;
+  max-width: 240px;
   min-width: 200px;
-  height: 80%;
+  height: 350px;
   margin: 30px 25px;
   padding: 15px;
   font-size: 20px;
@@ -90,40 +90,76 @@
 }
 
 @media (max-width: 1345px) {
+  .categories_h2 {
+    font-size: 30px;
+  }
   .category-box {
     flex: 2;
     width: 100%;
     max-width: 213px;
     min-width: 200px;
-    height: 75%;
-    font-size: 19px;
+    height: auto;
+    font-size: 18px;
+  }
+  .category-box:hover {
+    margin: 29px 24px;
+  }
+  #register_cattegories_page {
+    font-size: 26px;
+  }
+  .btn_div a {
+    width: 65%;
+    max-width: 450px;
   }
 }
 
 @media (max-width: 1201px) {
-  .container-div {
-    justify-content: center;
-    padding: 0 9%;
-  }
 
   .category-box {
-    max-width: 250px;
-    min-width: 200px;
+    width: 100%;
+    max-width: 213px;
+    min-width: 160px;
+    font-size: 17px;
+    margin: 30px 15px;
+  }
+  .category-box:hover {
+    margin: 29px 14px;
+  }
+  .category-box img {
+    width: 85px;
+    height: 85px;
   }
 }
 @media (max-width: 992px) {
-  .container-div {
-    padding: 0;
+  
+  .category-box{
+    max-width: 195px;
+    min-width: 155px;
+    font-size: 15px;
+    margin: 30px 10px;
+    padding: 5px;
+  }
+  .category-box:hover {
+    margin: 29px 9px;
+  }
+  .category-box img {
+    width: 75px;
+    height: 75px;
   }
 }
 
 @media (max-width: 768px) {
+  .container-div {
+    justify-content: center;
+    padding: 0 9%;
+  }
   .category-box {
     width: 100%;
-    max-width: 177px;
-    font-size: 1.1em;
-    height: 75%;
+    max-width: 190px;
+    /* font-size: 15px; */
+    /* margin: 20px; */
     margin: 30px 20px;
+
   }
 
   .category-box:hover {
@@ -134,11 +170,6 @@
     padding: 0 5px;
   }
 
-  .category-box img {
-    width: 85px;
-    height: 85px;
-  }
-  
   .container-div {
     justify-content: center;
     /* justify-content: space-between; */
@@ -152,15 +183,14 @@
 @media (max-width: 576px) {
   .category-box {
     max-width: 155px;
-    min-width: 100px;
-    height: 248px;
+    min-width: 130px;
     margin: 20px 20px;
-    padding: 10px;
+    padding: 5px;
     font-size: 0.9em;
   }
 
   .category-box:hover {
-    margin: 17px 19px;
+    margin: 19px 19px;
   }
 
   .category-box img {
@@ -171,21 +201,22 @@
 }
 
 @media (max-width: 481px) {
+  .container-div {
+    padding: 0;
+  }
   .h1-categories {
     padding-top: 15px;
   }
 
   .category-box {
     max-width: 135px;
-    min-width: 50px;
-    height: 192px;
-    margin: 18px 20px 13px 18px;
-    padding: 15px;
+    min-width: 125px;
+    margin: 17px ;
     font-size: 0.75em;
   }
 
   .category-box:hover {
-    margin: 14px 18px;
+    margin: 16px 16px;
   }
 
   .category-box h4 {
@@ -205,34 +236,33 @@
 
   .category-box {
     max-width: 118px;
-    min-width: 70px;
-    height: 180px;
-    margin: 20px 25px 17px 25px;
-    padding: 5px 5px 20px 5px;
+    min-width: 100px;
+    /* height: 180px; */
+    /* margin: 20px 25px 17px 25px; */
+    /* padding: 5px 5px 20px 5px; */
     font-size: 0.7em;
   }
 
   .category-box:hover {
-    margin: 14px 24px;
+    margin: 16px 16px;
   }
 }
 
 @media (max-width: 377px) {
   .categories_h2 {
     font-size: 1.2em;
+    padding:10px;
   }
 
   .category-box {
     max-width: 120px;
-    min-width: 70px;
-    height: 180px;
+    /* min-width: 100px; */
     margin: 10px;
-    padding: 5px 5px 20px 5px;
     font-size: 0.69em;
   }
 
   .category-box:hover {
-    margin: 8px 9px;
+    margin: 9px 9px;
   }
 
   #register_cattegories_page {
@@ -246,15 +276,14 @@
   }
 
   .category-box {
-    max-width: inherit;
+    min-width: 100%;
     height: 150px;
-    margin: 10px 0;
+    margin: 7px 0;
     padding: 0;
-    font-size: 0.69em;
   }
 
   .category-box:hover {
-    margin: 9px 0;
+    margin: 6px 0;
   transform: translateZ(-0.3em);
   }
 
@@ -264,26 +293,16 @@
 }
 
 @media (max-width: 246px) {
-  
-  .container-div {
-    padding: 5px 4px 15px 4px;
-  }
 
   .category-box {
-    max-width: inherit;
-    height: inherit;
-    margin: 10px 0;
-    padding: 0;
-    font-size: 0.69em;
+    height: auto;
   }
 
   .category-box h4 {
-    font-size: 1.5em;
+    font-size: small;
   }
 
   .btn_div a {
-    width: 90%;
-    text-align: center;
+    font-size: xx-small;
   }
-  
 }
