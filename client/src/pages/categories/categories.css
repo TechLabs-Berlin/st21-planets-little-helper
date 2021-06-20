@@ -129,6 +129,10 @@
     width: 85px;
     height: 85px;
   }
+  .btn_div a {
+    width: 65%;
+    max-width: 430px;
+  }
 }
 @media (max-width: 992px) {
   
