@@ -42,7 +42,7 @@ exports.signUp = async (req, res, next) => {
   try {
     //create user
     let user = await db.User.create(req.body);
-    let { id, username, profileImageUrl } = user;
+    let { id, username, profileImageUrl, challenges } = user;
     // create token
     let token = jwt.sign(
       { id, username, profileImageUrl },
@@ -52,6 +52,7 @@ exports.signUp = async (req, res, next) => {
       id,
       username,
       profileImageUrl,
+      challenges,
       token,
     });
   } catch (err) {
@@ -75,7 +76,7 @@ exports.getAllUsers = async (req, res, next) => {
 };
 
 exports.getUser = async (req, res, next) => {
-  const userId = req.params.id
+  const userId = req.params.id;
   try {
     const user = await db.User.findById(userId);
     res.status(200).json(user);
@@ -88,14 +89,31 @@ exports.saveUserChallenge = async (req, res, next) => {
   const { challengeId } = req.body;
   const userId = req.params.id;
   try {
+    const challenge = await db.ChallengeModel.findById(challengeId);
+    const { title, description } = challenge;
+
     await db.User.findByIdAndUpdate(
       userId,
       {
-        $push: { challenges: challengeId },
+        $push: {
+          challenges: {
+            id: challengeId,
+            title: title,
+            description: description,
+            completed: false,
+          },
+        },
       },
       { new: true }
     );
-    res.status(200).json({ message: challengeId });
+    res
+      .status(200)
+      .json({
+        id: challengeId,
+        title: title,
+        description: description,
+        completed: false,
+      });
   } catch (e) {
     return next(e);
   }
@@ -108,11 +126,32 @@ exports.removeUserChallenge = async (req, res) => {
     await db.User.findByIdAndUpdate(
       userId,
       {
-        $pull: { challenges: challengeId },
+        $pull: { challenges: { id: challengeId } },
       },
       { new: true }
     );
     res.status(200).json({ message: challengeId });
+  } catch (e) {
+    return next(e);
+  }
+};
+
+exports.toggleComplete = async (req, res) => {
+  let { challengeId, update } = req.body;
+  const userId = req.params.id;
+
+  update = JSON.parse(update);
+
+  try {
+    await db.User.updateOne(
+      { _id: userId, "challenges.id": challengeId },
+      {
+        $set: {
+          "challenges.$.completed": update,
+        },
+      }
+    );
+    res.status(200).json({ message: "updated completed property" });
   } catch (e) {
     return next(e);
   }

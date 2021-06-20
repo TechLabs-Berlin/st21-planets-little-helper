@@ -17,7 +17,6 @@ function AllCategories() {
 
                             <img src={process.env.PUBLIC_URL + cat.img} alt={cat.category} />
                             <h4>{cat.category}</h4>
-
                             <p>{cat.description}</p>
 
                         </div>
