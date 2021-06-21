@@ -1,40 +1,50 @@
-import React from 'react'
-import { Link } from "react-router-dom"
-import './categories.css'
-import categories from "./categoriesArray"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./categories.css";
+import categories from "./categoriesArray";
+import { connect } from "react-redux";
 
-function AllCategories() {
+function AllCategories({ currentUser }) {
+  return (
+    <div>
+      <h1 className="h1-categories">Categories</h1>
+      <div className="container-div">
+        {categories.map((cat) => (
+          <Link to={cat.path} className="category-box" key={cat.category}>
+            <div>
+              <img src={process.env.PUBLIC_URL + cat.img} alt={cat.category} />
+              <h4>{cat.category}</h4>
+              <p>{cat.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
 
-
-    return (
+      {!currentUser.isAuthenticated && (
         <div>
-            <h1 className='h1-categories'>Categories</h1>
-            <div className='container-div'>
-
-                {categories.map(cat => (
-                    <Link to={cat.path} className='category-box' key={cat.category}>
-                        <div  >
-
-                            <img src={process.env.PUBLIC_URL + cat.img} alt={cat.category} />
-                            <h4>{cat.category}</h4>
-                            <p>{cat.description}</p>
-
-                        </div>
-                    </Link>
-                ))}
-
-
-            </div>
-
-
-            <h2 className = "categories_h2">Start with small positive changes for our planet</h2>
-            <div className="btn_div">
-                <Link to="/signup">
-                    <button className="button-register" id="register_cattegories_page">Register</button>
-                </Link>
-            </div>
+          <h2 className="categories_h2">
+            Start with small positive changes for our planet
+          </h2>
+          <div className="btn_div">
+            <Link to="/signup">
+              <button
+                className="button-register"
+                id="register_cattegories_page"
+              >
+                Register
+              </button>
+            </Link>
+          </div>
         </div>
-    )
+      )}
+    </div>
+  );
 }
 
-export default AllCategories
+function mapStateToProps(state) {
+  return {
+    currentUser: state.currentUser,
+  };
+}
+
+export default connect(mapStateToProps)(AllCategories);
