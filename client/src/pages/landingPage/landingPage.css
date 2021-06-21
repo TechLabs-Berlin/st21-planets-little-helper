@@ -189,19 +189,27 @@ h3 {
     margin: 0 50px;
   }
 
+  .box-text h1{
+  text-shadow: 4px 0 0 white, -4px 0 0 white, 0 4px 0 white, 0 -4px 0 white, 3px 3px white, -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white;
+  }
+  .box-text p{
+    text-shadow: 3px 0 0 white, -3px 0 0 white, 0 3px 0 white, 0 -3px 0 white, 2px 2px white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white;
+    }
+
    /*--------- This is setting a background picture of planet Earth */
   .container::before{
     position: absolute;
     content: "";
     background-image: url("earth.png");
-    background-size: 30%;
+    margin: 10px 5px;
+    background-size: 35%;
     background-position: top right;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 /* ----------------------------------------------------------------- */
 
@@ -212,6 +220,7 @@ h3 {
     height: 0;
   }
   /* -------------------------------------------------------------------- */
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -278,6 +287,10 @@ h3 {
   .box-text {
     font-size: 1.4em;
   }
+  
+  .box-text h1,p{
+    text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+    }
 
   .button-register {
     height: 70px;
