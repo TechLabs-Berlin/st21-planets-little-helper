@@ -12,8 +12,8 @@ function AllCategories() {
             <div className='container-div'>
 
                 {categories.map(cat => (
-                    <Link to={cat.path} className='category-box'>
-                        <div  key={cat.category}>
+                    <Link to={cat.path} className='category-box' key={cat.category}>
+                        <div  >
 
                             <img src={process.env.PUBLIC_URL + cat.img} alt={cat.category} />
                             <h4>{cat.category}</h4>

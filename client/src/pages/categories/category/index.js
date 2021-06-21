@@ -16,6 +16,7 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
 
   useEffect(() => {
     fetchChallenges();
+    // eslint-disable-next-line
   }, []);
 
   return (

@@ -16,6 +16,7 @@ function UserProfile({
 }) {
   useEffect(() => {
     getUserChallenges(currentUser.user.id);
+    // eslint-disable-next-line
   }, []);
 
   const userId = currentUser.user.id;
