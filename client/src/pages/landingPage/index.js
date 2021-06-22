@@ -22,7 +22,17 @@ function LandingPage({ currentUser }) {
         )}
         {currentUser.isAuthenticated && (
           <div className="box-text">
-            <h1>Welcome, {currentUser.user.username}!</h1>
+            <h1 className="h1LogedIn">Hi {currentUser.user.username}!</h1>
+            <p className="pLogedIn">
+            Nice to have you on our journey to have sustainable positive impact on our environment.
+            </p>
+            <p className="pLogedIn">
+            Let’s begin!
+            </p>
+
+            <Link to="/challenges">
+              <button className="btnChallenges">Challenges</button>
+            </Link>
           </div>
         )}
         <div className="box-img">
