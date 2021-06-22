@@ -23,6 +23,14 @@ html {
   flex: 4;
 }
 
+.name{
+  /* text-transform: capitalize; */
+  /* font-style: italic; */
+  font-weight: 600;
+  padding-left: 15px;
+  text-shadow: 0.5px 0.5px 1px #317e67;
+}
+
 .box-img {
   flex: 3;
   display: flex;
@@ -53,6 +61,7 @@ html {
   box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
   transition: all 0.3s ease;
 }
+
 .btnChallenges{
   background-color: #204768;
   border: 2px solid#204768;
@@ -65,6 +74,7 @@ html {
   box-shadow: 0 0.5em 0.5em -0.2em #0c704b;
   border: 2px solid #1eac78;
 }
+
 .btnChallenges:hover {
   cursor: pointer;
   transform: translateY(-0.1em);
