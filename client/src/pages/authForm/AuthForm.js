@@ -32,8 +32,10 @@ function AuthForm({
   });
 
   return (
-    <form onSubmit={handleSubmit} className={styles.container}>
-      <h2>{heading}</h2>
+    <div className={styles.contentBox}>
+    <div className={styles.formContainer}>
+    <form onSubmit={handleSubmit} className={styles.formDiv}>
+      <h2 className={styles.h2Form}>{heading}</h2>
       {error.message && <div>{error.message}</div>}
       <div className={styles.inputContainer}>
         <label htmlFor="email"></label>
@@ -95,6 +97,8 @@ function AuthForm({
         {buttonText}
       </button>
     </form>
+    </div>
+    </div>
   );
 }
 
