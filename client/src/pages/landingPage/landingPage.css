@@ -23,12 +23,19 @@ html {
   flex: 4;
 }
 
-.name{
+.name {
   /* text-transform: capitalize; */
   /* font-style: italic; */
   font-weight: 600;
   padding-left: 15px;
   text-shadow: 0.5px 0.5px 1px #317e67;
+}
+
+/* .pLogedIn{
+  margin-top: 50px;
+} */
+#pLetsBegin {
+  margin-top: 70px;
 }
 
 .box-img {
@@ -46,7 +53,8 @@ html {
   width: 100%;
 }
 
-.button-register, .btnChallenges {
+.button-register,
+.btnChallenges {
   height: 108px;
   color: white;
   width: 100%;
@@ -62,10 +70,9 @@ html {
   transition: all 0.3s ease;
 }
 
-.btnChallenges{
+.btnChallenges {
   background-color: #204768;
   border: 2px solid#204768;
-
 }
 
 .button-register:hover {
@@ -162,15 +169,19 @@ h3 {
 }
 
 @media screen and (max-width: 1440px) {
-  h1{
-  font-size: 50px;
-}
-.h1LogedIn{
-  font-size: 45px;
-}
-.pLogedIn{
-  font-size: 25px;
-}
+  h1 {
+    font-size: 50px;
+  }
+  .h1LogedIn {
+    font-size: 45px;
+  }
+  .pLogedIn {
+    font-size: 25px;
+  }
+
+  #pLetsBegin {
+    margin-top: 60px;
+  }
 
   .box-text {
     max-width: 600px;
@@ -179,14 +190,15 @@ h3 {
     font-size: 28px;
   }
 
-  .box-text p{
+  .box-text p {
     line-height: 1.3em;
   }
   .box-img {
     min-width: 260px;
   }
 
-  .button-register, .btnChallenges {
+  .button-register,
+  .btnChallenges {
     height: 88px;
     width: 100%;
     max-width: 75%;
@@ -212,19 +224,23 @@ h3 {
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .how-text {
     font-size: 20px;
   }
-  .h1LogedIn{
+  .h1LogedIn {
     margin-top: 60px;
     font-size: 40px;
   }
-  
-  .pLogedIn{
+
+  .pLogedIn {
     font-size: 22px;
   }
-  .box-text p{
+
+  #pLetsBegin {
+    margin-top: 50px;
+  }
+  .box-text p {
     line-height: 1.4em;
     font-size: 25px;
   }
@@ -234,21 +250,22 @@ h3 {
   .how-text {
     margin: 0 67px;
   }
-  .h1LogedIn{
+  .h1LogedIn {
     font-size: 37px;
   }
-  
-  .pLogedIn{
+
+  .pLogedIn {
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 835px) {
-  .h1LogedIn{
+  .h1LogedIn {
     font-size: 35px;
     margin-top: 40px;
   }
-  .button-register,.btnChallenges {
+  .button-register,
+  .btnChallenges {
     margin-bottom: 25px;
   }
 
@@ -268,7 +285,12 @@ h3 {
       2px 2px white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white;
   }
 
-  .button-register,.btnChallenges {
+  #pLetsBegin {
+    margin-top: 40px;
+  }
+
+  .button-register,
+  .btnChallenges {
     height: 88px;
     width: 70%;
     min-width: unset;
@@ -313,7 +335,7 @@ h3 {
     font-size: 1.8em;
   }
 
-  .h1LogedIn{
+  .h1LogedIn {
     font-size: 32px;
     margin-top: 37px;
   }
@@ -329,15 +351,21 @@ h3 {
     margin-bottom: 0;
   }
 
-  .box-text{
+  .box-text {
     max-width: 85%;
     padding-left: 10%;
   }
+
   .box-text p {
     line-height: 1.5em;
   }
 
-  .button-register,.btnChallenges {
+  #pLetsBegin {
+    margin-top: 30px;
+  }
+
+  .button-register,
+  .btnChallenges {
     height: 88px;
     min-width: unset;
     font-size: 1.3em;
@@ -357,11 +385,14 @@ h3 {
   h1 {
     font-size: 1.5em;
   }
-  .h1LogedIn{
+  .h1LogedIn {
     font-size: 30px;
     margin-top: 37px;
   }
-  
+  .name {
+    padding-left: 3%;
+  }
+
   h2,
   h3 {
     margin-top: 10px;
@@ -371,13 +402,14 @@ h3 {
 
   .box-text {
     font-size: 1.4em;
-  }
-
-  .box-text {
     padding: 0;
     width: 100%;
     min-width: 100%;
     text-align: center;
+  }
+
+  #pLetsBegin {
+    margin-top: 25px;
   }
 
   .box-text p,
@@ -393,7 +425,8 @@ h3 {
       1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
   }
 
-  .button-register,.btnChallenges {
+  .button-register,
+  .btnChallenges {
     height: 60px;
     width: 60%;
     font-size: 1.1em;
@@ -428,7 +461,7 @@ h3 {
   h1 {
     margin-top: 15px;
   }
-  .h1LogedIn{
+  .h1LogedIn {
     font-size: 28px;
     margin-top: 37px;
   }
@@ -465,7 +498,7 @@ h3 {
     font-size: 1.3em;
   }
 
-  .h1LogedIn{
+  .h1LogedIn {
     font-size: 26px;
     margin-top: 30px;
   }
@@ -475,7 +508,8 @@ h3 {
     line-height: 1.3em;
   }
 
-  .button-register, .btnChallenges {
+  .button-register,
+  .btnChallenges {
     height: 50px;
     font-size: 1em;
   }
@@ -491,7 +525,7 @@ h3 {
     font-size: 1.2em;
   }
 
-.h1LogedIn{
+  .h1LogedIn {
     font-size: 24px;
     margin-top: 27px;
   }
@@ -501,7 +535,8 @@ h3 {
     line-height: 1.3em;
   }
 
-  .button-register, .btnChallenges {
+  .button-register,
+  .btnChallenges {
     width: 60%;
     font-size: 0.9em;
   }
@@ -517,8 +552,8 @@ h3 {
   h1 {
     font-size: 1em;
   }
-  
-  .h1LogedIn{
+
+  .h1LogedIn {
     font-size: 20px;
     margin-top: 27px;
   }
@@ -533,7 +568,8 @@ h3 {
     line-height: 1.3em;
   }
 
-  .button-register, .btnChallenges {
+  .button-register,
+  .btnChallenges {
     height: 40px;
     width: 80%;
     font-size: 0.7em;
