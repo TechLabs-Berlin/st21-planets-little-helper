@@ -1,12 +1,63 @@
+.pageContent{
+  display: flex;
+  position: relative;
+  background: white;
+  width: 100%;
+  justify-content: center;
+}
+.pageContent::before {
+  position: absolute;
+  content: "";
+  background-image: url("./earthCroppedBottom.png");
+  background-size: 30%;
+  background-position: bottom left;
+  background-attachment: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.profileDiv{
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border: 1px solid black;
+  min-width: 25%;
+}
+
+.pictureDiv{
+  margin-top: 70px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pictureDiv img{
+  /* height: 100%; */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .container {
-  padding: 0 3.5rem;
+  position: relative;
+  padding-left:  6rem;
+}
+
+.container h2{
+  width: 85%;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+  margin-bottom: 0;
 }
 
 .challenge {
-  background-color: #eee;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  padding: 7px;
+  width: 85%;
 }
 
 .challenge button {
@@ -16,6 +67,7 @@
   border-radius: 3px;
   cursor: pointer;
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .completed {
