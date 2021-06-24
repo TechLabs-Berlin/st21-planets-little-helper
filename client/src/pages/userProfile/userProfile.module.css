@@ -1,10 +1,11 @@
-.pageContent{
+.pageContent {
   display: flex;
   position: relative;
   background: white;
   width: 100%;
   justify-content: center;
-  font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Spartan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .pageContent::before {
   position: absolute;
@@ -21,7 +22,7 @@
   opacity: 0.4;
 }
 
-.profileDiv{
+.profileDiv {
   position: relative;
   display: flex;
   flex-flow: column wrap;
@@ -30,24 +31,24 @@
   min-width: 25%;
 }
 
-.profileDiv p{
+.profileDiv p {
   text-align: center;
 }
 
-.profileDiv span{
+.profileDiv span {
   font-weight: 600;
   font-style: italic;
 }
 
-.pictureDiv{
+.pictureDiv {
   margin-top: 70px;
   border: 2px solid #204768;
   border-radius: 50%;
   background-color: white;
-  width: 40%;
+  width: 8.5em;
 }
 
-.pictureDiv img{
+.pictureDiv img {
   /* height: 100%; */
   width: 100%;
   object-fit: cover;
@@ -56,13 +57,13 @@
 
 .container {
   position: relative;
-  padding-left:  6rem;
+  padding-left: 6rem;
 }
 
-.container h2{
+.container h2 {
   color: #204768;
   width: 85%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #204768;
   padding-bottom: 30px;
   letter-spacing: 1.5px;
   margin-bottom: 0;
@@ -77,7 +78,7 @@
   border-radius: 10px;
 }
 
-.challenge::before{
+.challenge::before {
   content: "";
   position: absolute;
   background-color: white;
@@ -89,14 +90,14 @@
   border-radius: 10px;
 }
 
-.challenge h4{
+.challenge h4 {
   position: relative;
   font-size: 20px;
   margin: 4px 0 22px;
   letter-spacing: 0.5px;
 }
 
-.challenge p{
+.challenge p {
   position: relative;
   font-size: 18px;
   text-shadow: none;
@@ -129,11 +130,11 @@
 }
 
 .default {
-  color:  #204768;
+  color: #204768;
 }
 
 .delete {
-  color: #FB6B4A;
+  color: #fb6b4a;
 }
 
 @media (max-width: 1024px) {
@@ -141,17 +142,21 @@
     background-size: 26rem;
   }
 
-  .pictureDiv{
-  width: 70%;
+  .pictureDiv {
+    width: 8em;
   }
 
   .container {
-    padding-left:  5rem;
+    padding-left: 4rem;
   }
 }
 
-@media (max-width: 768px) { 
-  .profileDiv p{
+@media (max-width: 768px) {
+  .pictureDiv {
+    width: 7em;
+  }
+
+  .profileDiv p {
     margin-bottom: 0;
   }
 
@@ -160,50 +165,49 @@
   }
 
   .container {
-    padding-left:  3.5rem;
+    padding-left: 3rem;
   }
 
-  .container h2{
+  .container h2 {
     padding-bottom: 25px;
   }
 
-  .challenge h4{
+  .challenge h4 {
     font-size: 19px;
     margin: 4px 0 15px;
   }
 
-  .challenge p{
+  .challenge p {
     font-size: 17px;
   }
 }
 
 @media screen and (max-width: 576px) {
-  
   .pageContent::before {
     background-size: 24rem;
   }
 
   .container {
-    padding-left:  3rem;
+    padding-left: 2rem;
   }
 
-  .pictureDiv{
+  .pictureDiv {
     margin-top: 30px;
-   width: 70%;
+    width: 70%;
   }
-  .profileDiv p{
+  .profileDiv p {
     text-shadow: none;
-    }
-  .container h2{
+  }
+  .container h2 {
     padding-bottom: 20px;
   }
 
-  .challenge h4{
+  .challenge h4 {
     font-size: 18px;
     margin: 4px 0 15px;
   }
 
-  .challenge p{
+  .challenge p {
     font-size: 16px;
   }
 
@@ -214,25 +218,24 @@
 }
 
 @media screen and (max-width: 481px) {
-  
   .pageContent::before {
     background-size: 20rem;
   }
 
   .container {
-    padding-left:  2rem;
+    padding-left: 1rem;
   }
 
-  .pictureDiv{
+  .pictureDiv {
     margin-top: 20px;
-   width: 75%;
+    width: 75%;
   }
 
-  .challenge h4{
+  .challenge h4 {
     font-size: 18px;
   }
 
-  .challenge p{
+  .challenge p {
     font-size: 15px;
   }
 
@@ -243,36 +246,35 @@
 }
 
 @media screen and (max-width: 425px) {
-  
   .pageContent::before {
     background-size: 18rem;
   }
 
   .container {
-    padding-left:  1.3rem;
+    padding-left: 1.3rem;
   }
 
-  .pictureDiv{
+  .pictureDiv {
     margin-top: 20px;
-   width: 75%;
+    width: 75%;
   }
 
-  .container h2{
+  .container h2 {
     width: 90%;
     padding-bottom: 15px;
     margin-top: 5px;
     font-size: 24px;
     letter-spacing: 1px;
   }
-  .challenge{
+  .challenge {
     width: 90%;
   }
 
-  .challenge h4{
+  .challenge h4 {
     font-size: 18px;
   }
 
-  .challenge p{
+  .challenge p {
     font-size: 15px;
   }
 
@@ -283,34 +285,33 @@
 }
 
 @media screen and (max-width: 377px) {
-  
   .pageContent::before {
     background-size: 16rem;
   }
 
   .container {
-    padding-left:  1.1rem;
+    padding-left: 1.1rem;
   }
 
-  .pictureDiv{
+  .pictureDiv {
     margin-top: 10px;
-   /* width: 80%; */
+    /* width: 80%; */
   }
 
-  .profileDiv p{
-font-size: 12px;
-}
+  .profileDiv p {
+    font-size: 12px;
+  }
 
-  .container h2{
+  .container h2 {
     font-size: 20px;
   }
 
-  .challenge h4{
+  .challenge h4 {
     font-size: 16px;
     margin-bottom: 0;
   }
 
-  .challenge p{
+  .challenge p {
     font-size: 13px;
   }
 
@@ -322,28 +323,27 @@ font-size: 12px;
 }
 
 @media screen and (max-width: 320px) {
-  
   .pageContent::before {
     background-size: 14rem;
   }
 
   .container {
-    padding-left:  0.5rem;
+    padding-left: 0.5rem;
   }
 
-  .profileDiv p{
-font-size: 10px;
-}
+  .profileDiv p {
+    font-size: 10px;
+  }
 
-  .container h2{
+  .container h2 {
     font-size: 17px;
   }
 
-  .challenge h4{
+  .challenge h4 {
     font-size: 14px;
   }
 
-  .challenge p{
+  .challenge p {
     margin-top: 8px;
     font-size: 11px;
   }
@@ -355,29 +355,28 @@ font-size: 10px;
 }
 
 @media screen and (max-width: 246px) {
-  
   .pageContent::before {
     background-size: 12rem;
   }
 
-  .profileDiv p{
-font-size: 8.5px;
-}
+  .profileDiv p {
+    font-size: 8.5px;
+  }
 
-  .container h2{
+  .container h2 {
     font-size: 14px;
     padding: 10px 0;
   }
 
-  .challenge{
+  .challenge {
     padding: 6px;
   }
 
-  .challenge h4{
+  .challenge h4 {
     font-size: 12px;
   }
 
-  .challenge p{
+  .challenge p {
     font-size: 10.5px;
   }
 
