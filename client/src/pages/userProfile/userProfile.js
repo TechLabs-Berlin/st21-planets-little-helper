@@ -65,10 +65,31 @@ function UserProfile({
     );
   } else {
     profile = (
-      <div>
+      <div className={styles.pageContent}>
+      <div className={styles.profileDiv}>
+
+          <div className={styles.pictureDiv}>
+            <img src={process.env.PUBLIC_URL + "/images/mask.png"}
+              alt="profile pic"
+              id="profilePic" />
+          </div>
+
+          <p>Username: <span>{currentUser.user.username}</span></p>
+          <p>E-mail: <span>{currentUser.user.eMail}</span></p>
+        </div>
+
+      <div className={styles.noChallengescontainer}>
         <h2>You have no challenges</h2>
-        <Link to="/challenges">Go to challenges</Link>
+        <div className={styles.noChallenges}>
+        <button className={styles.goToChallengesBtn}>
+        <Link to="/challenges">
+        Go to challenges
+        </Link>
+        </button>
+        </div>
       </div>
+      </div>
+
     );
   }
 
