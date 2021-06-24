@@ -24,28 +24,43 @@ function UserProfile({
 
   if (currentUser.user.challenges && currentUser.user.challenges.length > 0) {
     profile = (
-      <div className={styles.container}>
-        <h2>Your challenges:</h2>
-        {currentUser.user.challenges.map((c) => (
-          <div key={c.id} className={styles.challenge}>
-            <div>
-              <h4>{c.title}</h4>
-              <p>{c.description}</p>
-            </div>
-            <button
-              className={c.completed ? styles.completed : styles.default}
-              onClick={() => completeChallenge(userId, c.id, !c.completed)}
-            >
-              {c.completed ? "Completed" : "Mark as completed"}
-            </button>
-            <button
-              onClick={() => deleteChallenge(userId, c.id)}
-              className={styles.delete}
-            >
-              Remove challenge
-            </button>
+      <div className={styles.pageContent}>
+
+        <div className={styles.profileDiv}>
+
+          <div className={styles.pictureDiv}>
+            <img src={process.env.PUBLIC_URL + "/images/mask.png"}
+              alt="profile pic"
+              id="profilePic" />
           </div>
-        ))}
+
+          <p>Username: <span>{currentUser.user.username}</span></p>
+          <p>E-mail: <span>{currentUser.user.eMail}</span></p>
+        </div>
+
+        <div className={styles.container}>
+          <h2>Your challenges</h2>
+          {currentUser.user.challenges.map((c) => (
+            <div key={c.id} className={styles.challenge}>
+              <div>
+                <h4>{c.title}</h4>
+                <p>{c.description}</p>
+              </div>
+              <button
+                className={c.completed ? styles.completed : styles.default}
+                onClick={() => completeChallenge(userId, c.id, !c.completed)}
+              >
+                {c.completed ? "Completed" : "Mark as complete"}
+              </button>
+              <button
+                onClick={() => deleteChallenge(userId, c.id)}
+                className={styles.delete}
+              >
+                Remove
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     );
   } else {

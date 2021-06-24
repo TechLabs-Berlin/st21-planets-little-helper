@@ -17,7 +17,7 @@
 .navbar-logo-name {
   margin-left: 2rem;
   font-size: 30px;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  /* font-family: "Roboto", "Helvetica Neue", sans-serif; */
   font-weight: 700;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .log-out-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   text-align: center;
   line-height: 100%;
   cursor: pointer;
@@ -73,7 +73,7 @@ li {
   display: none;
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 835px) {
   .navbar {
     position: relative;
   }
