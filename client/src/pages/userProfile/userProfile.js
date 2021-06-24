@@ -29,7 +29,7 @@ function UserProfile({
         <div className={styles.profileDiv}>
 
           <div className={styles.pictureDiv}>
-            <img src={process.env.PUBLIC_URL + "/images/profile.png"}
+            <img src={process.env.PUBLIC_URL + "/images/mask.png"}
               alt="profile pic"
               id="profilePic" />
           </div>
@@ -39,7 +39,7 @@ function UserProfile({
         </div>
 
         <div className={styles.container}>
-          <h2>Your challenges:</h2>
+          <h2>Your challenges</h2>
           {currentUser.user.challenges.map((c) => (
             <div key={c.id} className={styles.challenge}>
               <div>
@@ -50,13 +50,13 @@ function UserProfile({
                 className={c.completed ? styles.completed : styles.default}
                 onClick={() => completeChallenge(userId, c.id, !c.completed)}
               >
-                {c.completed ? "Completed" : "Mark as completed"}
+                {c.completed ? "Completed" : "Mark as complete"}
               </button>
               <button
                 onClick={() => deleteChallenge(userId, c.id)}
                 className={styles.delete}
               >
-                Remove challenge
+                Remove
               </button>
             </div>
           ))}
