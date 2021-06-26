@@ -13,12 +13,17 @@ function AuthForm({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  // const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const authType = signup ? "signup" : "signin";
-    onAuth(authType, { email, password, username })
+    const formData = new FormData();
+    formData.append("imageUrl", imageUrl);
+    formData.append("email", email);
+    formData.append("password", password);
+    formData.append("username", username);
+    onAuth(authType, formData)
       .then(() => {
         history.push("/");
       })
@@ -31,73 +36,79 @@ function AuthForm({
     removeError();
   });
 
+  const handleFile = (e) => {
+    setImageUrl(e.target.files[0]);
+  };
+
   return (
     <div className={styles.contentBox}>
-    <div className={styles.formContainer}>
-    <form onSubmit={handleSubmit} className={styles.formDiv}>
-      <h2 className={styles.h2Form}>{heading}</h2>
-      {error.message && <div>{error.message}</div>}
-      <div className={styles.inputContainer}>
-        <label htmlFor="email"></label>
-
-        <input
-          type="email"
-          placeholder="email"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className={styles.authInput}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password"></label>
-
-        <input
-          type="password"
-          placeholder="password"
-          id="password"
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className={styles.authInput}
-        />
-      </div>
-      {signup && (
-        <>
+      <div className={styles.formContainer}>
+        <form
+          onSubmit={handleSubmit}
+          className={styles.formDiv}
+          encType="multipart/form-data"
+        >
+          <h2 className={styles.h2Form}>{heading}</h2>
+          {error.message && <div>{error.message}</div>}
           <div className={styles.inputContainer}>
-            <label htmlFor="username"></label>
+            <label htmlFor="email"></label>
 
             <input
-              type="username"
-              placeholder="username"
-              id="username"
-              name="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              type="email"
+              placeholder="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className={styles.authInput}
             />
           </div>
-          {/* <div className={styles.inputContainer}>
-            <label htmlFor="imageUrl" className={styles.authLabel}>
-              Profile picture:
-            </label>
+          <div className={styles.inputContainer}>
+            <label htmlFor="password"></label>
+
             <input
-              type="imageUrl"
-              placeholder="imageUrl"
-              id="imageUrl"
-              name="imageUrl"
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value)}
+              type="password"
+              placeholder="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className={styles.authInput}
             />
-          </div> */}
-        </>
-      )}
-      <button type="submit" className={styles.submitButton}>
-        {buttonText}
-      </button>
-    </form>
-    </div>
+          </div>
+          {signup && (
+            <>
+              <div className={styles.inputContainer}>
+                <label htmlFor="username"></label>
+
+                <input
+                  type="username"
+                  placeholder="username"
+                  id="username"
+                  name="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className={styles.authInput}
+                />
+              </div>
+              <div className={styles.inputContainer}>
+                <label htmlFor="imageUrl" className={styles.authLabel}></label>
+                <input
+                  type="file"
+                  placeholder="imageUrl"
+                  id="imageUrl"
+                  name="imageUrl"
+                  accept=".jpg"
+                  onChange={handleFile}
+                />
+              </div>
+            </>
+          )}
+          <button type="submit" className={styles.submitButton}>
+            {buttonText}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

@@ -11,6 +11,8 @@ const DEFAULT_STATE = {
   user: {
     id: null, 
     username: null,
+    email: null,
+    imageUrl: null,
     challenges: []
   },
 };
