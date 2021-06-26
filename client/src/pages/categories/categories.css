@@ -4,7 +4,7 @@
   background: white;
   margin: 0;
   padding-top: 30px;
-  text-shadow: 0.5px 0.5px 1px #3e93a7;
+  /* text-shadow: 0.5px 0.5px 1px #3e93a7; */
 }
 
 .categories_h2 {
@@ -32,8 +32,8 @@
 .category-box h4 {
   letter-spacing: 1.5px;
   margin: 10px;
-  text-shadow: 0.5px 0.5px 0.5px black;
-  color: #3e93a7;
+  /* text-shadow: 0.5px 0.5px 0.5px black; */
+  color: #204768;
   font-size: larger;
   /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
 }
@@ -61,14 +61,14 @@
   width: 100%;
   max-width: 240px;
   min-width: 200px;
-  height: 350px;
+  height: 310px;
   margin: 30px 25px;
   padding: 15px;
   font-size: 20px;
   text-align: center;
   background: whitesmoke;
-  border: 1px solid #1dad78;
-  border-radius: 5px;
+  border: 1px solid #204768;
+  /* border-radius: 5px; */
   box-shadow: 0 0.5em 0.5em -0.3em grey;
   justify-content: center;
   transition: all 0.5s ease-in-out;
@@ -76,8 +76,8 @@
 
 .category-box:hover {
   transform: translateY(-0.4em);
-  box-shadow: 0 0.7em 0.7em -0.3em #0f6143;
-  border: 2px solid #1eac78;
+  box-shadow: 0 0.7em 0.7em -0.3em #204768;
+  border: 2px solid #204768;
   transition: all 0.3s ease-in-out;
   margin: 29px 24px;
 }
@@ -85,14 +85,26 @@
 .category-box img {
   margin: 0px;
   padding: 3px;
-  height: 115px;
-  width: 115px;
+  padding-top: 15px;
+  height: 65px;
+  /* width: 115px; */
+}
+
+.pLastOnPage{
+  text-align: center;
+  margin: 40px 0;
+  font-size: 27px;
 }
 
 @media (max-width: 1345px) {
+  .h1-categories {
+    font-size: 40px;
+  }
+
   .categories_h2 {
     font-size: 30px;
   }
+
   .category-box {
     flex: 2;
     width: 100%;
@@ -101,19 +113,30 @@
     height: auto;
     font-size: 18px;
   }
+
   .category-box:hover {
     margin: 29px 24px;
   }
+
   #register_cattegories_page {
     font-size: 26px;
   }
+
   .btn_div a {
     width: 65%;
     max-width: 450px;
   }
+
+  .pLastOnPage{
+    font-size: 26px;
+  }
 }
 
 @media (max-width: 1201px) {
+
+  .h1-categories {
+    font-size: 35px;
+  }
 
   .category-box {
     width: 100%;
@@ -122,20 +145,32 @@
     font-size: 17px;
     margin: 30px 15px;
   }
+
   .category-box:hover {
     margin: 29px 14px;
   }
+
   .category-box img {
-    width: 85px;
-    height: 85px;
+    /* width: 55px; */
+    height: 55px;
   }
+
   .btn_div a {
     width: 65%;
     max-width: 430px;
   }
+
+  .pLastOnPage{
+    margin: 40px 0;
+    font-size: 25px;
+  }
 }
 @media (max-width: 992px) {
   
+  .h1-categories {
+    font-size: 33px;
+  }
+
   .category-box{
     max-width: 195px;
     min-width: 155px;
@@ -147,27 +182,43 @@
     margin: 29px 9px;
   }
   .category-box img {
-    width: 75px;
-    height: 75px;
+    /* width: 75px; */
+    padding-top: 10px;
+    height: 50px;
+  }
+
+  .categories_h2 {
+    font-size: 1.7em;
+    padding:0px;
+    margin: 20 10px;
+  }
+
+  .pLastOnPage{
+    margin: 35px 0;
+    font-size: 24px;
   }
 }
 
 @media (max-width: 768px) {
+
+  .h1-categories {
+    font-size: 30px;
+  }
+
   .container-div {
     justify-content: center;
-    padding: 0 9%;
+    padding: 15px 9%;
   }
   .category-box {
     width: 100%;
-    max-width: 190px;
+    max-width: 185px;
     /* font-size: 15px; */
     /* margin: 20px; */
-    margin: 30px 20px;
-
+    margin: 20px 20px;
   }
 
   .category-box:hover {
-    margin: 29px 19px;
+    margin: 19px 19px;
   }
   
   .category-box p {
@@ -182,9 +233,29 @@
   .btn_div {
     margin-top: 10px;
    }
+
+   .categories_h2 {
+    font-size: 1.6em;
+    margin: 15px 7px;
+  }
+
+   .pLastOnPage{
+    margin: 15px 7px;
+    font-size: 23px;
+  }
 }
 
 @media (max-width: 576px) {
+
+  .container-div{
+    padding-top: 0;
+  }
+
+  .h1-categories {
+    font-size: 28px;
+    padding-top: 15px;
+  }
+
   .category-box {
     max-width: 155px;
     min-width: 130px;
@@ -198,19 +269,30 @@
   }
 
   .category-box img {
-    width: 55px;
-    height: 55px;
+    /* width: 55px; */
+    height: 45px;
   }
   
+  .categories_h2 {
+    font-size: 1.5em;
+  }
+
+  .pLastOnPage{
+    font-size: 19px;
+  }
 }
 
 @media (max-width: 481px) {
   .container-div {
     padding: 0;
+    padding-bottom: 15px;
   }
+  
   .h1-categories {
-    padding-top: 15px;
+    font-size: 25px;
+    padding-top: 10px;
   }
+ 
 
   .category-box {
     max-width: 135px;
@@ -228,14 +310,23 @@
   }
 
   .category-box img {
-    width: 45px;
-    height: 45px;
+    /* width: 45px; */
+    height: 35px;
+  }
+
+  .categories_h2 {
+    font-size: 1.3em;
+  }
+
+  .pLastOnPage{
+    margin: 10px 5px;
+    font-size: 17px;
   }
 }
 
 @media (max-width: 425px) {
   .h1-categories {
-    padding-top: 13px;
+    font-size: 23px;
   }
 
   .category-box {
@@ -250,9 +341,23 @@
   .category-box:hover {
     margin: 16px 16px;
   }
+
+  .categories_h2 {
+    font-size: 1.2em;
+  }
+
+  .pLastOnPage{
+    margin: 7px 5px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 377px) {
+
+  .h1-categories {
+    font-size: 21px;
+  }
+
   .categories_h2 {
     font-size: 1.2em;
     padding:10px;
@@ -272,11 +377,24 @@
   #register_cattegories_page {
     height: 3em;
   }
+
+  .categories_h2 {
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+
+  .pLastOnPage{
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 320px) {
   .container-div {
     padding: 5px 4px 15px 4px;
+  }
+
+  .h1-categories {
+    font-size: 20px;
   }
 
   .category-box {
@@ -294,9 +412,24 @@
   .category-box h4 {
     font-size: 1.5em;
   }
+
+  .categories_h2 {
+    font-size: 1em;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  .pLastOnPage{
+    margin: 0 5px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 246px) {
+
+  .h1-categories {
+    font-size: 18px;
+  }
 
   .category-box {
     height: auto;
@@ -308,5 +441,14 @@
 
   .btn_div a {
     font-size: xx-small;
+  }
+
+  .categories_h2 {
+    font-size: 0.9em;
+  }
+
+  .pLastOnPage{
+    margin: 5px;
+    font-size: 13px;
   }
 }

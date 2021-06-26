@@ -18,7 +18,17 @@ function AllCategories({ currentUser }) {
             </div>
           </Link>
         ))}
+
       </div>
+
+      {currentUser.isAuthenticated && (
+        <div>
+          <h2 className="categories_h2">
+            Start with small positive changes for our planet
+          </h2>
+          <p className="pLastOnPage">Just choose a category and begin your journey.</p>
+        </div>
+      )}
 
       {!currentUser.isAuthenticated && (
         <div>
