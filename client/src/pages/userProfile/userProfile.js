@@ -25,17 +25,25 @@ function UserProfile({
   if (currentUser.user.challenges && currentUser.user.challenges.length > 0) {
     profile = (
       <div className={styles.pageContent}>
-
         <div className={styles.profileDiv}>
-
           <div className={styles.pictureDiv}>
-            <img src={process.env.PUBLIC_URL + "/images/mask.png"}
+            <img
+              src={
+                currentUser.user.imageUrl
+                  ? "http://localhost:8000/" + currentUser.user.imageUrl
+                  : process.env.PUBLIC_URL + "/images/mask.png"
+              }
               alt="profile pic"
-              id="profilePic" />
+              id="profilePic"
+            />
           </div>
 
-          <p>Username: <span>{currentUser.user.username}</span></p>
-          <p>E-mail: <span>{currentUser.user.eMail}</span></p>
+          <p>
+            Username: <span>{currentUser.user.username}</span>
+          </p>
+          <p>
+            E-mail: <span>{currentUser.user.email}</span>
+          </p>
         </div>
 
         <div className={styles.container}>

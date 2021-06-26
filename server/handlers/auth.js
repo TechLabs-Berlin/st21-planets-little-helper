@@ -1,5 +1,6 @@
 const db = require("../models");
 const jwt = require("jsonwebtoken");
+const { Mongoose } = require("mongoose");
 require("dotenv").config();
 
 exports.signIn = async function (req, res, next) {
@@ -8,21 +9,23 @@ exports.signIn = async function (req, res, next) {
     let user = await db.User.findOne({
       email: req.body.email,
     });
-    let { id, username, profileImageUrl, challenges } = user;
+    let { id, username, imageUrl, challenges, email } = user;
     let isMatch = await user.comparePassword(req.body.password);
     if (isMatch) {
       let token = jwt.sign(
         {
           id,
           username,
-          profileImageUrl,
+          imageUrl,
+          email,
         },
         process.env.SECRET_KEY
       );
       return res.status(200).json({
         id,
         username,
-        profileImageUrl,
+        imageUrl,
+        email,
         token,
         challenges,
       });
@@ -33,7 +36,6 @@ exports.signIn = async function (req, res, next) {
       });
     }
   } catch (e) {
-    console.log(e);
     return next({ status: 400, message: "Invalid email or password." });
   }
 };
@@ -41,17 +43,16 @@ exports.signIn = async function (req, res, next) {
 exports.signUp = async (req, res, next) => {
   try {
     //create user
-    let user = await db.User.create(req.body);
-    let { id, username, profileImageUrl, challenges } = user;
+    console.log(req.file);
+    let user = await db.User.create({imageUrl: req.file.path, ...req.body});
+    let { id, username, imageUrl, challenges, email } = user;
     // create token
-    let token = jwt.sign(
-      { id, username, profileImageUrl },
-      process.env.SECRET_KEY
-    );
+    let token = jwt.sign({ id, username, imageUrl }, process.env.SECRET_KEY);
     return res.status(200).json({
       id,
       username,
-      profileImageUrl,
+      email,
+      imageUrl,
       challenges,
       token,
     });
@@ -106,14 +107,12 @@ exports.saveUserChallenge = async (req, res, next) => {
       },
       { new: true }
     );
-    res
-      .status(200)
-      .json({
-        id: challengeId,
-        title: title,
-        description: description,
-        completed: false,
-      });
+    res.status(200).json({
+      id: challengeId,
+      title: title,
+      description: description,
+      completed: false,
+    });
   } catch (e) {
     return next(e);
   }
