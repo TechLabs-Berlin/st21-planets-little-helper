@@ -1,6 +1,5 @@
 const db = require("../models");
 const jwt = require("jsonwebtoken");
-const { Mongoose } = require("mongoose");
 require("dotenv").config();
 
 exports.signIn = async function (req, res, next) {
@@ -44,7 +43,10 @@ exports.signUp = async (req, res, next) => {
   try {
     //create user
     console.log(req.file);
-    let user = await db.User.create({imageUrl: req.file.path, ...req.body});
+    let user = await db.User.create({
+      imageUrl: req.file ? req.file.path : "uploads/mask.png",
+      ...req.body,
+    });
     let { id, username, imageUrl, challenges, email } = user;
     // create token
     let token = jwt.sign({ id, username, imageUrl }, process.env.SECRET_KEY);

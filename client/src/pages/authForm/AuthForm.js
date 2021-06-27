@@ -13,7 +13,7 @@ function AuthForm({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [imageUrl, setImageUrl] = useState(null);
+  const [imageUrl, setImageUrl] = useState("./uploads/mask.png");
 
   const handleSubmit = (e) => {
     e.preventDefault();
