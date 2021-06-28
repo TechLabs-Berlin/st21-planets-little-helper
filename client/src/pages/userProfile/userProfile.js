@@ -30,7 +30,7 @@ function UserProfile({
           <div key={c.id} className={styles.challenge}>
             <div>
               <h4>{c.title}</h4>
-              <p>{c.description}</p>
+              <p>{c.challenge}</p>
             </div>
             <button
               className={c.completed ? styles.completed : styles.default}
