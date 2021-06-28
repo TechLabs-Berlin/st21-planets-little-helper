@@ -92,8 +92,8 @@ exports.saveUserChallenge = async (req, res, next) => {
   const { challengeId } = req.body;
   const userId = req.params.id;
   try {
-    const challenge = await db.ChallengeModel.findById(challengeId);
-    const { title, description } = challenge;
+    const chall = await db.ChallengeModel.findById(challengeId);
+    const { title, challenge } = chall;
 
     await db.User.findByIdAndUpdate(
       userId,
@@ -102,7 +102,7 @@ exports.saveUserChallenge = async (req, res, next) => {
           challenges: {
             id: challengeId,
             title: title,
-            description: description,
+            challenge: challenge,
             completed: false,
           },
         },
@@ -112,7 +112,7 @@ exports.saveUserChallenge = async (req, res, next) => {
     res.status(200).json({
       id: challengeId,
       title: title,
-      description: description,
+      challenge: challenge,
       completed: false,
     });
   } catch (e) {
