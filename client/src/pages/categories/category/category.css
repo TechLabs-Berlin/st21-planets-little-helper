@@ -1,8 +1,7 @@
-#clicked {
-  /* color: white;
-  background-color: #3e93a7; */
+#clicked a {
   font-weight: 700;
-  /* border: 1px solid black; */
+  color: #204768;
+  font-size: 30px;
 
 }
 
@@ -11,49 +10,49 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
-  /* align-items: flex-start; */
-  background: whitesmoke;
+  flex-flow: column;
+  align-items: center;
   margin-bottom: 10px;
 }
 
 .toggle-btns-div {
   background-color: white;
-  justify-content: center;
-  width: 90%;
-  max-width: 1000px;
+  /* justify-content: center; */
+  width: 50%;
+  /* max-width: 1000px; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 30px;
-  border-bottom: 2px solid black;
-  border-radius: 6px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding: 15px 100px;
+  border-bottom: 2px solid #204768;
 }
 
 .toggle-btns {
-  /* color: white; */
-  /* background-color: rgba(62, 147, 167, 0.22); */
-  border-radius:5px;
   background-color: white;
-  border: 1px solid white;
+  border: none;
   font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* width: 50px; */
+  /* margin: 0 1px; */
+  /* box-shadow: 0 0.3em 0.3em -0.4em #1b4049; */
+  transition: all 0.3s ease;
+}
+.toggle-btns a{
+  /* padding: auto; */
   font-size: 28px;
   font-weight: 400;
-  width: 100%;
-  /* padding: auto; */
-  padding-top: 20px;
-  padding-bottom: 10px;
-  margin: 0px 1px;
-  /* box-shadow: 0 0.3em 0.3em -0.4em #1b4049; */
-  transition: all .3s ease;
+  padding-bottom: 2px;
+  text-decoration: none;
+  color: black;
 }
 
-.toggle-btns:hover {
+.toggle-btns-div a:hover {
   margin: 0;
-  /* padding-bottom: 8px; */
-  border: 1px solid black;
+  padding-bottom: 0;
   cursor: pointer;
-  /* transform: translateY(-0.1em); */
-  box-shadow: 0 0.7em 0.7em -0.7em #1b4049;
+  font-size: 30px;
+  /* box-shadow: 0 0.7em 0.7em -0.7em #1b4049; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -61,15 +60,13 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 90%;
-  max-width: 940px;
-  background-color: white;
-  /* border: 2px solid #1dad78; */
+  width: 55%;
+  /* max-width: 940px; */
+  /* background-color: white; */
   border-radius: 1.5%;
   padding: 0 30px 15px 30px;
   margin: 1rem 1rem 0 1rem;
-  /* border-bottom: 1px solid black; */
-  box-shadow: 20px 26px 10px -24px #1b4049;
+  box-shadow: 0 22px 8px -24px #204768;
 }
 
 .callengeBox h2 {
@@ -78,11 +75,21 @@
   margin-top: 10px;
   font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 .p-div {
-  align-content: flex-start;
+  display: flex;
+  flex-flow: column;
+  /* align-content: center; */
   padding: 0 1rem;
 }
+.p-div h4{
+  text-align: center;
+  margin: 0;
+  margin-top: 8px;
+  font-size: 25px;
+}
 .p-div p {
+  text-align: center;
     line-height: 1.7rem;
     font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -91,7 +98,9 @@
   background-color: #FB6B4A;
   font-size: 20px;
   border: none;
-  padding: 15px 25px;
+  padding: 5px 55px;
+  margin: 20px 0;
+  margin-top: 50px;
   border-radius: 50px;
   box-shadow: 0 0.2em 0.2em -0.2em black;
   font-family: 'Spartan', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -135,17 +144,337 @@
   display: flex ;
 }
 
-/* .back-to-categories-div a {
-  text-decoration: none;
-  color: #3e93a7;
-  font-size: 24px;
-  font-weight: 700;
-  text-shadow: 0.5px 0.5px 0.5px #021114;
-  letter-spacing: 0.1rem;
-} */
-/* .back-to-categories-div a:hover{
-    text-decoration: underline;
-    text-underline-offset: 7px;
-  text-shadow: 1px 1px 1px black;
+@media screen and (max-width: 1440px){
+  .toggle-btns-div {
+    /* width: 70%; */
+  padding: 15px 60px;
+  }
 
-} */
+  .callengeBox {
+     width: 70%;
+  }
+
+  .callengeBox h2{
+    font-size: 30px;
+  }
+
+  .p-div h4{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+
+  #clicked a,
+  .toggle-btns-div a:hover{
+    font-size: 26px;
+  }
+
+  .toggle-btns-div a {
+    font-size: 24px;
+  }
+
+  .callengeBox {
+     width: 75%;
+  }
+
+  .callengeBox h2{
+    font-size: 26px;
+  }
+  .p-div{
+    font-size: 15px;
+  }
+  .p-div h4{
+    font-size: 18px;
+  }
+
+  .add-challenge-btn{
+    padding: 5px 45px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  #clicked a,
+  .toggle-btns-div a:hover{
+    font-size: 24px;
+  }
+
+  .toggle-btns-div{
+    width: 60%;
+    margin-bottom: 0;
+  }
+
+  .toggle-btns-div a {
+    font-size: 22px;
+  }
+
+  .callengeBox {
+     width: 80%;
+  }
+
+  .callengeBox h2{
+    font-size: 24px;
+  }
+  /* .p-div{
+    font-size: 15px;
+  } */
+  .p-div h4{
+    font-size: 17px;
+  }
+
+  .add-challenge-btn{
+    margin-top: 35px;
+    padding: 5px 45px;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  #clicked a,
+  .toggle-btns-div a:hover{
+    font-size: 22px;
+  }
+
+  .toggle-btns-div{
+    margin-top: 25px;
+    padding: 10px 40px;
+    width: 65%;
+  }
+
+  .toggle-btns-div a {
+    font-size: 20px;
+  }
+
+  .callengeBox {
+     width: 90%;
+  }
+
+  .callengeBox h2{
+    margin-top: 0;
+    font-size: 22px;
+  }
+  .p-div p{
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .p-div h4{
+    font-size: 16px;
+  }
+
+  .add-challenge-btn{
+    margin-top: 25px;
+    padding: 5px 35px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 650px){
+
+.toggle-btns-div{
+  width: 75%;
+  padding:10px 20px ;
+}
+.callengeBox{
+  width: 94%;
+  margin: 16px 0 0;
+  padding: 0 5px;
+}
+}
+
+@media screen and (max-width: 576px){
+
+  #clicked a,
+  .toggle-btns-div a:hover{
+    font-size: 20px;
+  }
+
+  .toggle-btns-div{
+    margin-top: 20px;
+    padding: 10px 0;
+    width: 93%;
+  }
+
+  .toggle-btns-div a {
+    font-size: 18px;
+  }
+
+  /* .callengeBox {
+     width: 90%;
+  } */
+
+  .callengeBox h2{
+    font-size: 20px;
+  }
+  .p-div p{
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .p-div h4{
+    font-size: 15px;
+  }
+
+  .add-challenge-btn{
+    margin-top: 20px;
+    padding: 4px 30px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 425px){
+
+  #clicked a{
+    font-size: 16px;
+  }
+  
+  .toggle-btns-div{
+    margin-top: 15px;
+    width: 80%;
+  }
+
+  .toggle-btns-div a,
+  .toggle-btns-div a:hover {
+  font-size: 14px;
+  }
+
+  .callengeBox {
+     width: 97%;
+     padding-bottom: 15px;
+  }
+
+  .callengeBox h2{
+    padding: 7px 0;
+    font-size: 16px;
+  }
+  .p-div p{
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .p-div h4{
+    margin-top: 0;
+    font-size: 13px;
+  }
+
+  .add-challenge-btn{
+    margin-top: 5px;
+    /* margin-bottom: 20px; */
+    padding: 4px 25px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 425px){
+
+  #clicked a{
+    font-size: 15px;
+  }
+  
+  .toggle-btns-div{
+    margin-top: 10px;
+    /* width: 80%; */
+  }
+
+  .toggle-btns-div a,
+  .toggle-btns-div a:hover {
+  font-size: 13px;
+  }
+
+  /* .callengeBox {
+     width: 97%;
+  } */
+
+  .callengeBox h2{
+    padding: 4px 0;
+    font-size: 14px;
+  }
+  .p-div p{
+    line-height: 2em;
+    margin-top: 3px;
+    font-size: 11px;
+  }
+  .p-div h4{
+    font-size: 12px;
+  }
+
+  .add-challenge-btn{
+    margin-top: 0;
+    margin-bottom: 3px;
+    padding: 3px 23px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px){
+
+  #clicked a{
+    font-size: 14px;
+  }
+
+  .toggle-btns-div a,
+  .toggle-btns-div a:hover {
+  font-size: 12px;
+  }
+
+  .callengeBox {
+    margin-top: 10px;
+     width: 100%;
+     padding: 0 0 15px;
+  box-shadow: 0 22px 7px -26px #204768;
+
+  }
+
+  .callengeBox h2{
+    padding: 4px 0;
+    font-size: 12px;
+  }
+  .p-div p{
+    line-height: 1.9em;
+    margin: 1px 0;
+    font-size: 10px;
+    padding: 3px;
+  }
+  .p-div h4{
+    font-size: 11px;
+  }
+
+  .add-challenge-btn{
+    margin-bottom: 0;
+    padding: 2px 20px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 246px){
+  .toggle-btns-div{
+    /* display: flex;
+    flex-flow: column; */
+    width: 99%;
+  }
+  #clicked a{
+    font-size: 12px;
+  }
+
+  .toggle-btns-div a,
+  .toggle-btns-div a:hover {
+  font-size: 10px;
+  }
+
+  .callengeBox h2{
+    font-size: 11px;
+  }
+  .p-div{
+    padding: 0;
+    margin: 0;
+  }
+  .p-div p{
+    line-height: 1.5em;
+    font-size: 10px;
+  }
+  .p-div h4{
+    font-size: 10px;
+  }
+
+  .add-challenge-btn{
+    font-size: 10px;
+  }
+}
