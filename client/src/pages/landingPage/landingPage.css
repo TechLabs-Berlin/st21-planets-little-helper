@@ -1,7 +1,9 @@
-html {
-  background: whitesmoke;
+/* html {
+  background: white;
+} */
+.content-box{
+  background-color: whitesmoke;
 }
-
 .container {
   position: relative;
   width: 100%;

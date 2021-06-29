@@ -24,14 +24,11 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
       <div className="toggle-btns-div">
         {challenges &&
           categories.map((btn) => (
-            <Link to={btn.path} key={btn.path}>
-              <button
-                className="toggle-btns"
-                id={btn.category === category ? "clicked" : null}
-              >
+            <button className="toggle-btns" id={btn.category === category ? "clicked" : null}>
+              <Link to={btn.path} key={btn.path}>
                 {btn.category}
-              </button>
-            </Link>
+              </Link>
+            </button>
           ))}
       </div>
 
@@ -42,14 +39,11 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
             <div key={cat._id} className="callengeBox">
               <h2>{cat.title}</h2>
               <div className="p-div">
-                <p>
-                  <strong>Action: </strong>
-                  {cat.challenge}
-                </p>
-                <p>
-                  <strong>The problem: </strong>
-                  {cat.description}
-                </p>
+                <p>{cat.description}</p>
+
+                <h4>Summary</h4>
+
+                <p>{cat.challenge}</p>
               </div>
               {currentUser.isAuthenticated && (
                 <button
@@ -57,8 +51,7 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
                   onClick={() => addChallenge(userId, cat._id)}
                   disabled={currentUser.user.challenges
                     .map((c) => c.id)
-                    .includes(cat._id)}
-                >
+                    .includes(cat._id)}>
                   Add challenge
                 </button>
               )}
