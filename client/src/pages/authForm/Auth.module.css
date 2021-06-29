@@ -74,6 +74,24 @@
   color:black;
 }
 
+.upload {
+  background-color: #204768;
+  border: none;
+  border-radius: 5px; 
+  color: white;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.error {
+  background-color: #FB6B4A;
+  padding: 5px;
+  color: white;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
 .submitButton {
   width: 250px;
   height: 45px;

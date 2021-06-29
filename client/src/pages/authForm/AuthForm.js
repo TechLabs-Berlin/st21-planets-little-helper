@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./Auth.module.css";
 
 function AuthForm({
@@ -14,6 +14,9 @@ function AuthForm({
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [imageUrl, setImageUrl] = useState("./uploads/mask.png");
+  const [fileLabel, setFileLabel] = useState("Please choose a squared picture")
+
+  const fileInput = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,6 +41,7 @@ function AuthForm({
 
   const handleFile = (e) => {
     setImageUrl(e.target.files[0]);
+    setFileLabel(e.target.files[0].name)
   };
 
   return (
@@ -49,7 +53,7 @@ function AuthForm({
           encType="multipart/form-data"
         >
           <h2 className={styles.h2Form}>{heading}</h2>
-          {error.message && <div>{error.message}</div>}
+          {error.message && <div className={styles.error}>{error.message}</div>}
           <div className={styles.inputContainer}>
             <label htmlFor="email"></label>
 
@@ -91,8 +95,13 @@ function AuthForm({
                   className={styles.authInput}
                 />
               </div>
-              <div className={styles.inputContainer}>
-                <label htmlFor="imageUrl" className={styles.authLabel}></label>
+              <div
+                className={styles.inputContainer}
+                style={{ display: "flex", flexDirection: "column" }}
+              >
+                <label htmlFor="imageUrl" className={styles.authLabel} style={{marginBottom: "5px", textAlign: "center"}}>
+                  {fileLabel}
+                </label>
                 <input
                   type="file"
                   placeholder="imageUrl"
@@ -100,7 +109,16 @@ function AuthForm({
                   name="imageUrl"
                   accept=".jpg"
                   onChange={handleFile}
+                  ref={fileInput}
+                  style={{ display: "none" }}
                 />
+                <button
+                  type="button"
+                  className={styles.upload}
+                  onClick={() => fileInput.current.click()}
+                >
+                  Upload profile picture
+                </button>
               </div>
             </>
           )}
