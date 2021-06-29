@@ -14,7 +14,7 @@ function AuthForm({
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [imageUrl, setImageUrl] = useState("./uploads/mask.png");
-  const [fileLabel, setFileLabel] = useState("Please choose squared picture")
+  const [fileLabel, setFileLabel] = useState("Please choose a squared picture")
 
   const fileInput = useRef(null);
 
@@ -53,7 +53,7 @@ function AuthForm({
           encType="multipart/form-data"
         >
           <h2 className={styles.h2Form}>{heading}</h2>
-          {error.message && <div>{error.message}</div>}
+          {error.message && <div className={styles.error}>{error.message}</div>}
           <div className={styles.inputContainer}>
             <label htmlFor="email"></label>
 
