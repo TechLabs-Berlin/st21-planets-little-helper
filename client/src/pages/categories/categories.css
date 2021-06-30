@@ -26,6 +26,7 @@
 
 #register_cattegories_page {
   margin: auto;
+  margin-bottom: 70px;
   min-width: 100%;
 }
 
@@ -163,6 +164,11 @@
   .pLastOnPage{
     margin: 40px 0;
     font-size: 25px;
+  }
+
+  #register_cattegories_page {
+    font-size: 26px;
+    margin: 5px 0 50px 0;
   }
 }
 @media (max-width: 992px) {
