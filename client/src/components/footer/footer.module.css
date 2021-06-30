@@ -1,5 +1,10 @@
 .footbar {
-  display: grid;
+ /* margin-top: auto; */
+ /* position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%; */
+    display: grid;
   grid-template-columns: 1fr 1fr;
   padding-right: 2%;
   align-items: center;
