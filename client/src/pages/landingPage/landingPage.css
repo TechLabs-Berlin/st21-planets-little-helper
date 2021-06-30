@@ -25,6 +25,7 @@
   flex: 4;
 }
 
+
 .name{
   /* text-transform: capitalize; */
   /* font-style: italic; */
@@ -53,6 +54,7 @@
   grid: box-img;
   flex: 2;
   width: 100%;
+  opacity: 0.8;
 }
 
 .button-register, .btnChallenges {
@@ -61,8 +63,8 @@
   width: 100%;
   max-width: 80%;
   border-radius: 5px;
-  border: 2px solid #1dad78;
-  background: #1dad78;
+  border: 2px solid #204768;
+  background: #204768;
   font-size: 30px;
   font-weight: 700;
   margin-top: 20px;
@@ -71,23 +73,24 @@
   transition: all 0.3s ease;
 }
 
-.btnChallenges{
+/* .btnChallenges{
   background-color: #204768;
   border: 2px solid#204768;
 
-}
+} */
 
-.button-register:hover {
+/* .button-register:hover {
   cursor: pointer;
   transform: translateY(-0.1em);
   box-shadow: 0 0.5em 0.5em -0.2em #0c704b;
   border: 2px solid #1eac78;
-}
+} */
 
-.btnChallenges:hover {
+.btnChallenges:hover,
+.button-register:hover {
   cursor: pointer;
   transform: translateY(-0.1em);
-  box-shadow: 0 0.5em 0.5em -0.2em #0c704b;
+  box-shadow: 0 0.5em 0.5em -0.35em #0c704b;
   border: 2px solid #204768;
 }
 
@@ -133,20 +136,22 @@ h3 {
   width: 100%;
   min-width: 200px;
   font-size: xx-large;
-  border-radius: 3px;
+  font-weight: 600;
+  border-radius: 5px;
   background: white;
-  color: #3e93a7;
-  text-shadow: 0.5px 0.5px 0.5px black;
-  border: 1px solid #2d8162;
+  color: #204768;
+  /* text-shadow: 0.5px 0.5px 0.5px black; */
+  border: 2px solid #FB6B4A;
   margin: 10px auto;
   transition: all 0.3s ease;
+  box-shadow: 0 0.25em 0.25em -0.2em gray;
 }
 
 .btns:hover {
   cursor: pointer;
   transform: translateY(-0.2em);
-  box-shadow: 0 0.8em 0.8em -0.4em gray;
-  border: 1.5px solid #2d8162;
+  box-shadow: 0 0.5em 0.5em -0.35em gray;
+  /* border: 1.5px solid #2d8162; */
 }
 
 .container3 {
