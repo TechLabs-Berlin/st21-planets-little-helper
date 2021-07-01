@@ -1,0 +1,100 @@
+.footbar {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 2%;
+  align-items: center;
+  background-color: #204768;
+  height: 60px;
+}
+
+.h2 {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0 0 0 10%;
+  padding: 0;
+  opacity: 0.5;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.about {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.aboutBtn {
+  background-color: inherit;
+  border: none;
+}
+
+.aboutBtn:hover {
+  transform: translateY(-0.05em);
+  transition: all 0.2s step-end;
+}
+
+@media screen and (max-width: 1440px) {
+  .footbar {
+    padding-right: 3%;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footbar {
+    padding-right: 4%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footbar {
+    padding-right: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footbar {
+    padding-right: 7%;
+    height: 35px;
+  }
+
+  .h2,
+  .about {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footbar {
+    padding-right: 4%;
+  }
+
+  .h2,.about{
+    font-size: 13px;
+}
+
+  .aboutDiv {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 425px){ 
+    .footbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .h2,.about{
+        font-size: 12px;
+    }
+    .h2Div{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 320px){ 
+    .h2,.about{
+        font-size: 11px;
+    }
+}

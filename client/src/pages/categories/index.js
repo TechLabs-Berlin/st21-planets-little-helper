@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 function AllCategories({ currentUser }) {
   return (
-    <div>
+    <div className="content">
       <h1 className="h1-categories">Categories</h1>
       <div className="container-div">
         {categories.map((cat) => (

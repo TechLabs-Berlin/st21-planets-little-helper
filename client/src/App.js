@@ -7,6 +7,7 @@ import AllCategories from "./pages/categories";
 import LandingPage from "./pages/landingPage";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import About from "./pages/about/About";
 import { connect } from "react-redux";
 import { authUser } from "./store/actions/auth";
 import { removeError } from "./store/actions/error";
@@ -63,6 +64,7 @@ function App({ authUser, error, removeError, currentUser }) {
           path="/"
           render={(props) => <LandingPage currentUser={currentUser} />}
         />
+        <Route path="/about" component={About} />
       </Switch>
       <Footer />
     </Router>

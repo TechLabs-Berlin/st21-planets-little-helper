@@ -47,7 +47,7 @@ class Header extends React.Component {
           >
             <li>
               <NavLink to="/challenges" className="nav-links">
-                All Challenges
+              Challenges
               </NavLink>
             </li>
 
@@ -58,7 +58,7 @@ class Header extends React.Component {
                     to={`/user/${this.props.currentUser.user.id}`}
                     className="nav-links"
                   >
-                    Your profile
+                  Profile
                   </NavLink>
                 </li>
                 <li>
