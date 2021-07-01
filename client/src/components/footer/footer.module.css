@@ -1,15 +1,10 @@
 .footbar {
- /* margin-top: auto; */
- /* position: fixed;
- bottom: 0;
- left: 0;
- width: 100%; */
     display: grid;
   grid-template-columns: 1fr 1fr;
   padding-right: 2%;
   align-items: center;
   background-color: #204768;
-  height: 40px;
+  height: 60px;
 }
 
 .h2 {
@@ -45,6 +40,7 @@
 @media screen and (max-width: 1440px) {
   .footbar {
     padding-right: 3%;
+    height: 40px;
   }
 }
 
