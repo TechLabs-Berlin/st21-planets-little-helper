@@ -278,6 +278,7 @@ h3 {
 }
 
 @media screen and (max-width: 835px) {
+  
   .h1LogedIn {
     font-size: 35px;
     margin-top: 40px;
@@ -335,7 +336,7 @@ h3 {
   /* ------------------ This is hiding/removing the box-img from the page   */
   .box-text {
     font-size: 1.6em;
-    min-width: 60%;
+    min-width: 70%;
     padding: 0 20px 0 30px;
     margin: 0;
   }
@@ -343,7 +344,7 @@ h3 {
   .box-img {
     visibility: collapse;
     height: 0;
-    width: 0;
+    padding: 7px;
   }
   /* -------------------------------------------------------------------- */
 }
