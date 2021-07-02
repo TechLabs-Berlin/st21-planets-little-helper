@@ -1,0 +1,301 @@
+.contentBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 142px);
+  width: 100%;
+  position: relative;
+}
+
+.contentBox::before {
+  position: absolute;
+  content: "";
+  background-image: url("./earthCroppedBottom.png");
+  background-size: 50rem;
+  background-position: bottom left;
+  background-attachment: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+.aboutDiv {
+  position: relative;
+  width: 70%;
+  margin: 50px 0;
+}
+
+.aboutDiv h2 {
+  position: relative;
+  text-align: left;
+  font-size: 47px;
+  margin-bottom: 60px;
+}
+
+.aboutDiv p {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+.btnDiv {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.btnChallenges {
+  color: white;
+  border-radius: 5px;
+  border: none;
+  background: #204768;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin-top: 50px;
+  margin-right: 30px;
+  padding: 40px 150px;
+  box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
+  transition: all 0.3s ease;
+}
+
+.btnChallenges:hover {
+  cursor: pointer;
+  transform: translateY(-0.1em);
+  box-shadow: 0 0.5em 0.5em -0.35em #0c704b;
+}
+
+@media screen and (max-width: 1440px) {
+  .contentBox {
+    min-height: calc(100vh - 112px);
+  }
+
+  .contentBox::before {
+    background-size: 26rem;
+  }
+
+  .aboutDiv h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .aboutDiv p {
+    font-size: 18px;
+    line-height: 2.2rem;
+  }
+
+  .btnChallenges {
+    font-size: 24px;
+    margin-top: 10px;
+    padding: 22px 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .contentBox {
+    min-height: calc(100vh - 102px);
+  }
+
+  .contentBox::before {
+    background-size: 24rem;
+  }
+
+  .aboutDiv h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  .aboutDiv p {
+    font-size: 16px;
+    line-height: 1.8rem;
+  }
+
+  .btnChallenges {
+    font-size: 22px;
+    padding: 20px 35px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  
+  .aboutDiv {
+    width: 75%;
+    margin: 40px 0;
+  }
+
+  .aboutDiv h2 {
+    font-size: 22px;
+  }
+
+  .aboutDiv p {
+    font-size: 15px;
+    line-height: 2rem;
+  }
+
+  .btnChallenges {
+    font-size: 20px;
+    margin-top: 0;
+    padding: 17px 33px;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .contentBox {
+    min-height: calc(100vh - 97px);
+  }
+
+  .contentBox::before {
+    background-size: 30rem;
+  }
+
+  .aboutDiv h2 {
+    font-size: 20px;
+  }
+
+  .aboutDiv p {
+    font-size: 16px;
+    line-height: 1.8rem;
+  }
+
+  .btnChallenges {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .contentBox {
+    min-height: calc(100vh - 92px);
+  }
+
+  .contentBox::before {
+    background-size: 25rem;
+  }
+
+  .aboutDiv {
+    margin: 30px 0;
+  }
+
+  .aboutDiv h2 {
+    font-size: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .aboutDiv p {
+    font-size: 15px;
+    line-height: 1.7rem;
+    margin-top: 5px;
+  }
+
+  .btnChallenges {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+
+  .contentBox::before {
+    background-size: 24rem;
+  }
+
+  .aboutDiv h2 {
+    font-size: 17px;
+  }
+
+  .aboutDiv p {
+    font-size: 13px;
+    line-height: 1.6rem;
+  }
+
+  .btnChallenges {
+    font-size: 15px;
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .contentBox::before {
+    background-size: 23rem;
+  }
+
+  .aboutDiv h2 {
+    font-size: 16px;
+  }
+
+  .aboutDiv p {
+    font-size: 12px;
+    line-height: 1.4rem;
+  }
+
+  .btnChallenges {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  .contentBox {
+    min-height: calc(100vh - 82px);
+  }
+
+  .contentBox::before {
+    background-size: 20rem;
+  }
+
+  .aboutDiv {
+    width: 80%;
+  }
+  .aboutDiv h2 {
+    font-size: 15px;
+  }
+
+  .aboutDiv p {
+    font-size: 11px;
+    line-height: 1.2rem;
+  }
+
+  .btnChallenges {
+    font-size: 12px;
+    padding: 13px 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+    
+  .contentBox::before {
+    background-size: 17rem;
+  }
+
+  .aboutDiv {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .aboutDiv h2 {
+    font-size: 13px;
+  }
+
+  .aboutDiv p {
+    font-size: 10px;
+    line-height: 1.1rem;
+    text-align: justify;
+  }
+
+  .btnChallenges {
+    font-size: 11px;
+    padding: 11px 20px;
+    margin-right: 10px;
+  }
+}
