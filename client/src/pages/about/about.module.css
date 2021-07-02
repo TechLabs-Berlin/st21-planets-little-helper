@@ -94,11 +94,11 @@
     font-size: 24px;
     margin-top: 10px;
     padding: 22px 40px;
+    letter-spacing: 0.1rem;
   }
 }
 
 @media screen and (max-width: 1200px) {
-
   .contentBox {
     min-height: calc(100vh - 102px);
   }
@@ -125,7 +125,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  
   .aboutDiv {
     width: 75%;
     margin: 40px 0;
@@ -144,12 +143,11 @@
     font-size: 20px;
     margin-top: 0;
     padding: 17px 33px;
-    letter-spacing: 0.1rem;
+    /* letter-spacing: 0.1rem; */
   }
 }
 
 @media screen and (max-width: 768px) {
-
   .contentBox {
     min-height: calc(100vh - 97px);
   }
@@ -173,7 +171,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
   .contentBox {
     min-height: calc(100vh - 92px);
   }
@@ -204,7 +201,6 @@
 }
 
 @media screen and (max-width: 481px) {
-
   .contentBox::before {
     background-size: 24rem;
   }
@@ -225,7 +221,6 @@
 }
 
 @media screen and (max-width: 425px) {
-
   .contentBox::before {
     background-size: 23rem;
   }
@@ -245,7 +240,6 @@
 }
 
 @media screen and (max-width: 375px) {
-
   .contentBox {
     min-height: calc(100vh - 82px);
   }
@@ -273,7 +267,6 @@
 }
 
 @media screen and (max-width: 320px) {
-    
   .contentBox::before {
     background-size: 17rem;
   }
