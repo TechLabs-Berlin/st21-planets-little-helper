@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import {
   deleteChallenge,
   completeChallenge,
   getUserChallenges,
+  updateProfilePic,
 } from "../../store/actions/challenges";
 import { Link } from "react-router-dom";
 import styles from "./userProfile.module.css";
@@ -13,11 +14,24 @@ function UserProfile({
   completeChallenge,
   deleteChallenge,
   getUserChallenges,
+  updateProfilePic,
 }) {
   useEffect(() => {
     getUserChallenges(currentUser.user.id);
     // eslint-disable-next-line
   }, []);
+
+  const fileInput = useRef(null);
+
+  const [img, setImg] = useState();
+
+  const updateProfileImg = (e) => {
+    console.log(e.target)
+    setImg(e.target.files[0]);
+    const formData = new FormData();
+    formData.append("imageUrl", img);
+    updateProfilePic(currentUser.user.id, formData);
+  };
 
   const userId = currentUser.user.id;
   let profile;
@@ -69,9 +83,17 @@ function UserProfile({
             src={"http://localhost:8000/" + currentUser.user.imageUrl}
             alt="profile pic"
             id="profilePic"
+            onClick={() => fileInput.current.click()}
           />
         </div>
-
+        <input
+          type="file"
+          ref={fileInput}
+          name="imageUrl"
+          accept=".jpg"
+          style={{ display: "none" }}
+          onChange={updateProfileImg}
+        />
         <p>
           Username: <span>{currentUser.user.username}</span>
         </p>
@@ -94,4 +116,5 @@ export default connect(mapStateToProps, {
   deleteChallenge,
   completeChallenge,
   getUserChallenges,
+  updateProfilePic,
 })(UserProfile);

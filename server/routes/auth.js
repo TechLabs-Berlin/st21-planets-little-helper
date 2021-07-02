@@ -37,6 +37,7 @@ const {
   removeUserChallenge,
   getUser,
   toggleComplete,
+  updateProfilePic,
 } = require("../handlers/auth");
 
 router.post("/signup", upload.single("imageUrl"), signUp);
@@ -57,5 +58,7 @@ router.delete(
 );
 
 router.post("/:id/completed", logInRequired, ensureCorrectUser, toggleComplete);
+
+router.post("/:id/image", logInRequired, ensureCorrectUser, upload.single("imageUrl"), updateProfilePic);
 
 module.exports = router;

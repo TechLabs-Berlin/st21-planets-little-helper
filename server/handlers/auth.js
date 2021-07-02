@@ -42,7 +42,7 @@ exports.signIn = async function (req, res, next) {
 exports.signUp = async (req, res, next) => {
   try {
     //create user
-    console.log(req.file);
+    console.log(req.file)
     let user = await db.User.create({
       imageUrl: req.file ? req.file.path : "uploads/mask.png",
       ...req.body,
@@ -120,7 +120,7 @@ exports.saveUserChallenge = async (req, res, next) => {
   }
 };
 
-exports.removeUserChallenge = async (req, res) => {
+exports.removeUserChallenge = async (req, res, next) => {
   const { challengeId } = req.body;
   const userId = req.params.id;
   try {
@@ -137,7 +137,7 @@ exports.removeUserChallenge = async (req, res) => {
   }
 };
 
-exports.toggleComplete = async (req, res) => {
+exports.toggleComplete = async (req, res, next) => {
   let { challengeId, update } = req.body;
   const userId = req.params.id;
 
@@ -153,6 +153,22 @@ exports.toggleComplete = async (req, res) => {
       }
     );
     res.status(200).json({ message: "updated completed property" });
+  } catch (e) {
+    return next(e);
+  }
+};
+
+exports.updateProfilePic = async (req, res, next) => {
+  let id = req.params.id;
+  let img = req.file.path;
+
+  console.log(img)
+  try {
+    await db.User.findByIdAndUpdate(id, {
+      $set: {
+        imageUrl: img,
+      },
+    });
   } catch (e) {
     return next(e);
   }

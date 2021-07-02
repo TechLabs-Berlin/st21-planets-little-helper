@@ -1,6 +1,18 @@
 import { addError } from "./error";
-import { LOAD_CHALLENGES, DELETE_USER_CHALLENGE, GET_USER_CHALLENGES, SET_CHALLENGE_AS_COMPLETED, ADD_USER_CHALLENGE } from "../actionTypes";
+import {
+  LOAD_CHALLENGES,
+  DELETE_USER_CHALLENGE,
+  GET_USER_CHALLENGES,
+  SET_CHALLENGE_AS_COMPLETED,
+  ADD_USER_CHALLENGE,
+  UPDATE_PROFILE_PICTURE,
+} from "../actionTypes";
 import axios from "axios";
+
+export const updatePic = (imageUrl) => ({
+  type: UPDATE_PROFILE_PICTURE,
+  imageUrl,
+});
 
 export const loadChallenges = (challenges) => ({
   type: LOAD_CHALLENGES,
@@ -26,31 +38,36 @@ export const setComplete = (id, update) => ({
   type: SET_CHALLENGE_AS_COMPLETED,
   id,
   update,
-})
+});
 
 export const completeChallenge = (userId, challengeId, update) => {
-  return dispatch => {
-    return axios({method: "post", url: `http://localhost:8000/api/user/${userId}/completed`, data: {
-      challengeId,
-      update
-    }})
-    .then((res) => {
-      dispatch(setComplete(challengeId, update))
-    })
-    
-  }
-}
+  return (dispatch) => {
+    return axios({
+      method: "post",
+      url: `http://localhost:8000/api/user/${userId}/completed`,
+      data: {
+        challengeId,
+        update,
+      },
+    }).then((res) => {
+      dispatch(setComplete(challengeId, update));
+    });
+  };
+};
 
 export const getUserChallenges = (userId) => {
-  return dispatch => {
-    return axios({method: "get", url: `http://localhost:8000/api/user/${userId}`})
-    .then(res => {
-      const userChallenges = res.data.challenges;
-      dispatch(getChallenges(userChallenges))
+  return (dispatch) => {
+    return axios({
+      method: "get",
+      url: `http://localhost:8000/api/user/${userId}`,
     })
-    .catch(err => addError(err.message))
-  }
-}
+      .then((res) => {
+        const userChallenges = res.data.challenges;
+        dispatch(getChallenges(userChallenges));
+      })
+      .catch((err) => addError(err.message));
+  };
+};
 
 export const deleteChallenge = (userId, challengeId) => {
   return (dispatch) => {
@@ -93,3 +110,18 @@ export const fetchChallenges = () => {
       .catch((err) => addError(err.message));
   };
 };
+
+export function updateProfilePic(userId, imageUrl) {
+  console.log("pic")
+  return (dispatch) => {
+    return axios({
+      method: "post",
+      url: `http://localhost:8000/api/user/${userId}/image`,
+      data: imageUrl,
+    })
+      .then(() => {
+        dispatch(updatePic(imageUrl));
+      })
+      .catch((err) => addError(err.message));
+  };
+}
