@@ -111,16 +111,18 @@ export const fetchChallenges = () => {
   };
 };
 
-export function updateProfilePic(userId, imageUrl) {
-  console.log("pic")
+export function updateProfilePic(userId, profilePic) {
   return (dispatch) => {
     return axios({
       method: "post",
       url: `http://localhost:8000/api/user/${userId}/image`,
-      data: imageUrl,
+      data: profilePic,
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
     })
       .then(() => {
-        dispatch(updatePic(imageUrl));
+        dispatch(updatePic(profilePic));
       })
       .catch((err) => addError(err.message));
   };

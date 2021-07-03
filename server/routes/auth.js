@@ -59,6 +59,6 @@ router.delete(
 
 router.post("/:id/completed", logInRequired, ensureCorrectUser, toggleComplete);
 
-router.post("/:id/image", logInRequired, ensureCorrectUser, upload.single("imageUrl"), updateProfilePic);
+router.post("/:id/image", logInRequired, ensureCorrectUser, upload.single("avatar"), updateProfilePic);
 
 module.exports = router;

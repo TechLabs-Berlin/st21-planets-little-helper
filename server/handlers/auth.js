@@ -42,7 +42,7 @@ exports.signIn = async function (req, res, next) {
 exports.signUp = async (req, res, next) => {
   try {
     //create user
-    console.log(req.file)
+    console.log(req.file);
     let user = await db.User.create({
       imageUrl: req.file ? req.file.path : "uploads/mask.png",
       ...req.body,
@@ -129,7 +129,7 @@ exports.removeUserChallenge = async (req, res, next) => {
       {
         $pull: { challenges: { id: challengeId } },
       },
-      { new: true }
+      { new: true, useFindAndModify: false }
     );
     res.status(200).json({ message: challengeId });
   } catch (e) {
@@ -159,16 +159,26 @@ exports.toggleComplete = async (req, res, next) => {
 };
 
 exports.updateProfilePic = async (req, res, next) => {
-  let id = req.params.id;
-  let img = req.file.path;
+  console.log(req);
 
-  console.log(img)
   try {
-    await db.User.findByIdAndUpdate(id, {
-      $set: {
-        imageUrl: img,
-      },
-    });
+    let id = req.params.id;
+    let img = req.file.path;
+
+    if (img) {
+      await db.User.findByIdAndUpdate(
+        id,
+        {
+          $set: {
+            imageUrl: img,
+          },
+        },
+        { new: true, useFindAndModify: false }
+      );
+      res.status(200).json({ message: "profile picture has been updated" });
+    } else {
+      res.status(500).json({ message: "unable to upload file" });
+    }
   } catch (e) {
     return next(e);
   }

@@ -26,10 +26,10 @@ function UserProfile({
   const [img, setImg] = useState();
 
   const updateProfileImg = (e) => {
-    console.log(e.target)
     setImg(e.target.files[0]);
+    e.preventDefault();
     const formData = new FormData();
-    formData.append("imageUrl", img);
+    formData.append("avatar", img);
     updateProfilePic(currentUser.user.id, formData);
   };
 
@@ -86,14 +86,16 @@ function UserProfile({
             onClick={() => fileInput.current.click()}
           />
         </div>
-        <input
-          type="file"
-          ref={fileInput}
-          name="imageUrl"
-          accept=".jpg"
-          style={{ display: "none" }}
-          onChange={updateProfileImg}
-        />
+        <form encType="multipart/form-data">
+          <input
+            type="file"
+            ref={fileInput}
+            name="avatar"
+            accept=".jpg"
+            style={{ display: "none" }}
+            onChange={updateProfileImg}
+          />
+        </form>
         <p>
           Username: <span>{currentUser.user.username}</span>
         </p>
