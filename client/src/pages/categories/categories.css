@@ -1,3 +1,7 @@
+.content {
+  min-height: calc(100vh - 142px);
+}
+
 .h1-categories {
   text-align: center;
   letter-spacing: 2px;
@@ -26,6 +30,7 @@
 
 #register_cattegories_page {
   margin: auto;
+  margin-bottom: 70px;
   min-width: 100%;
 }
 
@@ -92,11 +97,15 @@
 
 .pLastOnPage{
   text-align: center;
-  margin: 40px 0;
+  margin: 40px 0 80px 0;
   font-size: 27px;
 }
 
-@media (max-width: 1345px) {
+@media (max-width: 1440px) {
+  .content {
+    min-height: calc(100vh - 112px);
+  }
+
   .h1-categories {
     font-size: 40px;
   }
@@ -132,7 +141,11 @@
   }
 }
 
-@media (max-width: 1201px) {
+@media (max-width: 1200px) {
+
+  .content {
+    min-height: calc(100vh - 102px);
+  }
 
   .h1-categories {
     font-size: 35px;
@@ -161,8 +174,14 @@
   }
 
   .pLastOnPage{
-    margin: 40px 0;
+  margin: 40px 0 60px 0;
     font-size: 25px;
+  }
+
+  #register_cattegories_page {
+    font-size: 26px;
+    margin: 5px 0 50px 0;
+    min-width: 70%;
   }
 }
 @media (max-width: 992px) {
@@ -194,12 +213,16 @@
   }
 
   .pLastOnPage{
-    margin: 35px 0;
+    margin: 35px 0 50px 0;
     font-size: 24px;
   }
 }
 
 @media (max-width: 768px) {
+
+  .content {
+    min-height: calc(100vh - 97px);
+  }
 
   .h1-categories {
     font-size: 30px;
@@ -207,7 +230,7 @@
 
   .container-div {
     justify-content: center;
-    padding: 15px 9%;
+    padding: 15px 10%;
   }
   .category-box {
     width: 100%;
@@ -240,12 +263,16 @@
   }
 
    .pLastOnPage{
-    margin: 15px 7px;
+    margin: 20px 0 40px 0;
     font-size: 23px;
   }
 }
 
 @media (max-width: 576px) {
+
+  .content {
+    min-height: calc(100vh - 92px);
+  }
 
   .container-div{
     padding-top: 0;
@@ -319,7 +346,7 @@
   }
 
   .pLastOnPage{
-    margin: 10px 5px;
+    margin: 15px 5px 30px 5px;
     font-size: 17px;
   }
 }
@@ -347,20 +374,18 @@
   }
 
   .pLastOnPage{
-    margin: 7px 5px;
     font-size: 16px;
   }
 }
 
-@media (max-width: 377px) {
+@media (max-width: 375px) {
+
+  .content {
+    min-height: calc(100vh - 82px);
+  }
 
   .h1-categories {
     font-size: 21px;
-  }
-
-  .categories_h2 {
-    font-size: 1.2em;
-    padding:10px;
   }
 
   .category-box {
@@ -384,6 +409,7 @@
   }
 
   .pLastOnPage{
+    margin: 0 5px 25px 5px;
     font-size: 15px;
   }
 }
@@ -416,11 +442,11 @@
   .categories_h2 {
     font-size: 1em;
     margin-top: 4px;
-    margin-bottom: 0;
   }
 
   .pLastOnPage{
-    margin: 0 5px;
+    /* margin: 0 5px; */
+    /* margin: 0 5px 25px 5px; */
     font-size: 14px;
   }
 }
@@ -448,7 +474,6 @@
   }
 
   .pLastOnPage{
-    margin: 5px;
     font-size: 13px;
   }
 }

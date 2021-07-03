@@ -24,7 +24,7 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
       <div className="toggle-btns-div">
         {challenges &&
           categories.map((btn) => (
-            <button className="toggle-btns" id={btn.category === category ? "clicked" : null}>
+            <button key={btn.category} className="toggle-btns" id={btn.category === category ? "clicked" : null}>
               <Link to={btn.path} key={btn.path}>
                 {btn.category}
               </Link>
