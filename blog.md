@@ -10,6 +10,15 @@ The project  that we are presenting is a web application, where a user can creat
 
 In this article we explained the process of building our app, the roadblocks we faced and more details about the project. 
 
+## UI/UX
+
+First task for the UX design team was to identify if there is a need for such a platform, who our users are, and what they want from the platform. We have created a survey to get insights on how much people are aware of the connection between environmental issues and their actions and whether they are willing to change their actions or take extra actions in order to make a positive impact on the environment. The questionnaire also included questions concerning environmental online platforms; what platforms they use, if not using any, whether they will be interested in using one and what are the reasons for using such platforms. Demographic questions were also included to help us create more precise user persona and user story. The survey was created via Google Forms.
+
+After collecting the data, we started to work on creating user personas and user stories. However, we also started to do first sketches and wireframes right away because of the time pressure. After finalising the collected data, it was easier for us to understand the user flow through the platform, which helped a lot with sketches. For prototyping we used Figma.
+Even though everyone on the team (not only UX) had so many ideas of various features of the platform, we separated the main ones, which will be feasible within the limited timeframe and the team capabilities. The main features were chosen to be receiving challenges, personalisation of challenges when signed in and user profile, where the user can complete or delete the challenge.
+After many options with the design and functionality of the platform and many team meetings, 1 week before the deadline we finalised everything, chose the color palette and did user testing. As we tried to keep the simple and understandable design, the testing went very well and only a few minor changes were required.
+
+
 ## Web Development Overview
 
 We decided to create our web app with the MERN stack (MongoDB, Express, React, Node.js) and we used Python on Flask for the machine learning part. 
