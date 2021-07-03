@@ -120,7 +120,7 @@ exports.saveUserChallenge = async (req, res, next) => {
   }
 };
 
-exports.removeUserChallenge = async (req, res) => {
+exports.removeUserChallenge = async (req, res, next) => {
   const { challengeId } = req.body;
   const userId = req.params.id;
   try {
@@ -129,7 +129,7 @@ exports.removeUserChallenge = async (req, res) => {
       {
         $pull: { challenges: { id: challengeId } },
       },
-      { new: true }
+      { new: true, useFindAndModify: false }
     );
     res.status(200).json({ message: challengeId });
   } catch (e) {
@@ -137,7 +137,7 @@ exports.removeUserChallenge = async (req, res) => {
   }
 };
 
-exports.toggleComplete = async (req, res) => {
+exports.toggleComplete = async (req, res, next) => {
   let { challengeId, update } = req.body;
   const userId = req.params.id;
 
@@ -153,6 +153,32 @@ exports.toggleComplete = async (req, res) => {
       }
     );
     res.status(200).json({ message: "updated completed property" });
+  } catch (e) {
+    return next(e);
+  }
+};
+
+exports.updateProfilePic = async (req, res, next) => {
+  console.log(req);
+
+  try {
+    let id = req.params.id;
+    let img = req.file.path;
+
+    if (img) {
+      await db.User.findByIdAndUpdate(
+        id,
+        {
+          $set: {
+            imageUrl: img,
+          },
+        },
+        { new: true, useFindAndModify: false }
+      );
+      res.status(200).json({ imageUrl: img });
+    } else {
+      res.status(500).json({ message: "unable to upload file" });
+    }
   } catch (e) {
     return next(e);
   }

@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import {
   deleteChallenge,
   completeChallenge,
   getUserChallenges,
+  updateProfilePic,
 } from "../../store/actions/challenges";
+
 import { Link } from "react-router-dom";
 import styles from "./userProfile.module.css";
 
@@ -13,11 +15,32 @@ function UserProfile({
   completeChallenge,
   deleteChallenge,
   getUserChallenges,
+  updateProfilePic,
 }) {
   useEffect(() => {
     getUserChallenges(currentUser.user.id);
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(currentUser.user));
+  }, [currentUser]);
+
+  const fileInput = useRef(null);
+
+  const [img, setImg] = useState(null);
+
+  const updateProfileImg = (e) => {
+    setImg(e.target.files[0]);
+  };
+
+  const submitProfilePic = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("avatar", img);
+    updateProfilePic(currentUser.user.id, formData);
+    setImg(null);
+  };
 
   const userId = currentUser.user.id;
   let profile;
@@ -69,9 +92,33 @@ function UserProfile({
             src={"http://localhost:8000/" + currentUser.user.imageUrl}
             alt="profile pic"
             id="profilePic"
+            onClick={() => fileInput.current.click()}
           />
         </div>
-
+        <form encType="multipart/form-data">
+          <input
+            type="file"
+            ref={fileInput}
+            name="avatar"
+            accept=".jpg"
+            style={{ display: "none" }}
+            onChange={updateProfileImg}
+          />
+          {img && (
+            <div className={styles.buttonsGroup}>
+              <button onClick={submitProfilePic} className={styles.updatePic}>
+                Change profile picture
+              </button>
+              <button
+                onClick={() => setImg(null)}
+                className={styles.updatePic}
+                style={{ backgroundColor: "#c3c7c4", marginLeft: 5 , border: "1px solid white"}}
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+        </form>
         <p>
           Username: <span>{currentUser.user.username}</span>
         </p>
@@ -94,4 +141,5 @@ export default connect(mapStateToProps, {
   deleteChallenge,
   completeChallenge,
   getUserChallenges,
+  updateProfilePic,
 })(UserProfile);

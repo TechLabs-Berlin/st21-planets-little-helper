@@ -4,16 +4,17 @@ import {
   GET_USER_CHALLENGES,
   SET_CHALLENGE_AS_COMPLETED,
   ADD_USER_CHALLENGE,
+  UPDATE_PROFILE_PICTURE,
 } from "../actionTypes";
 
 const DEFAULT_STATE = {
   isAuthenticated: false,
   user: {
-    id: null, 
+    id: null,
     username: null,
     email: null,
     imageUrl: null,
-    challenges: []
+    challenges: [],
   },
 };
 
@@ -60,6 +61,15 @@ const currentUser = (state = DEFAULT_STATE, action) => {
           ),
         },
       };
+    case UPDATE_PROFILE_PICTURE: {
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          imageUrl: action.imageUrl
+        }
+      };
+    }
     default: {
       return state;
     }
@@ -67,4 +77,3 @@ const currentUser = (state = DEFAULT_STATE, action) => {
 };
 
 export default currentUser;
-
