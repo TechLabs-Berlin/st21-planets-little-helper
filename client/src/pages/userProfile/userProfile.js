@@ -6,6 +6,7 @@ import {
   getUserChallenges,
   updateProfilePic,
 } from "../../store/actions/challenges";
+
 import { Link } from "react-router-dom";
 import styles from "./userProfile.module.css";
 
@@ -21,16 +22,24 @@ function UserProfile({
     // eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(currentUser.user));
+  }, [currentUser]);
+
   const fileInput = useRef(null);
 
-  const [img, setImg] = useState();
+  const [img, setImg] = useState(null);
 
   const updateProfileImg = (e) => {
     setImg(e.target.files[0]);
+  };
+
+  const submitProfilePic = (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("avatar", img);
     updateProfilePic(currentUser.user.id, formData);
+    setImg(null);
   };
 
   const userId = currentUser.user.id;
@@ -95,6 +104,20 @@ function UserProfile({
             style={{ display: "none" }}
             onChange={updateProfileImg}
           />
+          {img && (
+            <div className={styles.buttonsGroup}>
+              <button onClick={submitProfilePic} className={styles.updatePic}>
+                Change profile picture
+              </button>
+              <button
+                onClick={() => setImg(null)}
+                className={styles.updatePic}
+                style={{ backgroundColor: "#c3c7c4", marginLeft: 5 , border: "1px solid white"}}
+              >
+                Cancel
+              </button>
+            </div>
+          )}
         </form>
         <p>
           Username: <span>{currentUser.user.username}</span>

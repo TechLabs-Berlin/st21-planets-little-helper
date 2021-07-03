@@ -175,7 +175,7 @@ exports.updateProfilePic = async (req, res, next) => {
         },
         { new: true, useFindAndModify: false }
       );
-      res.status(200).json({ message: "profile picture has been updated" });
+      res.status(200).json({ imageUrl: img });
     } else {
       res.status(500).json({ message: "unable to upload file" });
     }

@@ -121,8 +121,8 @@ export function updateProfilePic(userId, profilePic) {
         "Content-Type": "multipart/form-data",
       },
     })
-      .then(() => {
-        dispatch(updatePic(profilePic));
+      .then((res) => {
+        dispatch(updatePic(res.data.imageUrl));
       })
       .catch((err) => addError(err.message));
   };
