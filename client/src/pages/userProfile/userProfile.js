@@ -29,9 +29,11 @@ function UserProfile({
   const fileInput = useRef(null);
 
   const [img, setImg] = useState(null);
+  const [newImgName, setNewImgName] = useState(null);
 
   const updateProfileImg = (e) => {
     setImg(e.target.files[0]);
+    setNewImgName(e.target.files[0].name);
   };
 
   const submitProfilePic = (e) => {
@@ -40,6 +42,13 @@ function UserProfile({
     formData.append("avatar", img);
     updateProfilePic(currentUser.user.id, formData);
     setImg(null);
+    setNewImgName(null);
+  };
+
+  const abortSubmit = () => {
+    setImg(null);
+    setNewImgName(null);
+    fileInput.current.value = null
   };
 
   const userId = currentUser.user.id;
@@ -59,7 +68,7 @@ function UserProfile({
               className={c.completed ? styles.completed : styles.default}
               onClick={() => completeChallenge(userId, c.id, !c.completed)}
             >
-              {c.completed ? "Completed" : "Mark as complete"}
+              {c.completed ? "Completed" : "Mark as completed"}
             </button>
             <button
               onClick={() => deleteChallenge(userId, c.id)}
@@ -105,17 +114,26 @@ function UserProfile({
             onChange={updateProfileImg}
           />
           {img && (
-            <div className={styles.buttonsGroup}>
-              <button onClick={submitProfilePic} className={styles.updatePic}>
-                Change profile picture
-              </button>
-              <button
-                onClick={() => setImg(null)}
-                className={styles.updatePic}
-                style={{ backgroundColor: "#c3c7c4", marginLeft: 5 , border: "1px solid white"}}
-              >
-                Cancel
-              </button>
+            <div>
+              <div className={styles.buttonsGroup}>
+                <button onClick={submitProfilePic} className={styles.updatePic}>
+                  Change profile picture
+                </button>
+                <button
+                  onClick={abortSubmit}
+                  className={styles.updatePic}
+                  style={{
+                    backgroundColor: "#c3c7c4",
+                    marginLeft: 5,
+                    border: "1px solid white",
+                  }}
+                >
+                  Cancel
+                </button>
+              </div>
+              <p style={{ textAlign: "center"}}>
+                Set profile picture to: {newImgName}
+              </p>
             </div>
           )}
         </form>
