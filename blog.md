@@ -1,6 +1,11 @@
 # How we build Planet’s Little Helper
 
 [Introduction](#introduction)
+[UI/UX](#ui-ux)
+[Web Development](#web-development)
+[Data Science](#data-science)
+[The Team](#the-team)
+[Conclusions](#conclusions)
 
 ## Introduction 
 
@@ -14,7 +19,7 @@ In this article we explained the process of building our app, the roadblocks we 
 
 <img src="./blog_images/home_page.jpg"/>
 
-## UI/UX 
+## UI UX 
 
 First task for the UX design team was to identify if there is a need for such a platform, who our users are, and what they want from the platform. We have created a survey to get insights on how much people are aware of the connection between environmental issues and their actions and whether they are willing to change their actions or take extra actions in order to make a positive impact on the environment. The questionnaire also included questions concerning environmental online platforms; what platforms they use, if not using any, whether they will be interested in using one and what are the reasons for using such platforms. Demographic questions were also included to help us create more precise user persona and user story. The survey was created via Google Forms.
 
