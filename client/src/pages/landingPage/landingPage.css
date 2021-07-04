@@ -294,6 +294,8 @@ h3 {
 
   .box-text h1 {
     width: 90%;
+    margin-top: 40px;
+    font-size: 32px;
     /* text-shadow: 4px 0 0 white, -4px 0 0 white, 0 4px 0 white, 0 -4px 0 white,
       3px 3px white, -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white; */
   }
@@ -310,8 +312,8 @@ h3 {
 
   .button-register,
   .btnChallenges {
-    height: 88px;
-    width: 70%;
+    height: 70px;
+    width: 60%;
     min-width: unset;
     font-size: 1.3em;
   }
@@ -381,6 +383,7 @@ h3 {
 
   .box-text p {
     line-height: 1.5em;
+    font-size: 20px;
   }
 
   #pLetsBegin {
@@ -389,7 +392,6 @@ h3 {
 
   .button-register,
   .btnChallenges {
-    height: 88px;
     min-width: unset;
     font-size: 1.3em;
   }
