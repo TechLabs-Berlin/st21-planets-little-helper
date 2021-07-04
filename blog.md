@@ -10,16 +10,17 @@ The project  that we are presenting is a web application, where a user can creat
 
 In this article we explained the process of building our app, the roadblocks we faced and more details about the project. 
 
-<a name="UI/UX">UI/UX</a>
-<a name="Web Development">Web Development</a>
-<a name="Data Science">Data Science</a>
-<a name="The team">The Team</a>
-<a name="Conclusions">Conclusions</a>
+<ul>
+<li><a name="ui">UI/UX</a></li>
+<li><a name="wd">Web Development</a></li>
+<li><a name="ds">Data Science</a></li>
+<li><a name="team">The Team</a></li>
+<li><a name="end">Conclusions</a></li>
 </ul>
 
 <img src="./blog_images/home_page.jpg"/>
 
-## UI/UX
+## UI/UX {: #ui }
 
 First task for the UX design team was to identify if there is a need for such a platform, who our users are, and what they want from the platform. We have created a survey to get insights on how much people are aware of the connection between environmental issues and their actions and whether they are willing to change their actions or take extra actions in order to make a positive impact on the environment. The questionnaire also included questions concerning environmental online platforms; what platforms they use, if not using any, whether they will be interested in using one and what are the reasons for using such platforms. Demographic questions were also included to help us create more precise user persona and user story. The survey was created via Google Forms.
 
@@ -28,7 +29,7 @@ Even though everyone on the team (not only UX) had so many ideas of various feat
 After many options with the design and functionality of the platform and many team meetings, 1 week before the deadline we finalised everything, chose the color palette and did user testing. As we tried to keep the simple and understandable design, the testing went very well and only a few minor changes were required.
 
 
-## Web Development 
+## Web Development {: #wd }
 
 We decided to create our web app with the MERN stack (MongoDB, Express, React, Node.js) and we used Python for the machine learning part. We all had little or no experience with these technologies, but we decided to venture out and learn something new while building our project. 
 
@@ -78,7 +79,7 @@ Last but not least we put our styling skills in action. Every page was styled wi
 
 This journey was a great experience. We all learned a lot. It wasn't always easy and we are proud of the result of our work. Thank you for taking the time to read our blog! Now let's make the world a better place together!
 
-## Data Science 
+## Data Science {: #ds }
 
 ### Demand
 
@@ -99,7 +100,7 @@ That is also why the Planet’s Little Helper team decided on providing the chal
 As for the recommender function, the DS team has decided to achieve the functionality with the help of Count Vectorizer for text processing. Each question stored in the Planet’s Little Helper’s database is also provided with other information like category and challenge description. Those information are combined in a “bag of words” and the DS team utilizes the Count Vectorizer to create a machine learning model that finds the similarities between the challenges that are already chosen by the user and the challenges available. So at the end, a list of challenge recommendations can be created. 
  
 
-# The team
+# The team {: #team }
 
 Btari - Data Science
 Donara - UI/UX
@@ -108,7 +109,7 @@ Giulia - Back end development
 Ori - UI/UX
 Sam - UI/UX
 
-# Conclusions
+# Conclusions {: #end }
 
 This journey was a great experience. We all learned a lot. It wasn't always easy and we are proud of the result of our work. Thank you for taking the time to read our blog! Now let's make the world a better place together!
 
