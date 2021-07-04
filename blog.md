@@ -10,12 +10,11 @@ The project  that we are presenting is a web application, where a user can creat
 
 In this article we explained the process of building our app, the roadblocks we faced and more details about the project. 
 
-<ul>
-<li><a name="UI/UX">UI/UX</a></li>
-<li><a name="Web Development">Web Development</a></li>
-<li><a name="Data Science">Data Science</a></li>
-<li><a name="The team">The Team</a></li>
-<li><a name="Conclusions">Conclusions</a></li>
+<a name="UI/UX">UI/UX</a>
+<a name="Web Development">Web Development</a>
+<a name="Data Science">Data Science</a>
+<a name="The team">The Team</a>
+<a name="Conclusions">Conclusions</a>
 </ul>
 
 <img src="./blog_images/home_page.jpg"/>
