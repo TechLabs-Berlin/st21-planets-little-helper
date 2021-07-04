@@ -1,4 +1,4 @@
-### How we build Planet’s Little Helper
+# How we build Planet’s Little Helper
 
 ## Introduction 
 
@@ -25,7 +25,7 @@ After many options with the design and functionality of the platform and many te
 
 We decided to create our web app with the MERN stack (MongoDB, Express, React, Node.js) and we used Python for the machine learning part. We all had little or no experience with these technologies, but we decided to venture out and learn something new while building our project. 
 
-## The building
+### The building
 
 We created the initial React project by using create-react-app. CRA simplifies the process of setting up a new application, so we did not have to think too much about the configuration and were able to focus on coding. 
 
@@ -33,7 +33,7 @@ CRA does not create the backend, as we decided to use Node.js, we created the ba
 
 Another decision we made almost immediately was to use MongoDB’s Atlas cloud platform to manage the database. It did not take much to set it up and it offered a free plan that was more than enough for our needs. 
 
-# The back end
+### The back end
 
 The first thing we did was to create a Cluster on MongoDB Atlas, so that we could receive the connection string to use in our application. 
 Back into the project we started by creating our server with Express, then thanks to a library called Mongoose we created our connection with MongoDB Atlas, using the connection string we had just received. 
@@ -57,7 +57,7 @@ After that we moved on and created the functionalities to add/remove and toggle 
 During this process, since we did not have a UI yet, we tested our requests using Postman. 
 
 
-# The front end
+### The front end
 
 The first thing we did was to create the project structure. We created our pages and then we started working on routing using react-router-dom. For the challenges page we used dynamic routes, like that we did not have to hard code the challenge's category url and we could add more categories in the future. We then used the url parameter (the category itself) to filter through our challenges and display the right challenges by category. 
 
@@ -73,14 +73,14 @@ This journey was a great experience. We all learned a lot. It wasn't always easy
 
 ## Data Science 
 
-# Demand:
+### Demand:
 
 Nowadays, many people speak about wanting to be more eco-friendly, yet that is harder done than said. In order to achieve our goal, we had to dig deep into the why. So initially it can be seen that the main problem that hinders people from changing their habits into more environmentally friendly is the time/energy required to find the information about what activities that can be done to achieve the  behaviour. So logically, if the list of activities are provided, this would be a big help for the people to act more consciously, right? That is exactly the reason why the Planet’s Little Helper was initiated. 
 
-# Task:
+### Task:
 The WebDev team has done a great job providing the feature where the user can choose their option of challenges. From the Data Science side, the task assigned would be to cluster the data of potential users that has been collected and to give recommendations based on their chosen challenges.
 
-# Process:
+### Process:
 In order to provide suitable challenges for the users, the market has to be analysed from the data collected beforehand. The method used to analyse certain relationships between potential users is by using KMeans model. The Elbow method also helped to decide the optimal number of clusters along the way. And as the result is that, it is the most optimal when the users are divided into 4 groups. 
 
 <img src="./blog_images/data_1.png" alt="cluster"/>
@@ -101,7 +101,7 @@ Giulia - Back end development
 Ori - UI/UX
 Sam - UI/UX
 
-## Conclusions
+# Conclusions
 
 This journey was a great experience. We all learned a lot. It wasn't always easy and we are proud of the result of our work. Thank you for taking the time to read our blog! Now let's make the world a better place together!
 
