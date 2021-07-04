@@ -11,16 +11,16 @@ The project  that we are presenting is a web application, where a user can creat
 In this article we explained the process of building our app, the roadblocks we faced and more details about the project. 
 
 <ul>
-<li><a name="ui">UI/UX</a></li>
-<li><a name="wd">Web Development</a></li>
-<li><a name="ds">Data Science</a></li>
-<li><a name="team">The Team</a></li>
-<li><a name="end">Conclusions</a></li>
+<li>[UI/UX](#ui/ux)</li>
+<li>[Web Development](#web-development)</li>
+<li>[Data Science](#data-science)</li>
+<li>[The Team](#the-team)</li>
+<li>[Conclusions](#conclusions)</li>
 </ul>
 
 <img src="./blog_images/home_page.jpg"/>
 
-## UI/UX {: #ui }
+## UI/UX 
 
 First task for the UX design team was to identify if there is a need for such a platform, who our users are, and what they want from the platform. We have created a survey to get insights on how much people are aware of the connection between environmental issues and their actions and whether they are willing to change their actions or take extra actions in order to make a positive impact on the environment. The questionnaire also included questions concerning environmental online platforms; what platforms they use, if not using any, whether they will be interested in using one and what are the reasons for using such platforms. Demographic questions were also included to help us create more precise user persona and user story. The survey was created via Google Forms.
 
