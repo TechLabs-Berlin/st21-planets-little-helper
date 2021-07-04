@@ -10,6 +10,14 @@ The project  that we are presenting is a web application, where a user can creat
 
 In this article we explained the process of building our app, the roadblocks we faced and more details about the project. 
 
+<ul>
+<li><a name="UI/UX">UI/UX</a></li>
+<li><a name="Web Development">Web Development</a></li>
+<li><a name="Data Science">Data Science</a></li>
+<li><a name="The team">The Team</a></li>
+<li><a name="Conclusions">Conclusions</a></li>
+</ul>
+
 <img src="./blog_images/home_page.jpg"/>
 
 ## UI/UX
@@ -73,14 +81,14 @@ This journey was a great experience. We all learned a lot. It wasn't always easy
 
 ## Data Science 
 
-### Demand:
+### Demand
 
 Nowadays, many people speak about wanting to be more eco-friendly, yet that is harder done than said. In order to achieve our goal, we had to dig deep into the why. So initially it can be seen that the main problem that hinders people from changing their habits into more environmentally friendly is the time/energy required to find the information about what activities that can be done to achieve the  behaviour. So logically, if the list of activities are provided, this would be a big help for the people to act more consciously, right? That is exactly the reason why the Planet’s Little Helper was initiated. 
 
-### Task:
+### Task
 The WebDev team has done a great job providing the feature where the user can choose their option of challenges. From the Data Science side, the task assigned would be to cluster the data of potential users that has been collected and to give recommendations based on their chosen challenges.
 
-### Process:
+### Process
 In order to provide suitable challenges for the users, the market has to be analysed from the data collected beforehand. The method used to analyse certain relationships between potential users is by using KMeans model. The Elbow method also helped to decide the optimal number of clusters along the way. And as the result is that, it is the most optimal when the users are divided into 4 groups. 
 
 <img src="./blog_images/data_1.png" alt="cluster"/>
