@@ -5,6 +5,8 @@
   justify-content: space-around;
   align-items: center;
   font-size: 1.2rem;
+  border-bottom: 2px solid white;
+  /* box-shadow: 0 0.5em 0.5em -0.3em gray; */
 }
 
 .navbar-logo-name {

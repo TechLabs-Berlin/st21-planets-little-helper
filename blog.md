@@ -61,13 +61,18 @@ then we started working on routing using react-router-dom. For the challenges pa
 
 Since we almost immediately realized that we needed to have some state, like the challenges and the current user, available in more parts of our application, we decided to use redux to handle it. Having the current user available globally, we could for example show and hide some routes or buttons to the user if it was authenticated or not. 
 
+Last but not least we put our styling skills in action. Every page was styled with CSS and it's technology Flexbox. Regular meetings were taking place between the UX team and the Web developers in order to ensure good communication and understanding about each others work and skills. The UX team had great ideas which weren't always doable with the current knowledge and experience of the Front end developer. This was discussed and changes were made accordingly. After agreeing on the final design
+last touches were made until the presentation day.
+
+This journey was a great experience. We all learned a lot. It wasn't always easy and we are proud of the result of our work.  Thank you for taking the time to read our blog! Now let's make the world a better place together!
+
 
 # The team
 
 Btari - Data Science
 Donara - UI/UX
-Ina - Front end development
 Giulia - Back end development
+Ina - Front end development
 Ori - UI/UX
 Sam - UI/UX
 
