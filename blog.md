@@ -21,7 +21,7 @@ Even though everyone on the team (not only UX) had so many ideas of various feat
 After many options with the design and functionality of the platform and many team meetings, 1 week before the deadline we finalised everything, chose the color palette and did user testing. As we tried to keep the simple and understandable design, the testing went very well and only a few minor changes were required.
 
 
-## Web Development Overview
+## Web Development 
 
 We decided to create our web app with the MERN stack (MongoDB, Express, React, Node.js) and we used Python for the machine learning part. We all had little or no experience with these technologies, but we decided to venture out and learn something new while building our project. 
 
