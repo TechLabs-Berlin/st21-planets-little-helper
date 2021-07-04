@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Recommendations from "../../components/recommendations/recommendations";
 import { connect } from "react-redux";
 import {
   deleteChallenge,
@@ -78,6 +79,7 @@ function UserProfile({
             </button>
           </div>
         ))}
+        <Recommendations/>
       </div>
     );
   } else {
