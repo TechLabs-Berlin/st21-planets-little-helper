@@ -24,12 +24,16 @@ The project  that we are presenting is a web application, where a user can creat
 
 # The Team
 
-Btari - Data Science
-Donara - UI/UX
-Ina - Front end development
-Giulia - Back end development
-Ori - UI/UX
-Sam - UI/UX
+
+<ul>
+<li>Btari - Data Science</li>
+<li>Donara - UI/UX</li>
+<li>Ina - Front end development</li>
+<li>Giulia - Back end development</li>
+<li>Ori - UI/UX</li>
+<li>Sam - UI/UX</li>
+</ul>
+
 
 ## Todo:
 
