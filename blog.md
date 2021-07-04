@@ -4,16 +4,12 @@
 <br>
 [UI/UX](#ui-ux)
 <br>
-
 [Web Development](#web-development)
 <br>
-
 [Data Science](#data-science)
 <br>
-
 [The Team](#the-team)
 <br>
-
 [Conclusions](#conclusions)
 <br>
 
