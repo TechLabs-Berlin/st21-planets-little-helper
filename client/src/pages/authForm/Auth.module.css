@@ -66,7 +66,8 @@
   padding: 8px 30px;
   border-radius: 16px;
   border: 2px solid #204768;
-  background-color: #b2daac;
+  background-color: #b2daac28;
+  /* color: black; */
   box-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white,
     1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
   outline: none;
@@ -108,14 +109,14 @@
   border: none;
   border-radius: 5px;
   margin-top: 30px;
-  box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
+  box-shadow: 0 0.4em 0.4em -0.4em gray;
   transition: all 0.3s ease;
 }
 
 .submitButton:hover {
   cursor: pointer;
   transform: translateY(-0.1em);
-  box-shadow: 0 0.5em 0.5em -0.2em #0c704b;
+  box-shadow: 0 0.5em 0.5em -0.2em gray;
 }
 
 @media screen and (max-width: 1440px) {

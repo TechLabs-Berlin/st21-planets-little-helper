@@ -60,7 +60,7 @@
   grid: box-img;
   flex: 2;
   width: 100%;
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 .button-register,
@@ -76,7 +76,7 @@
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 50px;
-  box-shadow: 0 0.4em 0.4em -0.4em #0e704c;
+  box-shadow: 0 0.4em 0.4em -0.4em gray;
   transition: all 0.3s ease;
 }
 
@@ -97,7 +97,7 @@
 .button-register:hover {
   cursor: pointer;
   transform: translateY(-0.1em);
-  box-shadow: 0 0.5em 0.5em -0.35em #0c704b;
+  box-shadow: 0 0.5em 0.5em -0.35em grey;
   border: 2px solid #204768;
 }
 
