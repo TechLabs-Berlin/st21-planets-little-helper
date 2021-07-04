@@ -1,5 +1,7 @@
 # How we build Planet’s Little Helper
 
+[Introduction](#introduction)
+
 ## Introduction 
 
 Planet’s Little Helper is the result of the work of Btari, Donara, Ina, Giulia, Ori and Sam, six passionate students at TechLabs, Berlin.
@@ -9,14 +11,6 @@ The idea of the project was to come up with a web application that helps their u
 The project  that we are presenting is a web application, where a user can create an account, browse among our challenges, add them, toggle them as complete or remove them. 
 
 In this article we explained the process of building our app, the roadblocks we faced and more details about the project. 
-
-<ul>
-<li>[UI/UX](#ui/ux)</li>
-<li>[Web Development](#web-development)</li>
-<li>[Data Science](#data-science)</li>
-<li>[The Team](#the-team)</li>
-<li>[Conclusions](#conclusions)</li>
-</ul>
 
 <img src="./blog_images/home_page.jpg"/>
 
@@ -29,7 +23,7 @@ Even though everyone on the team (not only UX) had so many ideas of various feat
 After many options with the design and functionality of the platform and many team meetings, 1 week before the deadline we finalised everything, chose the color palette and did user testing. As we tried to keep the simple and understandable design, the testing went very well and only a few minor changes were required.
 
 
-## Web Development {: #wd }
+## Web Development 
 
 We decided to create our web app with the MERN stack (MongoDB, Express, React, Node.js) and we used Python for the machine learning part. We all had little or no experience with these technologies, but we decided to venture out and learn something new while building our project. 
 
@@ -79,7 +73,7 @@ Last but not least we put our styling skills in action. Every page was styled wi
 
 This journey was a great experience. We all learned a lot. It wasn't always easy and we are proud of the result of our work. Thank you for taking the time to read our blog! Now let's make the world a better place together!
 
-## Data Science {: #ds }
+## Data Science 
 
 ### Demand
 
@@ -100,7 +94,7 @@ That is also why the Planet’s Little Helper team decided on providing the chal
 As for the recommender function, the DS team has decided to achieve the functionality with the help of Count Vectorizer for text processing. Each question stored in the Planet’s Little Helper’s database is also provided with other information like category and challenge description. Those information are combined in a “bag of words” and the DS team utilizes the Count Vectorizer to create a machine learning model that finds the similarities between the challenges that are already chosen by the user and the challenges available. So at the end, a list of challenge recommendations can be created. 
  
 
-# The team {: #team }
+# The team 
 
 Btari - Data Science
 Donara - UI/UX
@@ -109,7 +103,7 @@ Giulia - Back end development
 Ori - UI/UX
 Sam - UI/UX
 
-# Conclusions {: #end }
+# Conclusions 
 
 This journey was a great experience. We all learned a lot. It wasn't always easy and we are proud of the result of our work. Thank you for taking the time to read our blog! Now let's make the world a better place together!
 
