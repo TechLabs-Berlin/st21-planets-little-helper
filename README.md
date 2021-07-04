@@ -39,5 +39,5 @@ The project  that we are presenting is a web application, where a user can creat
 
 Back end deployment
 
-If you want to take a look at the front end part, please visit <a href="https://planetslittlehelper.netlify.app/">Planet's Little Helper.</a>:
+If you want to take a look at the front end part, please visit <a href="https://planetslittlehelper.netlify.app/">Planet's Little Helper.</a>
 
