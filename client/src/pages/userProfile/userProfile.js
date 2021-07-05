@@ -79,7 +79,7 @@ function UserProfile({
             </button>
           </div>
         ))}
-        <Recommendations/>
+        <Recommendations id={currentUser.user.id} userChallenges={currentUser.user.challenges}/>
       </div>
     );
   } else {

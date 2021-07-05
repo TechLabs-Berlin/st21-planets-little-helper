@@ -35,76 +35,25 @@
   text-align: left;
 }
 
-/* hide scrollbar in webkit browser */
-.content::-webkit-scrollbar {
-  display: none;
-}
-
-.content > * {
-  flex-shrink: 0;
-  flex-grow: 1;
-  width: calc(100% / 3);
-}
-
-.leftArrow,
-.rightArrow {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  transform: translateY(-90%);
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-  background-color: rgba(177, 176, 176, 0.4);
+.addchallengeBtn {
   color: white;
+  background-color: #fb6b4a;
+  font-size: 20px;
   border: none;
+  padding: 5px;
+  margin: 20px 0;
+  margin-top: 50px;
+  border-radius: 50px;
+  box-shadow: 0 0.2em 0.2em -0.2em black;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 200px;
 }
 
-.leftArrow,
-.rightArrow svg {
-  font-size: 40px;
+.addchallengeBtn:hover {
+  transform: translateY(-0.2em);
+  box-shadow: 0 0.6em 0.6em -0.4em #1b4049;
+  transition: all 0.2s ease-in-out;
 }
 
-.leftArrow {
-  left: 24px;
-}
-
-.rightArrow {
-  right: 24px;
-}
-
-/* @include tablet-landscape {
-  .content > * {
-    width: 50%;
-  }
-}
-
-@include tablet-portrait {
-  .content > * {
-    width: 100%;
-  }
-
-  .overlay {
-    width: 500px;
-  }
-}
-
-@include big-phone {
-  .leftArrow,
-  .rightArrow {
-    width: 30px;
-    height: 30x;
-    background-color: transparent;
-
-    svg {
-      font-size: 28px;
-    }
-  }
-}
-
-@include phone {
-  .overlay {
-    width: 300px;
-    top: 30%;
-  }
-} */
