@@ -6,7 +6,6 @@
 
 .wrapper {
   display: flex;
-  width: 100%;
 }
 
 .recommend {
@@ -46,3 +45,16 @@
   box-shadow: 0 0.6em 0.6em -0.4em #1b4049;
   transition: all 0.2s ease-in-out;
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+
+  }
+
+  .recommend {
+    width: 85%;
+  text-align: center;
+  }
+}
+

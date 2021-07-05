@@ -275,6 +275,7 @@
 @media screen and (max-width: 576px) {
   .pageContent {
     min-height: calc(100vh - 92px);
+    flex-direction: column;
   }
 
   .pageContent::before {
