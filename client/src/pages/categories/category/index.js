@@ -41,7 +41,7 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
               <div className="p-div">
                 <p>{cat.description}</p>
 
-                <h4>Summary</h4>
+                <h4>Your challenge</h4>
 
                 <p>{cat.challenge}</p>
               </div>

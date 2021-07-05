@@ -45,7 +45,7 @@ function Recommendations({
           .map((c) => (
             <div
               key={c._id}
-              style={{ display: "flex", flexDirection: "column" }}
+              className={styles.recommend}
             >
               <h4>{c.title}</h4>
               <p>{c.challenge}</p>

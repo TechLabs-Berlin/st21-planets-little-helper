@@ -7,14 +7,26 @@
 .wrapper {
   display: flex;
   width: 100%;
-  position: relative;
 }
 
+.recommend {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 10px;
+}
+
+.recommend p {
+  font-size: 14px;
+}
+.recommend h4 {
+  text-align: center;
+}
 
 .addchallengeBtn {
   color: white;
   background-color: #fb6b4a;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
   padding: 5px;
   margin: 20px 0;
@@ -24,7 +36,9 @@
   font-family: inherit;
   transition: all 0.3s ease;
   cursor: pointer;
-  width: 200px;
+  width: 180px;
+  align-self: center;
+  margin-top: auto;
 }
 
 .addchallengeBtn:hover {
@@ -32,4 +46,3 @@
   box-shadow: 0 0.6em 0.6em -0.4em #1b4049;
   transition: all 0.2s ease-in-out;
 }
-
