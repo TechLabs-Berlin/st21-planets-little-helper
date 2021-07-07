@@ -16,7 +16,7 @@ class Header extends React.Component {
   }
 
   handleResize = () => {
-    this.setState({clicked: false});
+    this.setState({clicked: true});
     this.forceUpdate();
   };
 
