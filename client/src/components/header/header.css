@@ -31,6 +31,7 @@
   color: white;
   font-size: 1.2rem;
   margin-top: -5px;
+  margin-left: 10px;
 }
 
 .nav-menu {
@@ -142,6 +143,11 @@ li {
 
   .logOutLi {
     padding: 17px;
+  }
+
+  .log-out-btn{
+  margin-left: 0;
+
   }
 
   .navbar-menu-icon {
@@ -264,7 +270,7 @@ li {
 }
 
 @media screen and (max-width: 150px) {
-  
+
   .navbar-logo-name {
     font-size: 13px;
   }
