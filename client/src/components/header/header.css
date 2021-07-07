@@ -1,5 +1,5 @@
 .navbar {
-  background: #B2DAAC;
+  background: #b2daac;
   height: 80px;
   display: flex;
   justify-content: space-around;
@@ -12,7 +12,6 @@
 .navbar-logo-name {
   margin-left: 2rem;
   font-size: 30px;
-  /* font-family: "Roboto", "Helvetica Neue", sans-serif; */
   font-weight: 700;
 }
 
@@ -44,12 +43,14 @@
   justify-content: end;
   margin-right: 1rem;
 }
+
 .nav-links {
   color: black;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
 }
+
 .nav-links a {
   margin: 0;
 }
@@ -68,19 +69,22 @@ li {
   display: none;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
+
   .navbar {
     height: 70px;
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
+
   .navbar {
     height: 60px;
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
+
   .navbar-logo-name {
     margin-left: 2rem;
     font-size: 27px;
@@ -89,12 +93,12 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+
   .navbar {
     position: relative;
   }
 
   .navbar-logo-name {
-    /* font-size: 26px; */
     margin-left: auto;
   }
 
@@ -112,7 +116,7 @@ li {
 
   .nav-menu.active {
     background: #dcfbd8;
-    border-bottom: 2px solid #B2DAAC;
+    border-bottom: 2px solid #b2daac;
     border-bottom-left-radius: 2%;
     border-bottom-right-radius: 2%;
     left: 0;
@@ -122,17 +126,22 @@ li {
     padding: 0;
     justify-content: center;
   }
-  
+
   .nav-links {
     text-align: center;
     padding: 1.3rem 0;
     width: 100%;
     display: table;
   }
-  
-  .nav-links:hover {
+
+  .nav-links:hover,
+  li:hover {
     background-color: #b2dfab;
     border-radius: 0;
+  }
+
+  .logOutLi {
+    padding: 17px;
   }
 
   .navbar-menu-icon {
@@ -147,7 +156,7 @@ li {
   }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
 
   .navbar {
     height: 55px;
@@ -169,9 +178,13 @@ li {
   .nav-links {
     padding: 1rem 0;
   }
+
+  .logOutLi {
+    padding: 14px;
+  }
 }
 
-@media screen and (max-width: 481px){
+@media screen and (max-width: 481px) {
 
   .navbar-logo-name {
     font-size: 21px;
@@ -183,11 +196,7 @@ li {
   }
 }
 
-@media screen and (max-width: 425px){
-
-  /* .navbar {
-    height: 60px;
-  } */
+@media screen and (max-width: 425px) {
 
   .navbar-logo-name {
     font-size: 20px;
@@ -198,7 +207,7 @@ li {
   }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
 
   .navbar {
     height: 45px;
@@ -221,9 +230,13 @@ li {
     padding: 0.8rem 0;
     font-size: 16px;
   }
+
+  .logOutLi {
+    padding: 10px;
+  }
 }
 
-@media screen and (max-width: 246px){
+@media screen and (max-width: 246px) {
 
   .navbar-logo-name {
     font-size: 16px;
@@ -237,13 +250,21 @@ li {
     height: 160px;
   }
 
-  .nav-links{
+  .nav-links {
     font-size: 14px;
+  }
+
+  .logOutLi {
+    padding: 6px 0;
+  }
+
+  .log-out-btn {
+    font-size: 16px;
   }
 }
 
-@media screen and (max-width: 150px){
-
+@media screen and (max-width: 150px) {
+  
   .navbar-logo-name {
     font-size: 13px;
   }
