@@ -61,7 +61,7 @@ class Header extends React.Component {
                   Profile
                   </NavLink>
                 </li>
-                <li>
+                <li className="logOutLi">
                   <button className="log-out-btn" onClick={this.logout}>
                     Log out
                   </button>

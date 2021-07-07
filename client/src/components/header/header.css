@@ -1,5 +1,5 @@
 .navbar {
-  background: #B2DAAC;
+  background: #b2daac;
   height: 80px;
   display: flex;
   justify-content: space-around;
@@ -12,7 +12,6 @@
 .navbar-logo-name {
   margin-left: 2rem;
   font-size: 30px;
-  /* font-family: "Roboto", "Helvetica Neue", sans-serif; */
   font-weight: 700;
 }
 
@@ -32,6 +31,7 @@
   color: white;
   font-size: 1.2rem;
   margin-top: -5px;
+  margin-left: 10px;
 }
 
 .nav-menu {
@@ -44,12 +44,14 @@
   justify-content: end;
   margin-right: 1rem;
 }
+
 .nav-links {
   color: black;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
 }
+
 .nav-links a {
   margin: 0;
 }
@@ -68,19 +70,19 @@ li {
   display: none;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   .navbar {
     height: 70px;
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .navbar {
     height: 60px;
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .navbar-logo-name {
     margin-left: 2rem;
     font-size: 27px;
@@ -94,7 +96,6 @@ li {
   }
 
   .navbar-logo-name {
-    /* font-size: 26px; */
     margin-left: auto;
   }
 
@@ -102,24 +103,23 @@ li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 270px;
+    height: 230px;
     position: absolute;
-    top: 40px;
+    top: 61px;
     left: -250%;
     opacity: 1;
     transition: all 0.5s ease;
   }
 
   .nav-menu.active {
-    background: #d2ffcb;
-    border-bottom: 2px solid #B2DAAC;
+    background: #dcfbd8;
+    border-bottom: 2px solid #b2daac;
     border-bottom-left-radius: 2%;
     border-bottom-right-radius: 2%;
     left: 0;
     opacity: 1;
-    transition: all 0.5 ease;
     z-index: 1;
-
+    margin-top: 0;
     padding: 0;
     justify-content: center;
   }
@@ -131,9 +131,18 @@ li {
     display: table;
   }
 
-  .nav-links:hover {
+  .nav-links:hover,
+  li:hover {
     background-color: #b2dfab;
     border-radius: 0;
+  }
+
+  .logOutLi {
+    padding: 17px;
+  }
+
+  .log-out-btn {
+    margin-left: 0;
   }
 
   .navbar-menu-icon {
@@ -148,8 +157,7 @@ li {
   }
 }
 
-@media screen and (max-width: 576px){
-
+@media screen and (max-width: 576px) {
   .navbar {
     height: 55px;
   }
@@ -161,14 +169,22 @@ li {
   .navbar-menu-icon {
     font-size: 1.5rem;
   }
+
+  .nav-menu {
+    height: 210px;
+    top: 56px;
+  }
+
+  .nav-links {
+    padding: 1rem 0;
+  }
+
+  .logOutLi {
+    padding: 14px;
+  }
 }
 
-@media screen and (max-width: 481px){
-
-  /* .navbar {
-    height: 65px;
-  } */
-
+@media screen and (max-width: 481px) {
   .navbar-logo-name {
     font-size: 21px;
   }
@@ -179,12 +195,7 @@ li {
   }
 }
 
-@media screen and (max-width: 425px){
-
-  /* .navbar {
-    height: 60px;
-  } */
-
+@media screen and (max-width: 425px) {
   .navbar-logo-name {
     font-size: 20px;
   }
@@ -194,8 +205,7 @@ li {
   }
 }
 
-@media screen and (max-width: 375px){
-
+@media screen and (max-width: 375px) {
   .navbar {
     height: 45px;
   }
@@ -207,10 +217,23 @@ li {
   .navbar-menu-icon {
     font-size: 1.2rem;
   }
+
+  .nav-menu {
+    height: 180px;
+    top: 46px;
+  }
+
+  .nav-links {
+    padding: 0.8rem 0;
+    font-size: 16px;
+  }
+
+  .logOutLi {
+    padding: 10px;
+  }
 }
 
-@media screen and (max-width: 246px){
-
+@media screen and (max-width: 246px) {
   .navbar-logo-name {
     font-size: 16px;
   }
@@ -218,10 +241,25 @@ li {
   .navbar-menu-icon {
     font-size: 1.1rem;
   }
+
+  .nav-menu {
+    height: 160px;
+  }
+
+  .nav-links {
+    font-size: 14px;
+  }
+
+  .logOutLi {
+    padding: 6px 0;
+  }
+
+  .log-out-btn {
+    font-size: 16px;
+  }
 }
 
-@media screen and (max-width: 150px){
-
+@media screen and (max-width: 150px) {
   .navbar-logo-name {
     font-size: 13px;
   }
