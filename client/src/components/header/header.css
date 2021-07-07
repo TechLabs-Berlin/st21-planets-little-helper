@@ -71,21 +71,18 @@ li {
 }
 
 @media screen and (max-width: 1440px) {
-
   .navbar {
     height: 70px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-
   .navbar {
     height: 60px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-
   .navbar-logo-name {
     margin-left: 2rem;
     font-size: 27px;
@@ -94,7 +91,6 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-
   .navbar {
     position: relative;
   }
@@ -145,9 +141,8 @@ li {
     padding: 17px;
   }
 
-  .log-out-btn{
-  margin-left: 0;
-
+  .log-out-btn {
+    margin-left: 0;
   }
 
   .navbar-menu-icon {
@@ -163,7 +158,6 @@ li {
 }
 
 @media screen and (max-width: 576px) {
-
   .navbar {
     height: 55px;
   }
@@ -191,7 +185,6 @@ li {
 }
 
 @media screen and (max-width: 481px) {
-
   .navbar-logo-name {
     font-size: 21px;
   }
@@ -203,7 +196,6 @@ li {
 }
 
 @media screen and (max-width: 425px) {
-
   .navbar-logo-name {
     font-size: 20px;
   }
@@ -214,7 +206,6 @@ li {
 }
 
 @media screen and (max-width: 375px) {
-
   .navbar {
     height: 45px;
   }
@@ -243,7 +234,6 @@ li {
 }
 
 @media screen and (max-width: 246px) {
-
   .navbar-logo-name {
     font-size: 16px;
   }
@@ -270,7 +260,6 @@ li {
 }
 
 @media screen and (max-width: 150px) {
-
   .navbar-logo-name {
     font-size: 13px;
   }
