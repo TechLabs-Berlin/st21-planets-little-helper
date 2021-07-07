@@ -81,10 +81,6 @@ Last but not least we put our styling skills in action. Every page was styled wi
 
 <img src="./blog_images/redux.jpg"/>
 
-Last but not least we put our styling skills in action. Every page was styled with CSS and it's technology Flexbox. Regular meetings were taking place between the UX team and the Web developers in order to ensure good communication and understanding about each others work and skills. The UX team had great ideas which weren't always doable with the current knowledge and experience of the Front end developer. This was discussed and changes were made accordingly. After agreeing on the final design last touches were made until the presentation day.
-
-This journey was a great experience. We all learned a lot. It wasn't always easy and we are proud of the result of our work. Thank you for taking the time to read our blog! Now let's make the world a better place together!
-
 ## Data Science 
 
 ### Demand
