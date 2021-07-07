@@ -12,7 +12,6 @@
   position: absolute;
   content: "";
   background-image: url("./earthCroppedBottom.png");
-  /* background-size: 30%; */
   background-position: bottom left;
   background-attachment: fixed;
   top: 0;
@@ -28,7 +27,6 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  /* border: 1px solid black; */
   min-width: 25%;
 }
 
@@ -104,6 +102,7 @@
   box-shadow: 0 0.3em 0.3em -0.3em grey;
   margin-bottom: 10px;
   border-radius: 10px;
+  overflow-wrap: break-word;
 }
 
 .challenge::before,
@@ -130,13 +129,13 @@
   position: relative;
   font-size: 18px;
   text-shadow: none;
+  overflow-wrap: break-word;
 }
 
 .challenge button {
   position: relative;
   border: none;
   border-radius: 15px;
-  /* padding: 8px 15px; */
   background-color: inherit;
   font-size: 17px;
   font-weight: 600;
@@ -165,17 +164,24 @@
 
 .noChallenges {
   display: flex;
+  flex-flow: column;
   justify-content: center;
 }
 
+.noChallenges p {
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
 .goToChallengesBtn {
   position: relative;
-  /* width: 100%; */
-  margin: 50px 0;
+  margin: 10px 0 50px 0;
   background-color: inherit;
   border: none;
   border-radius: 10px;
-  /* padding: 10px 15px; */
   font-size: 40px;
 }
 
@@ -187,8 +193,13 @@
 .noChallenges a {
   position: relative;
   text-decoration: none;
+  color: rgb(59, 58, 58);
+}
+
+.noChallenges span {
   color: #fb6b4a;
 }
+
 .noChallenges a:hover {
   text-shadow: 0px 0px 1px #204768;
   transition: all 0.3s ease-in-out;
@@ -230,6 +241,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .pictureDiv {
     width: 7em;
   }
@@ -237,9 +249,11 @@
   .profileDiv p {
     margin-bottom: 0;
   }
+
   .pageContent {
     min-height: calc(100vh - 97px);
   }
+
   .pageContent::before {
     background-size: 25rem;
   }
@@ -266,13 +280,28 @@
     width: 80%;
     padding-left: 1.5em;
   }
+
+  .noChallenges p {
+    font-size: 19px;
+    margin-top: 40px;
+  }
+
   .goToChallengesBtn {
-    margin: 40px 0;
+    margin-bottom: 40px;
     font-size: 30px;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .profileDiv {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .userInfoDiv {
+    margin-left: 20px;
+  }
+
   .pageContent {
     min-height: calc(100vh - 92px);
     flex-direction: column;
@@ -282,18 +311,19 @@
     background-size: 24rem;
   }
 
-  .container {
-    padding-left: 2rem;
-  }
-
+  .container,
   .noChallengescontainer {
-    width: 180%;
-    padding-left: 1em;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-left: 0;
   }
 
   .pictureDiv {
     margin-top: 30px;
-    width: 70%;
+    width: 30%;
+    display: flex;
   }
 
   .profileDiv p {
@@ -302,7 +332,12 @@
 
   .container h2,
   .noChallengescontainer h2 {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .challenge {
+    margin-top: 6px;
+    margin-bottom: 4px;
   }
 
   .challenge h4 {
@@ -319,8 +354,11 @@
     margin-right: 15px;
   }
 
+  .noChallenges p {
+    font-size: 17px;
+  }
+
   .goToChallengesBtn {
-    margin: 30px 0;
     font-size: 26px;
   }
 }
@@ -330,13 +368,8 @@
     background-size: 20rem;
   }
 
-  .container {
-    padding-left: 1rem;
-  }
-
   .pictureDiv {
     margin-top: 20px;
-    width: 75%;
   }
 
   .challenge h4 {
@@ -352,8 +385,13 @@
     margin-right: 10px;
   }
 
+  .noChallenges p {
+    font-size: 15px;
+    margin-top: 30px;
+  }
+
   .goToChallengesBtn {
-    margin: 20px 0;
+    margin-top: 5px;
     font-size: 25px;
   }
 }
@@ -361,15 +399,6 @@
 @media screen and (max-width: 425px) {
   .pageContent::before {
     background-size: 18rem;
-  }
-
-  .container {
-    padding-left: 1.3rem;
-  }
-
-  .pictureDiv {
-    margin-top: 20px;
-    width: 75%;
   }
 
   .container h2,
@@ -380,6 +409,7 @@
     font-size: 24px;
     letter-spacing: 1px;
   }
+
   .challenge {
     width: 90%;
   }
@@ -398,8 +428,8 @@
   }
 
   .goToChallengesBtn {
-    margin: 15px 0;
     font-size: 23px;
+    margin-bottom: 30px;
   }
 }
 
@@ -410,16 +440,6 @@
 
   .pageContent::before {
     background-size: 16rem;
-  }
-
-  .container,
-  .noChallengescontainer {
-    padding-left: 1.1rem;
-  }
-
-  .pictureDiv {
-    margin-top: 10px;
-    /* width: 80%; */
   }
 
   .profileDiv p {
@@ -442,7 +462,6 @@
 
   .challenge button {
     font-size: 14px;
-    /* margin-right: 2px; */
     margin-bottom: 0;
   }
 
@@ -457,13 +476,12 @@
     background-size: 14rem;
   }
 
-  .container,
-  .noChallengescontainer {
-    padding-left: 0.5rem;
-  }
-
   .profileDiv p {
     font-size: 10px;
+  }
+
+  .pictureDiv {
+    width: 35%;
   }
 
   .container h2,
@@ -482,11 +500,14 @@
 
   .challenge button {
     font-size: 12px;
-    /* margin-right: 2px; */
+  }
+
+  .noChallenges p {
+    font-size: 14px;
+    margin-top: 10px;
   }
 
   .goToChallengesBtn {
-    margin: 0;
     font-size: 17px;
   }
 }
@@ -494,6 +515,21 @@
 @media screen and (max-width: 246px) {
   .pageContent::before {
     background-size: 12rem;
+  }
+
+  .profileDiv {
+    flex-flow: column;
+    box-shadow: 0.1em 0.2em 0.4em -0.2em #b2daac;
+    padding-bottom: 5px;
+    background-color: #b2daac05;
+  }
+
+  .pictureDiv {
+    width: 40%;
+  }
+
+  .userInfoDiv {
+    margin: 5px;
   }
 
   .profileDiv p {
@@ -522,6 +558,11 @@
   .challenge button {
     font-size: 11px;
     margin: 0;
+  }
+
+  .noChallenges p {
+    font-size: 12px;
+    margin-top: 10px;
   }
 
   .goToChallengesBtn {

@@ -66,7 +66,7 @@
   padding: 8px 30px;
   border-radius: 16px;
   border: 2px solid #204768;
-  background-color: #b2daac28;
+  background-color: #d6eed2;
   /* color: black; */
   box-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white,
     1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
@@ -107,7 +107,7 @@
   letter-spacing: 1px;
   background-color: #204768;
   border: none;
-  border-radius: 5px;
+  border-radius: 35px;
   margin-top: 30px;
   box-shadow: 0 0.4em 0.4em -0.4em gray;
   transition: all 0.3s ease;

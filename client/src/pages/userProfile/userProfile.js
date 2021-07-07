@@ -85,10 +85,11 @@ function UserProfile({
   } else {
     profile = (
       <div className={styles.noChallengescontainer}>
-        <h2>You have no challenges</h2>
+        <h2>Your challenges</h2>
         <div className={styles.noChallenges}>
+        <p>Currently you do not have any challenges.</p>
           <button className={styles.goToChallengesBtn}>
-            <Link to="/challenges">Go to challenges</Link>
+            <Link to="/challenges">Go to <span>challenges</span></Link>
           </button>
         </div>
       </div>
@@ -139,12 +140,14 @@ function UserProfile({
             </div>
           )}
         </form>
+        <div className={styles.userInfoDiv}>
         <p>
           Username: <span>{currentUser.user.username}</span>
-        </p>
-        <p>
+          </p>
+          <p>
           E-mail: <span>{currentUser.user.email}</span>
-        </p>
+          </p>
+          </div>
       </div>
       {profile}
     </div>

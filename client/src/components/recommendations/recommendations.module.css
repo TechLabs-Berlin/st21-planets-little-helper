@@ -1,28 +1,58 @@
 .container {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
+.recommendationsH2{
+  opacity: 0.8;
+  min-width: 99%;
+}
+
+.recommend::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(245, 245, 251);
+  opacity: 0.65;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+}
 
 .wrapper {
+  position: relative;
   display: flex;
 }
 
 .recommend {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 30%;
-  margin: 0 10px;
+  margin: 10px 5px;
+  padding: 5px 12px;
+  box-shadow: 0.1em 0.3em 0.3em -0.2em rgb(59, 60, 144);
+  /* box-shadow: 0.01em 0.1em 0.2em 0.01em rgb(59, 60, 144); */
+  text-align: justify;
+  border-radius: 10px;
+  overflow-wrap: break-word;
+
 }
 
 .recommend p {
+  position: relative;
   font-size: 14px;
+  /* overflow: hidden; */
 }
 .recommend h4 {
+  position: relative;
   text-align: center;
 }
 
 .addchallengeBtn {
+  position: relative;
   color: white;
   background-color: #fb6b4a;
   font-size: 18px;
@@ -46,15 +76,115 @@
   transition: all 0.2s ease-in-out;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .recommendationsH2{
+    min-width: 85%;
+  }
   .wrapper {
     flex-direction: column;
+  }
+  
+  .recommend {
+    width: 85%;
+    margin: 5px 0;
+    padding: 0;
+  text-align: center;
+  box-shadow: 0.1em 0.3em 0.3em -0.2em grey;
 
   }
 
-  .recommend {
-    width: 85%;
-  text-align: center;
+  .recommend p{
+    padding: 0 15px;
+    margin-top: 0;
   }
 }
 
+@media (max-width: 576px) {
+.container,.wrapper {
+align-items: center;
+}
+ .recommend{
+   width: 88%;
+ }
+ .recommend h4{
+   margin-bottom: 10px;
+ }
+.addchallengeBtn {
+  font-size: 15px;
+  padding: 3px;
+  width: 150px;
+}
+}
+
+/* @media screen and (max-width: 481px) {
+  .recommend h4 {
+    font-size: 18px;
+  }
+
+  .recommend p {
+    font-size: 15px;
+  }
+} */
+  @media screen and (max-width: 425px) {
+    .recommend{
+      width: 94%;
+    }
+
+    .recommend h4 {
+      font-size: 15px;
+    }
+  
+    .recommend p {
+      font-size: 13px;
+    }
+
+    .addchallengeBtn {
+      font-size: 14px;
+      padding: 3px;
+      width: 140px;
+    }
+  }
+    @media screen and (max-width: 375px) {
+     
+      .recommend p {
+        font-size: 12px;
+      }
+  
+      .addchallengeBtn {
+        font-size: 13px;
+        width: 130px;
+      }
+    }
+
+      @media screen and (max-width: 320px) {
+
+        .recommend h4 {
+          font-size: 13px;
+        }
+      
+        .recommend p {
+          font-size: 10px;
+        }
+    
+        .addchallengeBtn {
+          font-size: 11px;
+          padding: 3px;
+          width: 120px;
+          margin-bottom: 15px;
+        }
+      }
+        @media screen and (max-width: 246px) {
+          .recommend h4 {
+            font-size: 12px;
+          }
+        
+          .recommend p {
+         padding: 0 5px;
+          }
+      
+          .addchallengeBtn {
+            font-size: 11px;
+            width: 60%;
+            margin-bottom: 10px;
+          }
+        }

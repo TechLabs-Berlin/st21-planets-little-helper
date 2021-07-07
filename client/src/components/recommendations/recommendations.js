@@ -34,7 +34,7 @@ function Recommendations({
 
   return (
     <div className={styles.container}>
-      <h2>Our recommendations for you:</h2>
+      <h2 className={styles.recommendationsH2}>Our recommendations for you:</h2>
       <div className={styles.wrapper}>
         {shuffleArray(
           challenges.filter(
