@@ -12,7 +12,6 @@
   position: absolute;
   content: "";
   background-image: url("./earthCroppedBottom.png");
-  /* background-size: 30%; */
   background-position: bottom left;
   background-attachment: fixed;
   top: 0;
@@ -28,7 +27,6 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  /* border: 1px solid black; */
   min-width: 25%;
 }
 
@@ -132,14 +130,12 @@
   font-size: 18px;
   text-shadow: none;
   overflow-wrap: break-word;
-  /* margin: 0; */
 }
 
 .challenge button {
   position: relative;
   border: none;
   border-radius: 15px;
-  /* padding: 8px 15px; */
   background-color: inherit;
   font-size: 17px;
   font-weight: 600;
@@ -245,6 +241,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .pictureDiv {
     width: 7em;
   }
@@ -252,9 +249,11 @@
   .profileDiv p {
     margin-bottom: 0;
   }
+
   .pageContent {
     min-height: calc(100vh - 97px);
   }
+
   .pageContent::before {
     background-size: 25rem;
   }
@@ -286,6 +285,7 @@
     font-size: 19px;
     margin-top: 40px;
   }
+
   .goToChallengesBtn {
     margin-bottom: 40px;
     font-size: 30px;
@@ -297,9 +297,11 @@
     flex-direction: row;
     justify-content: center;
   }
+
   .userInfoDiv {
     margin-left: 20px;
   }
+
   .pageContent {
     min-height: calc(100vh - 92px);
     flex-direction: column;
@@ -337,6 +339,7 @@
     margin-top: 6px;
     margin-bottom: 4px;
   }
+
   .challenge h4 {
     font-size: 18px;
     margin: 4px 0 15px;
@@ -354,8 +357,8 @@
   .noChallenges p {
     font-size: 17px;
   }
+
   .goToChallengesBtn {
-    /* margin: 30px 0; */
     font-size: 26px;
   }
 }
@@ -364,10 +367,6 @@
   .pageContent::before {
     background-size: 20rem;
   }
-
-  /* .container {
-    padding-left: 1rem;
-  } */
 
   .pictureDiv {
     margin-top: 20px;
@@ -390,6 +389,7 @@
     font-size: 15px;
     margin-top: 30px;
   }
+
   .goToChallengesBtn {
     margin-top: 5px;
     font-size: 25px;
@@ -401,10 +401,6 @@
     background-size: 18rem;
   }
 
-  /* .container {
-    padding-left: 1.3rem;
-  } */
-
   .container h2,
   .noChallengescontainer h2 {
     width: 90%;
@@ -413,6 +409,7 @@
     font-size: 24px;
     letter-spacing: 1px;
   }
+
   .challenge {
     width: 90%;
   }
@@ -445,11 +442,6 @@
     background-size: 16rem;
   }
 
-  /* .container,
-  .noChallengescontainer {
-    padding-left: 1.1rem;
-  } */
-
   .profileDiv p {
     font-size: 12px;
   }
@@ -470,7 +462,6 @@
 
   .challenge button {
     font-size: 14px;
-    /* margin-right: 2px; */
     margin-bottom: 0;
   }
 
@@ -509,7 +500,6 @@
 
   .challenge button {
     font-size: 12px;
-    /* margin-right: 2px; */
   }
 
   .noChallenges p {
@@ -533,9 +523,11 @@
     padding-bottom: 5px;
     background-color: #b2daac05;
   }
+
   .pictureDiv {
     width: 40%;
   }
+
   .userInfoDiv {
     margin: 5px;
   }
