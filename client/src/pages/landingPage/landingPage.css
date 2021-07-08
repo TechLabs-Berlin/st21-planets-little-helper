@@ -323,7 +323,7 @@ h3 {
     bottom: 0;
     left: 0;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.35;
   }
   /* ----------------------------------------------------------------- */
 
@@ -346,6 +346,10 @@ h3 {
 @media screen and (max-width: 768px) {
   .content-box {
     min-height: calc(100vh - 97px);
+  }
+
+  .container::before {
+    background-size: 40%;
   }
 
   .h1LogedIn,
@@ -398,6 +402,10 @@ h3 {
 @media screen and (max-width: 576px) {
   .content-box {
     min-height: calc(100vh - 92px);
+  }
+
+  .container::before {
+    background-size: 50%;
   }
 
   .h1LogedIn {
@@ -468,6 +476,11 @@ h3 {
 }
 
 @media (max-width: 481px) {
+  .container::before {
+    background-size: 55%;
+    margin: 5px;
+  }
+
   .h1LogedIn,
   .h1LandingPage {
     font-size: 28px;
@@ -522,6 +535,10 @@ h3 {
     min-height: calc(100vh - 82px);
   }
 
+  .container::before {
+    background-size: 60%;
+  }
+
   .h1LogedIn,
   .h1LandingPage {
     font-size: 26px;
@@ -546,6 +563,10 @@ h3 {
 }
 
 @media (max-width: 320px) {
+  .container::before {
+    background-size: 65%;
+  }
+
   .h1LogedIn,
   .h1LandingPage {
     font-size: 24px;
