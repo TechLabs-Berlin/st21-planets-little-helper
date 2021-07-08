@@ -6,6 +6,7 @@ import "./header.css";
 import { logout } from "../../store/actions/auth";
 
 class Header extends React.Component {
+
   state = { clicked: false };
 
   componentDidMount() {
@@ -44,13 +45,15 @@ class Header extends React.Component {
   render() {
 
     return (
-      <header>
-        <nav className="navbar">
+      <header onClick={this.state.clicked ? this.handleClick : null}>
+        <nav className="navbar" >
+
           <NavLink to="/" className="nav-logo-link">
             <div className="navbar-logo-name">
               <span>Planet's Little Helper</span>
             </div>
           </NavLink>
+
           <ul
             className={this.state.clicked ? "nav-menu active" : "nav-menu"}
             onClick={this.handleClick}
