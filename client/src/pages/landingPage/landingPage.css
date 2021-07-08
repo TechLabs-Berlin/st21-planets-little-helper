@@ -1,7 +1,7 @@
 .content-box {
-  /* background-color: whitesmoke; */
   min-height: calc(100vh - 142px);
 }
+
 .container {
   position: relative;
   width: 100%;
@@ -33,16 +33,11 @@
 }
 
 .name {
-  /* text-transform: capitalize; */
-  /* font-style: italic; */
   font-weight: 600;
   padding-left: 15px;
   text-shadow: 0.5px 0.5px 1px #317e67;
 }
 
-/* .pLogedIn{
-  margin-top: 50px;
-} */
 #pLetsBegin {
   margin-top: 70px;
 }
@@ -79,19 +74,6 @@
   box-shadow: 0 0.4em 0.4em -0.4em gray;
   transition: all 0.3s ease;
 }
-
-/* .btnChallenges{
-  background-color: #204768;
-  border: 2px solid#204768;
-
-} */
-
-/* .button-register:hover {
-  cursor: pointer;
-  transform: translateY(-0.1em);
-  box-shadow: 0 0.5em 0.5em -0.2em #0c704b;
-  border: 2px solid #1eac78;
-} */
 
 .btnChallenges:hover,
 .button-register:hover {
@@ -154,7 +136,6 @@ h3 {
   cursor: pointer;
   transform: translateY(-0.2em);
   box-shadow: 0 0.5em 0.5em -0.35em gray;
-  /* border: 1.5px solid #2d8162; */
 }
 
 .container3 {
@@ -172,7 +153,7 @@ h3 {
 
 .btns-div {
   width: 45%;
-  max-width: 550px;
+  max-width: 950px;
   min-width: 212px;
   text-align: center;
   margin: 0px 10px;
@@ -186,9 +167,11 @@ h3 {
   h1 {
     font-size: 50px;
   }
+
   .h1LogedIn {
     font-size: 45px;
   }
+
   .pLogedIn {
     font-size: 25px;
   }
@@ -207,6 +190,7 @@ h3 {
   .box-text p {
     line-height: 1.3em;
   }
+
   .box-img {
     min-width: 260px;
   }
@@ -222,6 +206,7 @@ h3 {
 
   h2,
   h3 {
+    letter-spacing: 1px;
     font-size: 35px;
   }
 
@@ -229,6 +214,14 @@ h3 {
     font-size: 22px;
     max-width: 300px;
     min-width: 200px;
+  }
+
+  .container3 {
+    justify-content: space-evenly;
+  }
+
+  .btns-div {
+    max-width: 400px;
   }
 
   .btns {
@@ -246,6 +239,7 @@ h3 {
   .how-text {
     font-size: 20px;
   }
+
   .h1LogedIn {
     margin-top: 60px;
     font-size: 40px;
@@ -258,6 +252,7 @@ h3 {
   #pLetsBegin {
     margin-top: 50px;
   }
+
   .box-text p {
     line-height: 1.4em;
     font-size: 25px;
@@ -268,6 +263,7 @@ h3 {
   .how-text {
     margin: 0 67px;
   }
+
   .h1LogedIn {
     font-size: 37px;
   }
@@ -278,11 +274,11 @@ h3 {
 }
 
 @media screen and (max-width: 835px) {
-  
   .h1LogedIn {
     font-size: 35px;
     margin-top: 40px;
   }
+
   .button-register,
   .btnChallenges {
     margin-bottom: 25px;
@@ -292,18 +288,14 @@ h3 {
     margin: 0 50px;
   }
 
-  .box-text h1 {
+  .h1LandingPage {
     width: 90%;
     margin-top: 40px;
     font-size: 32px;
-    /* text-shadow: 4px 0 0 white, -4px 0 0 white, 0 4px 0 white, 0 -4px 0 white,
-      3px 3px white, -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white; */
   }
 
   .box-text p {
     width: 85%;
-    /* text-shadow: 3px 0 0 white, -3px 0 0 white, 0 3px 0 white, 0 -3px 0 white,
-      2px 2px white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white; */
   }
 
   #pLetsBegin {
@@ -356,17 +348,14 @@ h3 {
     min-height: calc(100vh - 97px);
   }
 
-  h1 {
-    font-size: 1.8em;
-  }
-
-  .h1LogedIn {
-    font-size: 32px;
-    margin-top: 37px;
+  .h1LogedIn,
+  .h1LandingPage {
+    font-size: 30px;
   }
 
   h2,
   h3 {
+    letter-spacing: normal;
     margin-top: 10px;
     padding: 20px 0;
     font-size: 30px;
@@ -411,13 +400,11 @@ h3 {
     min-height: calc(100vh - 92px);
   }
 
-  h1 {
-    font-size: 1.5em;
-  }
   .h1LogedIn {
     font-size: 30px;
     margin-top: 37px;
   }
+
   .name {
     padding-left: 3%;
   }
@@ -447,12 +434,6 @@ h3 {
     padding-right: 3%;
     text-align: left;
   }
-
-  /* .box-text h1,
-  p {
-    text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white,
-      1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
-  } */
 
   .button-register,
   .btnChallenges {
@@ -487,13 +468,12 @@ h3 {
 }
 
 @media (max-width: 481px) {
-  h1 {
-    margin-top: 15px;
-  }
-  .h1LogedIn {
+  .h1LogedIn,
+  .h1LandingPage {
     font-size: 28px;
     margin-top: 37px;
   }
+
   .box-text p {
     font-size: 22px;
   }
@@ -512,9 +492,24 @@ h3 {
 }
 
 @media (max-width: 425px) {
+  .h1LogedIn,
+  .h1LandingPage {
+    font-size: 27px;
+  }
+
   .box-text p {
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1.3em;
+  }
+
+  .button-register,
+  .btnChallenges {
+    font-size: 1em;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.4em;
   }
 
   .btns {
@@ -527,11 +522,8 @@ h3 {
     min-height: calc(100vh - 82px);
   }
 
-  h1 {
-    font-size: 1.3em;
-  }
-
-  .h1LogedIn {
+  .h1LogedIn,
+  .h1LandingPage {
     font-size: 26px;
     margin-top: 30px;
   }
@@ -554,11 +546,8 @@ h3 {
 }
 
 @media (max-width: 320px) {
-  h1 {
-    font-size: 1.2em;
-  }
-
-  .h1LogedIn {
+  .h1LogedIn,
+  .h1LandingPage {
     font-size: 24px;
     margin-top: 27px;
   }
@@ -574,6 +563,11 @@ h3 {
     font-size: 0.9em;
   }
 
+  h2,
+  h3 {
+    font-size: 1.2em;
+  }
+
   .btns {
     width: 95%;
     margin: 5px;
@@ -582,18 +576,15 @@ h3 {
 }
 
 @media (max-width: 246px) {
-  h1 {
-    font-size: 1em;
-  }
-
-  .h1LogedIn {
+  .h1LogedIn,
+  .h1LandingPage {
     font-size: 20px;
     margin-top: 27px;
   }
 
   h2,
   h3 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .box-text p {

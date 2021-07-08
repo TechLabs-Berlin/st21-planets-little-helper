@@ -8,7 +8,7 @@ function LandingPage({ currentUser }) {
       <div className="container">
         {!currentUser.isAuthenticated && (
           <div className="box-text">
-            <h1>Join us on our mission to save the planet</h1>
+            <h1 className="h1LandingPage">Join us on our mission to save the planet</h1>
             <p>
               Register and receive personalized challenges to save the world.
               Choose your own pace and own categories where you want to improve
