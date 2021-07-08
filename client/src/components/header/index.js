@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { NavLink, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import "./header.css";
@@ -9,14 +10,16 @@ class Header extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+    document.addEventListener('click', this.handleClickOutside, true);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
+    document.removeEventListener('click', this.handleClickOutside, true);
   }
 
   handleResize = () => {
-    this.setState({clicked: false});
+    this.setState({ clicked: false });
     this.forceUpdate();
   };
 
@@ -30,6 +33,13 @@ class Header extends React.Component {
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
+
+  handleClickOutside = event => {
+    const domNode = ReactDOM.findDOMNode(this);
+    if (!domNode || !domNode.contains(event.target)) {
+      this.setState({ clicked: false });
+    }
+  }
 
   render() {
 
@@ -47,7 +57,7 @@ class Header extends React.Component {
           >
             <li>
               <NavLink to="/challenges" className="nav-links">
-              Challenges
+                Challenges
               </NavLink>
             </li>
 
@@ -58,7 +68,7 @@ class Header extends React.Component {
                     to={`/user/${this.props.currentUser.user.id}`}
                     className="nav-links"
                   >
-                  Profile
+                    Profile
                   </NavLink>
                 </li>
                 <li className="logOutLi">
