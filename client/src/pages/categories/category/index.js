@@ -65,10 +65,7 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
           </h2>
           <div className="btn_div">
             <Link to="/signup">
-              <button
-                className="button-register"
-                id="register_cattegories_page"
-              >
+              <button className="button-register" id="register_cattegories_page">
                 Register
               </button>
             </Link>
