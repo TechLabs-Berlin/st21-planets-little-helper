@@ -60,19 +60,19 @@ function Category({ currentUser, challenges, fetchChallenges, addChallenge }) {
 
       {!currentUser.isAuthenticated && (
         <div className="bottom-div">
+        
           <h2 className="categories_h2">
             Start with small positive changes for our planet
           </h2>
+
           <div className="btn_div">
-            <Link to="/signup">
-              <button
-                className="button-register"
-                id="register_cattegories_page"
-              >
+            <button className="button-register" id="register_cattegories_page">
+              <Link to="/signup">
                 Register
-              </button>
-            </Link>
+              </Link>
+            </button>
           </div>
+
         </div>
       )}
     </div>

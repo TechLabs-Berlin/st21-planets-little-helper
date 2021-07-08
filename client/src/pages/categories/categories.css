@@ -8,7 +8,6 @@
   background: white;
   margin: 0;
   padding-top: 30px;
-  /* text-shadow: 0.5px 0.5px 1px #3e93a7; */
 }
 
 .categories_h2 {
@@ -28,19 +27,11 @@
   text-align: center;
 }
 
-#register_cattegories_page {
-  margin: auto;
-  margin-bottom: 70px;
-  min-width: 100%;
-}
-
 .category-box h4 {
   letter-spacing: 1.5px;
   margin: 10px;
-  /* text-shadow: 0.5px 0.5px 0.5px black; */
   color: #204768;
   font-size: larger;
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .container-div {
@@ -49,11 +40,7 @@
   flex-flow: row wrap;
   justify-content: center;
   background: white;
-  /* padding-bottom: 30px; */
   margin-bottom: 0px;
-  /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background: white; */
 }
 
 .container-div a {
@@ -73,7 +60,6 @@
   text-align: center;
   background: whitesmoke;
   border: 1px solid #204768;
-  /* border-radius: 5px; */
   box-shadow: 0 0.5em 0.5em -0.3em grey;
   justify-content: center;
   transition: all 0.5s ease-in-out;
@@ -92,10 +78,21 @@
   padding: 3px;
   padding-top: 15px;
   height: 65px;
-  /* width: 115px; */
 }
 
-.pLastOnPage{
+#register_cattegories_page {
+  font-size: 26px;
+  max-width: 340px;
+  color: white;
+  text-decoration: none;
+}
+
+#register_cattegories_page a {
+  color: white;
+  text-decoration: none;
+}
+
+.pLastOnPage {
   text-align: center;
   margin: 40px 0 80px 0;
   font-size: 27px;
@@ -136,13 +133,12 @@
     max-width: 450px;
   }
 
-  .pLastOnPage{
+  .pLastOnPage {
     font-size: 26px;
   }
 }
 
 @media (max-width: 1200px) {
-
   .content {
     min-height: calc(100vh - 102px);
   }
@@ -164,7 +160,6 @@
   }
 
   .category-box img {
-    /* width: 55px; */
     height: 55px;
   }
 
@@ -173,53 +168,55 @@
     max-width: 430px;
   }
 
-  .pLastOnPage{
-  margin: 40px 0 60px 0;
+  .pLastOnPage {
+    margin: 40px 0 60px 0;
     font-size: 25px;
   }
 
   #register_cattegories_page {
-    font-size: 26px;
     margin: 5px 0 50px 0;
-    min-width: 70%;
   }
 }
+
 @media (max-width: 992px) {
-  
   .h1-categories {
     font-size: 33px;
   }
 
-  .category-box{
+  .category-box {
     max-width: 195px;
     min-width: 155px;
     font-size: 15px;
     margin: 30px 10px;
     padding: 5px;
   }
+
   .category-box:hover {
     margin: 29px 9px;
   }
+
   .category-box img {
-    /* width: 75px; */
     padding-top: 10px;
     height: 50px;
   }
 
   .categories_h2 {
     font-size: 1.7em;
-    padding:0px;
+    padding: 0px;
     margin: 20 10px;
   }
 
-  .pLastOnPage{
+  #register_cattegories_page {
+    max-width: 250px;
+  }
+
+  .pLastOnPage {
     margin: 35px 0 50px 0;
     font-size: 24px;
   }
 }
 
 @media (max-width: 768px) {
-
   .content {
     min-height: calc(100vh - 97px);
   }
@@ -232,49 +229,50 @@
     justify-content: center;
     padding: 15px 10%;
   }
+
   .category-box {
     width: 100%;
     max-width: 185px;
-    /* font-size: 15px; */
-    /* margin: 20px; */
     margin: 20px 20px;
   }
 
   .category-box:hover {
     margin: 19px 19px;
   }
-  
+
   .category-box p {
     padding: 0 5px;
   }
 
   .container-div {
     justify-content: center;
-    /* justify-content: space-between; */
   }
 
   .btn_div {
     margin-top: 10px;
-   }
+  }
 
-   .categories_h2 {
+  .categories_h2 {
     font-size: 1.6em;
     margin: 15px 7px;
   }
 
-   .pLastOnPage{
+  #register_cattegories_page {
+    font-size: 24px;
+  }
+
+  .pLastOnPage {
     margin: 20px 0 40px 0;
     font-size: 23px;
   }
 }
 
 @media (max-width: 576px) {
-
   .content {
     min-height: calc(100vh - 92px);
   }
 
-  .container-div{
+  .container-div {
     padding-top: 0;
   }
 
@@ -296,15 +294,18 @@
   }
 
   .category-box img {
-    /* width: 55px; */
     height: 45px;
   }
-  
+
   .categories_h2 {
     font-size: 1.5em;
   }
 
-  .pLastOnPage{
+  #register_cattegories_page {
+    font-size: 22px;
+  }
+
+  .pLastOnPage {
     font-size: 19px;
   }
 }
@@ -314,17 +315,16 @@
     padding: 0;
     padding-bottom: 15px;
   }
-  
+
   .h1-categories {
     font-size: 25px;
     padding-top: 10px;
   }
- 
 
   .category-box {
     max-width: 135px;
     min-width: 125px;
-    margin: 17px ;
+    margin: 17px;
     font-size: 0.75em;
   }
 
@@ -337,7 +337,6 @@
   }
 
   .category-box img {
-    /* width: 45px; */
     height: 35px;
   }
 
@@ -345,7 +344,12 @@
     font-size: 1.3em;
   }
 
-  .pLastOnPage{
+  #register_cattegories_page {
+    font-size: 20px;
+    max-width: 200px;
+  }
+
+  .pLastOnPage {
     margin: 15px 5px 30px 5px;
     font-size: 17px;
   }
@@ -359,9 +363,6 @@
   .category-box {
     max-width: 118px;
     min-width: 100px;
-    /* height: 180px; */
-    /* margin: 20px 25px 17px 25px; */
-    /* padding: 5px 5px 20px 5px; */
     font-size: 0.7em;
   }
 
@@ -373,13 +374,16 @@
     font-size: 1.2em;
   }
 
-  .pLastOnPage{
+  #register_cattegories_page {
+    font-size: 18px;
+  }
+
+  .pLastOnPage {
     font-size: 16px;
   }
 }
 
 @media (max-width: 375px) {
-
   .content {
     min-height: calc(100vh - 82px);
   }
@@ -390,7 +394,6 @@
 
   .category-box {
     max-width: 120px;
-    /* min-width: 100px; */
     margin: 10px;
     font-size: 0.69em;
   }
@@ -399,16 +402,17 @@
     margin: 9px 9px;
   }
 
-  #register_cattegories_page {
-    height: 3em;
-  }
-
   .categories_h2 {
     font-size: 1.1em;
     margin-top: 10px;
   }
 
-  .pLastOnPage{
+  #register_cattegories_page {
+    font-size: 17px;
+    max-width: 160px;
+  }
+
+  .pLastOnPage {
     margin: 0 5px 25px 5px;
     font-size: 15px;
   }
@@ -432,7 +436,7 @@
 
   .category-box:hover {
     margin: 6px 0;
-  transform: translateZ(-0.3em);
+    transform: translateZ(-0.3em);
   }
 
   .category-box h4 {
@@ -444,15 +448,17 @@
     margin-top: 4px;
   }
 
-  .pLastOnPage{
-    /* margin: 0 5px; */
-    /* margin: 0 5px 25px 5px; */
+  #register_cattegories_page {
+    font-size: 17px;
+    width: inherit;
+  }
+
+  .pLastOnPage {
     font-size: 14px;
   }
 }
 
 @media (max-width: 246px) {
-
   .h1-categories {
     font-size: 18px;
   }
@@ -473,7 +479,12 @@
     font-size: 0.9em;
   }
 
-  .pLastOnPage{
+  #register_cattegories_page {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .pLastOnPage {
     font-size: 13px;
   }
 }

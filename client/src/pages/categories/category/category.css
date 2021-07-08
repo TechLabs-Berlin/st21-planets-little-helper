@@ -12,14 +12,11 @@
   justify-content: center;
   flex-flow: column;
   align-items: center;
-  /* margin-bottom: 10px; */
 }
 
 .toggle-btns-div {
   background-color: white;
-  /* justify-content: center; */
   width: 50%;
-  /* max-width: 1000px; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 35px;
@@ -31,16 +28,9 @@
 .toggle-btns {
   background-color: white;
   border: none;
-  font-family: "Spartan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
-  /* width: 50px; */
-  /* margin: 0 1px; */
-  /* box-shadow: 0 0.3em 0.3em -0.4em #1b4049; */
-  transition: all 0.3s ease;
 }
+
 .toggle-btns a {
-  /* padding: auto; */
   font-size: 28px;
   font-weight: 400;
   padding-bottom: 2px;
@@ -53,7 +43,6 @@
   padding-bottom: 0;
   cursor: pointer;
   font-size: 30px;
-  /* box-shadow: 0 0.7em 0.7em -0.7em #1b4049; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -62,8 +51,6 @@
   flex-flow: row wrap;
   justify-content: center;
   width: 55%;
-  /* max-width: 940px; */
-  /* background-color: white; */
   border-radius: 1.5%;
   padding: 0 30px 15px 30px;
   margin: 1rem 1rem 0 1rem;
@@ -74,28 +61,26 @@
   color: #fb6b4a;
   width: 100%;
   margin-top: 10px;
-  font-family: "Spartan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .p-div {
   display: flex;
   flex-flow: column;
-  /* align-content: center; */
   padding: 0 1rem;
 }
+
 .p-div h4 {
   text-align: center;
   margin: 0;
   margin-top: 8px;
   font-size: 25px;
 }
+
 .p-div p {
   text-align: center;
   line-height: 1.7rem;
-  font-family: "Spartan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
 .add-challenge-btn {
   color: white;
   background-color: #fb6b4a;
@@ -106,8 +91,6 @@
   margin-top: 50px;
   border-radius: 50px;
   box-shadow: 0 0.2em 0.2em -0.2em black;
-  font-family: "Spartan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -131,10 +114,7 @@
 }
 
 .bottom-div {
-  width: 100%;
-  background-color: white;
-  margin-top: 50px;
-  padding: 0 20px 50px 20px;
+  margin-top: 30px;
 }
 
 .hide {
@@ -146,12 +126,12 @@
 }
 
 @media screen and (max-width: 1440px) {
+
   .container-category-page {
     min-height: calc(100vh - 112px);
   }
 
   .toggle-btns-div {
-    /* width: 70%; */
     padding: 15px 60px;
   }
 
@@ -173,7 +153,7 @@
   .container-category-page {
     min-height: calc(100vh - 102px);
   }
-  
+
   #clicked a,
   .toggle-btns-div a:hover {
     font-size: 26px;
@@ -190,9 +170,11 @@
   .callengeBox h2 {
     font-size: 26px;
   }
+
   .p-div {
     font-size: 15px;
   }
+
   .p-div h4 {
     font-size: 18px;
   }
@@ -203,6 +185,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
   #clicked a,
   .toggle-btns-div a:hover {
     font-size: 24px;
@@ -224,9 +207,7 @@
   .callengeBox h2 {
     font-size: 24px;
   }
-  /* .p-div{
-    font-size: 15px;
-  } */
+
   .p-div h4 {
     font-size: 17px;
   }
@@ -266,10 +247,12 @@
     margin-top: 0;
     font-size: 22px;
   }
+
   .p-div p {
     margin-top: 10px;
     font-size: 14px;
   }
+
   .p-div h4 {
     font-size: 16px;
   }
@@ -282,10 +265,12 @@
 }
 
 @media screen and (max-width: 650px) {
+
   .toggle-btns-div {
     width: 75%;
     padding: 10px 20px;
   }
+
   .callengeBox {
     width: 94%;
     margin: 16px 0 0;
@@ -314,17 +299,15 @@
     font-size: 18px;
   }
 
-  /* .callengeBox {
-     width: 90%;
-  } */
-
   .callengeBox h2 {
     font-size: 20px;
   }
+
   .p-div p {
     margin-top: 5px;
     font-size: 13px;
   }
+
   .p-div h4 {
     font-size: 15px;
   }
@@ -337,6 +320,7 @@
 }
 
 @media screen and (max-width: 425px) {
+
   #clicked a {
     font-size: 16px;
   }
@@ -360,10 +344,12 @@
     padding: 7px 0;
     font-size: 16px;
   }
+
   .p-div p {
     margin-top: 5px;
     font-size: 12px;
   }
+
   .p-div h4 {
     margin-top: 0;
     font-size: 13px;
@@ -371,7 +357,6 @@
 
   .add-challenge-btn {
     margin-top: 5px;
-    /* margin-bottom: 20px; */
     padding: 4px 25px;
     font-size: 13px;
   }
@@ -389,7 +374,6 @@
 
   .toggle-btns-div {
     margin-top: 10px;
-    /* width: 80%; */
   }
 
   .toggle-btns-div a,
@@ -397,19 +381,17 @@
     font-size: 13px;
   }
 
-  /* .callengeBox {
-     width: 97%;
-  } */
-
   .callengeBox h2 {
     padding: 4px 0;
     font-size: 14px;
   }
+
   .p-div p {
     line-height: 2em;
     margin-top: 3px;
     font-size: 11px;
   }
+
   .p-div h4 {
     font-size: 12px;
   }
@@ -423,6 +405,7 @@
 }
 
 @media screen and (max-width: 320px) {
+
   #clicked a {
     font-size: 14px;
   }
@@ -443,12 +426,14 @@
     padding: 4px 0;
     font-size: 12px;
   }
+
   .p-div p {
     line-height: 1.9em;
     margin: 1px 0;
     font-size: 10px;
     padding: 3px;
   }
+
   .p-div h4 {
     font-size: 11px;
   }
@@ -461,11 +446,11 @@
 }
 
 @media (max-width: 246px) {
+  
   .toggle-btns-div {
-    /* display: flex;
-    flex-flow: column; */
     width: 99%;
   }
+
   #clicked a {
     font-size: 12px;
   }
@@ -478,14 +463,17 @@
   .callengeBox h2 {
     font-size: 11px;
   }
+
   .p-div {
     padding: 0;
     margin: 0;
   }
+
   .p-div p {
     line-height: 1.5em;
     font-size: 10px;
   }
+
   .p-div h4 {
     font-size: 10px;
   }

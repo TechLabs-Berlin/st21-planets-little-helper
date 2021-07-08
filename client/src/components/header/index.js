@@ -1,22 +1,26 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { NavLink, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import "./header.css";
 import { logout } from "../../store/actions/auth";
 
 class Header extends React.Component {
+
   state = { clicked: false };
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+    document.addEventListener('click', this.handleClickOutside, true);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
+    document.removeEventListener('click', this.handleClickOutside, true);
   }
 
   handleResize = () => {
-    this.setState({clicked: false});
+    this.setState({ clicked: false });
     this.forceUpdate();
   };
 
@@ -31,23 +35,32 @@ class Header extends React.Component {
     this.setState({ clicked: !this.state.clicked });
   };
 
+  handleClickOutside = event => {
+    const domNode = ReactDOM.findDOMNode(this);
+    if (!domNode || !domNode.contains(event.target)) {
+      this.setState({ clicked: false });
+    }
+  }
+
   render() {
 
     return (
-      <header>
-        <nav className="navbar">
+      <header onClick={this.state.clicked ? this.handleClick : null}>
+        <nav className="navbar" >
+
           <NavLink to="/" className="nav-logo-link">
             <div className="navbar-logo-name">
               <span>Planet's Little Helper</span>
             </div>
           </NavLink>
+
           <ul
             className={this.state.clicked ? "nav-menu active" : "nav-menu"}
             onClick={this.handleClick}
           >
             <li>
               <NavLink to="/challenges" className="nav-links">
-              Challenges
+                Challenges
               </NavLink>
             </li>
 
@@ -58,7 +71,7 @@ class Header extends React.Component {
                     to={`/user/${this.props.currentUser.user.id}`}
                     className="nav-links"
                   >
-                  Profile
+                    Profile
                   </NavLink>
                 </li>
                 <li className="logOutLi">
