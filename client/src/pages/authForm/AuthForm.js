@@ -99,7 +99,7 @@ function AuthForm({
                 className={styles.inputContainer}
                 style={{ display: "flex", flexDirection: "column" }}
               >
-                <label htmlFor="imageUrl" className={styles.authLabel} style={{marginBottom: "5px", textAlign: "center"}}>
+                <label htmlFor="imageUrl" className={styles.authLabel} style={{ marginBottom: "5px", textAlign: "center" }}>
                   {fileLabel}
                 </label>
                 <input

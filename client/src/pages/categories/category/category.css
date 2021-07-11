@@ -126,7 +126,6 @@
 }
 
 @media screen and (max-width: 1440px) {
-
   .container-category-page {
     min-height: calc(100vh - 112px);
   }
@@ -149,7 +148,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-
   .container-category-page {
     min-height: calc(100vh - 102px);
   }
@@ -185,7 +183,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-
   #clicked a,
   .toggle-btns-div a:hover {
     font-size: 24px;
@@ -219,7 +216,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .container-category-page {
     min-height: calc(100vh - 97px);
   }
@@ -265,7 +261,6 @@
 }
 
 @media screen and (max-width: 650px) {
-
   .toggle-btns-div {
     width: 75%;
     padding: 10px 20px;
@@ -279,7 +274,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
   .container-category-page {
     min-height: calc(100vh - 92px);
   }
@@ -320,7 +314,6 @@
 }
 
 @media screen and (max-width: 425px) {
-
   #clicked a {
     font-size: 16px;
   }
@@ -363,7 +356,6 @@
 }
 
 @media screen and (max-width: 375px) {
-
   .container-category-page {
     min-height: calc(100vh - 82px);
   }
@@ -405,7 +397,6 @@
 }
 
 @media screen and (max-width: 320px) {
-
   #clicked a {
     font-size: 14px;
   }
@@ -446,7 +437,6 @@
 }
 
 @media (max-width: 246px) {
-  
   .toggle-btns-div {
     width: 99%;
   }

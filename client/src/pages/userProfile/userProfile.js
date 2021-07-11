@@ -79,7 +79,7 @@ function UserProfile({
             </button>
           </div>
         ))}
-        <Recommendations id={currentUser.user.id} userChallenges={currentUser.user.challenges}/>
+        <Recommendations id={currentUser.user.id} userChallenges={currentUser.user.challenges} />
       </div>
     );
   } else {
@@ -87,7 +87,7 @@ function UserProfile({
       <div className={styles.noChallengescontainer}>
         <h2>Your challenges</h2>
         <div className={styles.noChallenges}>
-        <p>Currently you do not have any challenges.</p>
+          <p>Currently you do not have any challenges.</p>
           <button className={styles.goToChallengesBtn}>
             <Link to="/challenges">Go to <span>challenges</span></Link>
           </button>
@@ -134,20 +134,20 @@ function UserProfile({
                   Cancel
                 </button>
               </div>
-              <p style={{ textAlign: "center"}}>
+              <p style={{ textAlign: "center" }}>
                 Set profile picture to: {newImgName}
               </p>
             </div>
           )}
         </form>
         <div className={styles.userInfoDiv}>
-        <p>
-          Username: <span>{currentUser.user.username}</span>
+          <p>
+            Username: <span>{currentUser.user.username}</span>
           </p>
           <p>
-          E-mail: <span>{currentUser.user.email}</span>
+            E-mail: <span>{currentUser.user.email}</span>
           </p>
-          </div>
+        </div>
       </div>
       {profile}
     </div>

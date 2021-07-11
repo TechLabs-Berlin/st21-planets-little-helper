@@ -13,9 +13,9 @@ function Footer() {
                 </h2>
             </div>
             <div className={styles.aboutDiv}>
-            <button className={styles.aboutBtn}>
-            <Link to="/about" className={styles.about}>About</Link>
-            </button>
+                <button className={styles.aboutBtn}>
+                    <Link to="/about" className={styles.about}>About</Link>
+                </button>
             </div>
         </div>
     )

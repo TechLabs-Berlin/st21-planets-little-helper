@@ -24,10 +24,10 @@ function LandingPage({ currentUser }) {
           <div className="box-text">
             <h1 className="h1LogedIn">Hi <span className="name">{currentUser.user.username}</span>!</h1>
             <p className="pLogedIn">
-            Nice to have you on our journey to have sustainable positive impact on our environment.
+              Nice to have you on our journey to have sustainable positive impact on our environment.
             </p>
             <p className="pLogedIn" id="pLetsBegin">
-            Let’s begin!
+              Let’s begin!
             </p>
 
             <Link to="/challenges">
@@ -74,14 +74,14 @@ function LandingPage({ currentUser }) {
               <Link to="/challenges/food">
                 <button className="btns">
                   Food
-            </button>
+                </button>
               </Link>
             </div>
             <div>
               <Link to="/challenges/recycling">
                 <button className="btns">
                   Recycling
-            </button>
+                </button>
               </Link>
             </div>
           </div>
@@ -90,14 +90,14 @@ function LandingPage({ currentUser }) {
               <Link to="/challenges/energy">
                 <button className="btns">
                   Energy
-            </button>
+                </button>
               </Link>
             </div>
             <div>
               <Link to="/challenges/travel">
                 <button className="btns">
                   Travel
-            </button>
+                </button>
               </Link>
             </div>
           </div>
