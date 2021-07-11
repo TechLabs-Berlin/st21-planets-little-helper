@@ -59,7 +59,7 @@ class Header extends React.Component {
             onClick={this.handleClick}
           >
             <li>
-              <NavLink to="/challenges" className="nav-links" activeStyle={{fontWeight: 600}}>
+              <NavLink to="/challenges" className="nav-links" activeStyle={{ fontWeight: 600 }}>
                 Challenges
               </NavLink>
             </li>
@@ -70,7 +70,7 @@ class Header extends React.Component {
                   <NavLink
                     to={`/user/${this.props.currentUser.user.id}`}
                     className="nav-links"
-                    activeStyle={{fontWeight: 600}}
+                    activeStyle={{ fontWeight: 600 }}
                   >
                     Profile
                   </NavLink>
@@ -85,12 +85,12 @@ class Header extends React.Component {
             {!this.props.currentUser.isAuthenticated && (
               <>
                 <li>
-                  <NavLink to="/signin" className="nav-links" activeStyle={{fontWeight: 600}}>
+                  <NavLink to="/signin" className="nav-links" activeStyle={{ fontWeight: 600 }}>
                     Sign in
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/signup" className="nav-links" activeStyle={{fontWeight: 600}}>
+                  <NavLink to="/signup" className="nav-links" activeStyle={{ fontWeight: 600 }}>
                     Sign up
                   </NavLink>
                 </li>

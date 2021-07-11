@@ -1,5 +1,5 @@
 .footbar {
-    display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   padding-right: 2%;
   align-items: center;
@@ -71,30 +71,35 @@
     padding-right: 4%;
   }
 
-  .h2,.about{
+  .h2,
+  .about {
     font-size: 13px;
-}
+  }
 
   .aboutDiv {
     text-align: right;
   }
 }
 
-@media screen and (max-width: 425px){ 
-    .footbar{
-        display: flex;
-        justify-content: space-between;
-    }
-    .h2,.about{
-        font-size: 12px;
-    }
-    .h2Div{
-        width: 80%;
-    }
+@media screen and (max-width: 425px) {
+  .footbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .h2,
+  .about {
+    font-size: 12px;
+  }
+  
+  .h2Div {
+    width: 80%;
+  }
 }
 
-@media screen and (max-width: 320px){ 
-    .h2,.about{
-        font-size: 11px;
-    }
+@media screen and (max-width: 320px) {
+  .h2,
+  .about {
+    font-size: 11px;
+  }
 }
