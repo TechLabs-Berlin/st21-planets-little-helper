@@ -25,5 +25,6 @@ app.use((req, res, next) => {
 app.use(errorHandler);
 
 app.listen(process.env.PORT || port, () => {
-  console.log(`Server started at port ${port}.`);
+  console.log(process.env.PORT)
+  console.log(`Server started.`);
 });
