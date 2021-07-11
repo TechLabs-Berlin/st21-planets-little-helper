@@ -316,7 +316,7 @@ h3 {
     content: "";
     background-image: url("earth.png");
     margin: 10px 5px;
-    background-size: 35%;
+    background-size: 45%;
     background-position: top right;
     top: 0;
     right: 0;
@@ -349,7 +349,7 @@ h3 {
   }
 
   .container::before {
-    background-size: 40%;
+    background-size: 43%;
   }
 
   .h1LogedIn,
@@ -370,7 +370,6 @@ h3 {
   }
 
   .box-text {
-    max-width: 85%;
     padding-left: 10%;
   }
 
