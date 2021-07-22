@@ -42,9 +42,5 @@ Finally run yarn client-start in the client folder and yarn server-start in the 
 </ul>
 
 
-## Todo:
-
-Back end deployment
-
-If you want to take a look at the front end part, please visit <a href="https://planetslittlehelper.netlify.app/">Planet's Little Helper.</a>
+If you want to take a look at our project, please visit <a href="https://planetslittlehelper.netlify.app/">Planet's Little Helper.</a>
 
