@@ -44,7 +44,7 @@ export const completeChallenge = (userId, challengeId, update) => {
   return (dispatch) => {
     return axios({
       method: "post",
-      url: `http://localhost:8000/api/user/${userId}/completed`,
+      url: `/api/user/${userId}/completed`,
       data: {
         challengeId,
         update,
@@ -59,7 +59,7 @@ export const getUserChallenges = (userId) => {
   return (dispatch) => {
     return axios({
       method: "get",
-      url: `http://localhost:8000/api/user/${userId}`,
+      url: `/api/user/${userId}`,
     })
       .then((res) => {
         const userChallenges = res.data.challenges;
@@ -73,7 +73,7 @@ export const deleteChallenge = (userId, challengeId) => {
   return (dispatch) => {
     return axios({
       method: "delete",
-      url: `http://localhost:8000/api/user/${userId}/challenges`,
+      url: `/api/user/${userId}/challenges`,
       data: {
         challengeId,
       },
@@ -89,7 +89,7 @@ export const addChallenge = (userId, challengeId) => {
   return (dispatch) => {
     return axios({
       method: "post",
-      url: `http://localhost:8000/api/user/${userId}/challenges`,
+      url: `/api/user/${userId}/challenges`,
       data: {
         challengeId,
       },
@@ -103,7 +103,7 @@ export const addChallenge = (userId, challengeId) => {
 
 export const fetchChallenges = () => {
   return (dispatch) => {
-    return axios("http://localhost:8000/api/challenges")
+    return axios("/api/challenges")
       .then((res) => {
         dispatch(loadChallenges(res.data));
       })
@@ -115,7 +115,7 @@ export function updateProfilePic(userId, profilePic) {
   return (dispatch) => {
     return axios({
       method: "post",
-      url: `http://localhost:8000/api/user/${userId}/image`,
+      url: `/api/user/${userId}/image`,
       data: profilePic,
       headers: {
         "Content-Type": "multipart/form-data",

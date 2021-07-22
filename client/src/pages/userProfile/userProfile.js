@@ -101,7 +101,7 @@ function UserProfile({
       <div className={styles.profileDiv}>
         <div className={styles.pictureDiv}>
           <img
-            src={"http://localhost:8000/" + currentUser.user.imageUrl}
+            src={"/" + currentUser.user.imageUrl}
             alt="profile pic"
             id="profilePic"
             onClick={() => fileInput.current.click()}
