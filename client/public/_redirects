@@ -1,3 +1,3 @@
 /api/*  https://planetslittlehelper.herokuapp.com/api/:splat  200
-/api/*  https://planetslittlehelper.herokuapp.com/:splat  200
+/api/*  https://planetslittlehelper.herokuapp.com/uploads/:splat  200
 /* /index.html 200
